@@ -15,6 +15,15 @@ $btn-color: rgba(195, 216, 10, 1);
         transform: translateX(-100%);
     }
 }
+@keyframes movingHeroSection {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-30%);
+    }
+}
 
 .btn-ctm {
     font-family: 'crunch-chips';
@@ -77,14 +86,30 @@ $btn-color: rgba(195, 216, 10, 1);
 }
 
 .hero-section {
-    top: -70px !important;
+    top: -75px !important;
     z-index: -2;
+    background-color: $primary-color !important;
+
 }
 
 .hero-animation {
-    animation: movingLine 10s linear infinite;
+    animation: movingHeroSection 6s linear infinite;
     top: -45px !important;
     img{
         width: 100% !important;
+    }
+}
+.welcome-section{
+    background-color: $primary-color !important;
+    top: -85px !important;
+    .khush-aamdeed-text{
+        font-family: 'hey-kiddo';
+    }
+}
+.heading{
+    h1{
+        font-family: 'crunch-chips';
+        color: $primary-color !important;
+        font-size:4rem !important;
     }
 }
