@@ -28,6 +28,11 @@ const Home = () => {
             alt="hero animation"
             className="m-0 p-0 w-100"
           />
+          <img
+            src={heroAnimation}
+            alt="hero animation"
+            className="m-0 p-0 w-100"
+          />
         </div>
       </div>
 
@@ -49,6 +54,10 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <div className="who-we-are-section row m-0 p-0 pt-3">
+            <p className="heading-p m-0 p-0 mt-5  text-center fs-1">WHO WE ARE</p>
+            
+      </div>
     </div>
   );
 };
