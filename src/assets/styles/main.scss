@@ -6,6 +6,7 @@ $secondary-color: rgba(180, 205, 76, 1);
 $btn-outline-color: rgba(109, 128, 4, 1);
 $btn-color: rgba(195, 216, 10, 1);
 $red-primary: #D75438;
+$brown-primary:#582C1A;
 
 
 @keyframes movingLine {
@@ -179,9 +180,16 @@ $red-primary: #D75438;
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 50% 50%);
 }
 
-.mobile-gif-section {
+.why-humzabaan-section {
     position: relative;
     top: -87px !important;
-    height: 50vh;
     background: $red-primary url('../images/red-bg.svg') bottom/cover no-repeat;
+    .heading{
+        h1{
+            color: $brown-primary !important;
+        }
+    }
+    .content-1{
+        top:40px !important;
+    }
 }

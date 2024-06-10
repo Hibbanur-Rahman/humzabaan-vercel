@@ -2,7 +2,8 @@ import Navbar from "../components/navbar";
 import heroImg from "../assets/images/hero-img.png";
 import heroAnimation from "../assets/images/hero-animation.png";
 import welcomeUrdu from "../assets/images/welcome-urdu-text.svg";
-import headingBg from "../assets/images/heading-bg.svg";
+import headingBg1 from "../assets/images/heading-bg.svg";
+import headingBg2 from "../assets/images/heading-bg-2.svg";
 import videoFrame from "../assets/images/video-frame.svg";
 import playBtn from "../assets/images/play-btn.svg";
 import teacherGif from "../assets/images/teacher-img.gif";
@@ -10,8 +11,13 @@ import teacherVideoThumbnail from "../assets/images/teacher-video-thumbnail.svg"
 import mobileGif from "../assets/images/mobile-gif.gif";
 import Button from "../components/button";
 import PlayStoreBtn from "../components/playStoreBtn";
-import appleLogo from '../assets/images/Apple_logo.svg';
-import playStoreLogo from '../assets/images/playStoreLogo.svg';
+import appleLogo from "../assets/images/Apple_logo.svg";
+import playStoreLogo from "../assets/images/playStoreLogo.svg";
+import featureImg1 from "../assets/images/FEATURE-1.svg";
+import featureImg2 from "../assets/images/FEATURE-2.svg";
+import featureImg3 from "../assets/images/FEATURE-3.svg";
+import featureImg4 from "../assets/images/FEATURE-4.svg";
+
 const Home = () => {
   return (
     <div className="row m-0 p-0 overflow-hidden">
@@ -58,11 +64,13 @@ const Home = () => {
             Khush Aamdeed !
           </p>
           <div className="heading m-0 p-0 mt-4 position-relative d-flex align-items-center justify-content-center">
-            <img src={headingBg} alt="heading-bg" className="m-0 p-0 " />
+            <img src={headingBg1} alt="heading-bg" className="m-0 p-0 " />
             <h1 className="m-0 p-0 position-absolute">WELCOME TO HUMZABAAN</h1>
           </div>
         </div>
       </section>
+
+      {/** ================= Who-we-are-section ==================  */}
       <div className="who-we-are-section row m-0 p-0 pt-3 justify-content-center">
         <p className="heading-p m-0 p-0 mt-5 text-center fs-1">WHO WE ARE</p>
         <div className="row col-10 m-0 p-0 z-2 justify-content-between">
@@ -123,16 +131,58 @@ const Home = () => {
           </div>
           <div className="col-6 d-flex flex-column justify-content-end align-baseline">
             <div className="">
-              <PlayStoreBtn logo={playStoreLogo} para='GET IT ON' head='GOOGLE PLAY' />
+              <PlayStoreBtn
+                logo={playStoreLogo}
+                para="GET IT ON"
+                head="GOOGLE PLAY"
+              />
             </div>
             <div className="mt-4">
-              <PlayStoreBtn logo={appleLogo} para='DOWNLOAD ON THE' head='APP STORE'/>
+              <PlayStoreBtn
+                logo={appleLogo}
+                para="DOWNLOAD ON THE"
+                head="APP STORE"
+              />
             </div>
-           
           </div>
         </div>
       </div>
-      <div className="mobile-gif-section row m-0 p-0"></div>
+
+      {/** ================= Why-humzabaan-section ==================  */}
+      <div className="why-humzabaan-section row m-0 p-0 justify-content-center">
+        <div className="heading m-0 p-0 mt-5 position-relative d-flex align-items-center justify-content-center">
+          <img src={headingBg2} alt="heading-bg" className="m-0 p-0 " />
+          <h1 className="m-0 p-0 position-absolute">WHY HUMZABAAN ?</h1>
+        </div>
+        <div className="features col-10 m-0 p-0">
+          <div className=" row m-0 p-0">
+            <div className="col-6 m-0 p-0 position-relative d-flex">
+              <img
+                src={featureImg1}
+                alt="feature image-1"
+                className="m-0 p-0 position-relative"
+              />
+              <div className="content-1 position-absolute">
+                <h5 className="m-0 p-0 crunch-font">HISTORY OF URDU</h5>
+                <p className="m-0 p-0 kiddo-font">
+                  Urdu, originating in the 13th century in North India, emerged
+                  as a linguistic synthesis of Persian, Arabic, Turkish, and
+                  local dialects, initially known as "Rekhta." Flourishing
+                  during the Mughal era, it served as a language of the courts
+                  and cultural exchange 
+                </p>
+              </div>
+            </div>
+            <div className="col-6 m-0 p-0">
+              <img
+                src={featureImg2}
+                alt="feature image-1"
+                className="m-0 p-0"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
