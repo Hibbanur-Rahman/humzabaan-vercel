@@ -6,7 +6,7 @@ $secondary-color: rgba(180, 205, 76, 1);
 $btn-outline-color: rgba(109, 128, 4, 1);
 $btn-color: rgba(195, 216, 10, 1);
 $red-primary: #D75438;
-$brown-primary:#582C1A;
+$brown-primary: #582C1A;
 
 
 @keyframes movingLine {
@@ -58,7 +58,7 @@ $brown-primary:#582C1A;
     h4 {
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: $primary-color;
-       
+
     }
 
     p {
@@ -161,7 +161,8 @@ $brown-primary:#582C1A;
         height: 700px !important;
         right: -100% !important;
     }
-    .mobile{
+
+    .mobile {
         margin-top: 11.3rem !important;
         align-items: flex-start !important;
     }
@@ -184,12 +185,37 @@ $brown-primary:#582C1A;
     position: relative;
     top: -87px !important;
     background: $red-primary url('../images/red-bg.svg') bottom/cover no-repeat;
-    .heading{
-        h1{
+
+    .heading {
+        h1 {
             color: $brown-primary !important;
         }
     }
-    .content-1{
-        top:40px !important;
+
+    .features{
+        img{
+            height: 33rem ;
+        }
+        .features-center-mobile{
+            z-index: 6 !important;
+            width: 50rem !important;
+            height: 28rem !important;
+            bottom: -12rem;
+        }
+        .content {
+            width: 300px !important;
+            color: $brown-primary !important;
+        }
+    
+        .content-1 {
+            top: 15% !important;
+            right: 4rem !important;
+        }
+        .content-2{
+            top: 15% !important;
+            left: 2.6rem !important;
+        }
     }
+  
+   
 }

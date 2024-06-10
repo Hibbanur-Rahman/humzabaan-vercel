@@ -17,6 +17,7 @@ import featureImg1 from "../assets/images/FEATURE-1.svg";
 import featureImg2 from "../assets/images/FEATURE-2.svg";
 import featureImg3 from "../assets/images/FEATURE-3.svg";
 import featureImg4 from "../assets/images/FEATURE-4.svg";
+import featuresCenterMobile from "../assets/images/features-center-mobile.svg";
 
 const Home = () => {
   return (
@@ -154,17 +155,19 @@ const Home = () => {
           <img src={headingBg2} alt="heading-bg" className="m-0 p-0 " />
           <h1 className="m-0 p-0 position-absolute">WHY HUMZABAAN ?</h1>
         </div>
-        <div className="features col-10 m-0 p-0">
+        <div className="features col-10 m-0 p-0 mt-5">
           <div className=" row m-0 p-0">
-            <div className="col-6 m-0 p-0 position-relative d-flex">
+            <div className="col-6 m-0 p-0 position-relative d-flex justify-content-end">
               <img
                 src={featureImg1}
                 alt="feature image-1"
-                className="m-0 p-0 position-relative"
+                className="m-0 p-0 "
               />
-              <div className="content-1 position-absolute">
-                <h5 className="m-0 p-0 crunch-font">HISTORY OF URDU</h5>
-                <p className="m-0 p-0 kiddo-font">
+              <div className="content content-1 position-absolute">
+                <h2 className="m-0 p-0 crunch-font text-center mb-4">
+                  HISTORY OF URDU
+                </h2>
+                <p className="m-0 p-0 kiddo-font text-center">
                   Urdu, originating in the 13th century in North India, emerged
                   as a linguistic synthesis of Persian, Arabic, Turkish, and
                   local dialects, initially known as "Rekhta." Flourishing
@@ -173,12 +176,71 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <div className="col-6 m-0 p-0">
+            <div className="col-6 m-0 p-0 ps-2 position-relative d-flex justify-content-start">
               <img
                 src={featureImg2}
                 alt="feature image-1"
-                className="m-0 p-0"
+                className="m-0 p-0 "
               />
+              <div className="content content-2 position-absolute">
+                <h2 className="m-0 p-0 crunch-font text-center mb-4">
+                  COURSES / QUIZ
+                </h2>
+                <p className="m-0 p-0 kiddo-font text-center">
+                  Initially tailored for beginners starting their Urdu journey
+                  from scratch, our courses at Humzabaan are designed to
+                  gradually introduce foundational concepts. As we progress, we
+                  aim to expand our offerings to accommodate the needs of more
+                  advanced learners with additional levels.Each course is
+                  complemented by quizzes, enriching the learning experience 
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row m-0 p-0 mb-3 position-relative align-items-center justify-content-center">
+            <img
+              src={featuresCenterMobile}
+              alt=""
+              className="features-center-mobile position-absolute m-0 p-0"
+            />
+          </div>
+          <div className=" row m-0 p-0 mt-5">
+            <div className="col-6 m-0 p-0 position-relative d-flex justify-content-end">
+              <img
+                src={featureImg3}
+                alt="feature image-1"
+                className="m-0 p-0 "
+              />
+              <div className="content content-1 position-absolute">
+                <h2 className="m-0 p-0 crunch-font text-center mb-4">
+                  DICTIONARY
+                </h2>
+                <p className="m-0 p-0 kiddo-font text-center">
+                  Humzabaan aap is your all-in-one dictionary app for Hindi,
+                  Urdu, and English. Search for words by typing, speaking, or
+                  scanning text. Definitions include audio pronunciations and
+                  additional helpful features like example sentences, synonyms,
+                  antonyms, and a favorites list.
+                </p>
+              </div>
+            </div>
+            <div className="col-6 m-0 p-0 ps-2 position-relative d-flex justify-content-start">
+              <img
+                src={featureImg4}
+                alt="feature image-1"
+                className="m-0 p-0 "
+              />
+              <div className="content content-2 position-absolute">
+                <h2 className="m-0 p-0 crunch-font text-center mb-4">
+                  LITERATURE
+                </h2>
+                <p className="m-0 p-0 kiddo-font text-center">
+                  Humzabaan app is more than just mastering the alphabet, words,
+                  and numbers; we delve deeper to make your Urdu learning
+                  journey engaging and immersive. That's where literature comes
+                  in. We believe that by blending technology with literature,
+                </p>
+              </div>
             </div>
           </div>
         </div>
