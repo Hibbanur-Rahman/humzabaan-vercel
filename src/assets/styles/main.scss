@@ -112,7 +112,7 @@ $purple-primary:#752CAE;
 }
 
 .hero-section {
-    top: -75px !important;
+    top: -4.6785rem !important;
     z-index: -2;
     background-color: $primary-color !important;
 
@@ -120,7 +120,7 @@ $purple-primary:#752CAE;
 
 .hero-animation {
     animation: movingHeroSection 12s linear infinite;
-    top: -45px !important;
+    top: -2rem !important;
 
     img {
         width: 100% !important;
@@ -145,7 +145,7 @@ $purple-primary:#752CAE;
 }
 
 .who-we-are-section {
-    top: -85px !important;
+    top: -5.4125rem !important;
     position: relative;
     min-height: 920px !important;
     background: linear-gradient(to right bottom, $primary-color 70%, $secondary-color 30%);
@@ -167,7 +167,9 @@ $purple-primary:#752CAE;
         margin-top: 11.3rem !important;
         align-items: flex-start !important;
     }
-
+    .who-we-are-right{
+        max-width: 45rem !important;
+    }
 }
 
 .who-we-are-section::before {
@@ -178,15 +180,17 @@ $purple-primary:#752CAE;
     width: 100%;
     height: 100%;
     background:
-        linear-gradient(to bottom, $secondary-color 70%, transparent 30%), $red-primary url('../images/red-bg.svg') bottom/cover no-repeat;
+        linear-gradient(to bottom, $secondary-color 70%, transparent 30%), $red-primary url('../images/red-bg.svg') bottom/cover repeat;
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 50% 50%);
+    // background-blend-mode: multiply !important;
+
 }
 
 .why-humzabaan-section {
     position: relative;
-    top: -87px !important;
-    background: $red-primary url('../images/red-bg.svg') bottom/cover no-repeat;
-
+    top: -5.5627rem !important;
+    background: $red-primary url('../images/red-bg.svg') bottom/cover repeat;
+    background-blend-mode: multiply !important;
     .heading {
         h1 {
             color: $brown-primary !important;
@@ -219,8 +223,7 @@ $purple-primary:#752CAE;
     }
   .features-card{
     color: $brown-primary !important;
-    margin-bottom: -25% !important;
-    
+    background: linear-gradient(0deg,  $purple-primary 50%,rgba(255, 255, 255, 0) 50%), url('../images/red-bg.svg') repeat;
     z-index: 7 !important;
     .card-item-1{
         .card{
@@ -248,7 +251,7 @@ $purple-primary:#752CAE;
             max-width: fit-content;
             .head{
                 p{
-                    color: $brown-primary !important;
+                    color: #1D3AE2 !important;
                     margin-top: 2rem !important;
                     font-size: 3.2rem !important;
                 }
@@ -257,7 +260,7 @@ $purple-primary:#752CAE;
                 p{
                     position: relative;
                     bottom: -0.9rem !important;
-                    color: $brown-primary !important;
+                    color: #1D3AE2 !important;
                 }
             }
         }
@@ -269,7 +272,13 @@ $purple-primary:#752CAE;
 
 .about-urdu{
     position: relative;
-    top: -87px !important;
-    background-color: $purple-primary !important;
-    height: 100vh !important;
+    top: -5.56rem !important;
+    // background-color: $purple-primary !important;
+    background: linear-gradient(to bottom, $purple-primary 80%,$primary-color 50%);
+    .heading{
+        h1{
+
+            color: #FFD8A8 !important;
+        }
+    }
 }
