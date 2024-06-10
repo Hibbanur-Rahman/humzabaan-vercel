@@ -2,7 +2,7 @@ import btnBg from "../assets/images/btn-bg.png";
 
 const Button = () => {
   return (
-    <div className="btn-ctm btn rounded-4 m-0 p-0 position-relative overflow-hidden">
+    <div className="btn-ctm btn rounded-4 m-0 p-0 position-relative overflow-hidden w-auto">
       <div className="animation-div">
         <img src={btnBg} alt="btnBg" />
         <img src={btnBg} alt="btnBg" />
