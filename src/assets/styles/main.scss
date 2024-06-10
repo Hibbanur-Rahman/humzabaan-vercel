@@ -7,6 +7,7 @@ $btn-outline-color: rgba(109, 128, 4, 1);
 $btn-color: rgba(195, 216, 10, 1);
 $red-primary: #D75438;
 $brown-primary: #582C1A;
+$purple-primary:#752CAE;
 
 
 @keyframes movingLine {
@@ -216,6 +217,59 @@ $brown-primary: #582C1A;
             left: 2.6rem !important;
         }
     }
-  
+  .features-card{
+    color: $brown-primary !important;
+    margin-bottom: -25% !important;
+    
+    z-index: 7 !important;
+    .card-item-1{
+        .card{
+            background-color: #FFD912 !important;
+            max-width: fit-content;
+            .head{
+                p{
+                    color: $brown-primary !important;
+                    margin-top: 2rem !important;
+                    font-size: 3.2rem !important;
+                }
+            }
+            .content-list{
+                p{
+                    position: relative;
+                    bottom: -0.9rem !important;
+                    color: $brown-primary !important;
+                }
+            }
+        }
+    }
+    .card-item-2{
+        .card{
+            background-color: #00C6D0 !important;
+            max-width: fit-content;
+            .head{
+                p{
+                    color: $brown-primary !important;
+                    margin-top: 2rem !important;
+                    font-size: 3.2rem !important;
+                }
+            }
+            .content-list{
+                p{
+                    position: relative;
+                    bottom: -0.9rem !important;
+                    color: $brown-primary !important;
+                }
+            }
+        }
+    }
    
+  }
+   
+}
+
+.about-urdu{
+    position: relative;
+    top: -87px !important;
+    background-color: $purple-primary !important;
+    height: 100vh !important;
 }

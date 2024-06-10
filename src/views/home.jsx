@@ -18,7 +18,10 @@ import featureImg2 from "../assets/images/FEATURE-2.svg";
 import featureImg3 from "../assets/images/FEATURE-3.svg";
 import featureImg4 from "../assets/images/FEATURE-4.svg";
 import featuresCenterMobile from "../assets/images/features-center-mobile.svg";
-
+import featuresCardContent1 from "../assets/images/features-card-1.svg";
+import featuresCardHead1 from "../assets/images/features-card-head-1.svg";
+import featuresCardHead2 from "../assets/images/features-card-head-2.svg";
+import featuresContentList from "../assets/images/features-content-list.svg";
 const Home = () => {
   return (
     <div className="row m-0 p-0 overflow-hidden">
@@ -243,8 +246,180 @@ const Home = () => {
               </div>
             </div>
           </div>
+
+          <div className="features-card row m-0 p-0 mt-5 position-relative">
+            <div className="col-6 card-item-1 d-flex justify-content-end">
+              <div className="card rounded-5">
+                <div className="head row m-0 p-0 position-relative align-items-center justify-content-center">
+                  <img
+                    src={featuresCardHead1}
+                    alt=""
+                    className="m-0 p-0"
+                    style={{ height: "9rem" }}
+                  />
+                  <p className="kiddo-font m-0 p-0 fs-1 text-center position-absolute">
+                    COURSES
+                  </p>
+                </div>
+                <div className="card-content row m-0 p-0 position-relative align-items-center justify-content-center">
+                  <img
+                    src={featuresCardContent1}
+                    alt=""
+                    className="m-0 p-0"
+                    style={{}}
+                  />
+                  <div className="content-list  row m-0 p-0 position-absolute justify-content-center align-items-center">
+                    <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
+                      <p className="kiddo-font m-0 p-0 w-auto fs-2">
+                        Learning Alphabet
+                      </p>
+                      <img
+                        src={featuresContentList}
+                        alt=""
+                        className="m-0 p-0"
+                        style={{ height: "0.6rem", width: "80%" }}
+                      />
+                    </div>
+                    <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
+                      <p className="kiddo-font m-0 p-0 w-auto fs-2">
+                        Alphabets Groups
+                      </p>
+                      <img
+                        src={featuresContentList}
+                        alt=""
+                        className="m-0 p-0"
+                        style={{ height: "0.6rem", width: "80%" }}
+                      />
+                    </div>
+                    <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
+                      <p className="kiddo-font m-0 p-0 w-auto fs-2">
+                        Understanding Shapes
+                      </p>
+                      <img
+                        src={featuresContentList}
+                        alt=""
+                        className="m-0 p-0"
+                        style={{ height: "0.6rem", width: "80%" }}
+                      />
+                    </div>
+                    <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
+                      <p className="kiddo-font m-0 p-0 w-auto fs-2">
+                        Forming Words
+                      </p>
+                      <img
+                        src={featuresContentList}
+                        alt=""
+                        className="m-0 p-0"
+                        style={{ height: "0.6rem", width: "80%" }}
+                      />
+                    </div>
+                    <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
+                      <p className="kiddo-font m-0 p-0 w-auto fs-2">
+                        Learning Vowels
+                      </p>
+                      <img
+                        src={featuresContentList}
+                        alt=""
+                        className="m-0 p-0"
+                        style={{ height: "0.6rem", width: "80%" }}
+                      />
+                    </div>
+                    <div className="w-auto mt-3">
+                      <Button content='LEARN MORE' />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-6 card-item-2 d-flex justify-content-end">
+              <div className="card rounded-5">
+                <div className="head row m-0 p-0 position-relative align-items-center justify-content-center">
+                  <img
+                    src={featuresCardHead2}
+                    alt=""
+                    className="m-0 p-0"
+                    style={{ height: "9rem" }}
+                  />
+                  <p className="kiddo-font m-0 p-0 fs-1 text-center position-absolute">
+                    COURSES
+                  </p>
+                </div>
+                <div className="card-content row m-0 p-0 position-relative align-items-center justify-content-center">
+                  <img
+                    src={featuresCardContent1}
+                    alt=""
+                    className="m-0 p-0"
+                    style={{}}
+                  />
+                  <div className="content-list  row m-0 p-0 position-absolute justify-content-center align-items-center">
+                    <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
+                      <p className="kiddo-font m-0 p-0 w-auto fs-2">
+                        Learning Alphabet
+                      </p>
+                      <img
+                        src={featuresContentList}
+                        alt=""
+                        className="m-0 p-0"
+                        style={{ height: "0.6rem", width: "80%" }}
+                      />
+                    </div>
+                    <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
+                      <p className="kiddo-font m-0 p-0 w-auto fs-2">
+                        Alphabets Groups
+                      </p>
+                      <img
+                        src={featuresContentList}
+                        alt=""
+                        className="m-0 p-0"
+                        style={{ height: "0.6rem", width: "80%" }}
+                      />
+                    </div>
+                    <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
+                      <p className="kiddo-font m-0 p-0 w-auto fs-2">
+                        Understanding Shapes
+                      </p>
+                      <img
+                        src={featuresContentList}
+                        alt=""
+                        className="m-0 p-0"
+                        style={{ height: "0.6rem", width: "80%" }}
+                      />
+                    </div>
+                    <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
+                      <p className="kiddo-font m-0 p-0 w-auto fs-2">
+                        Forming Words
+                      </p>
+                      <img
+                        src={featuresContentList}
+                        alt=""
+                        className="m-0 p-0"
+                        style={{ height: "0.6rem", width: "80%" }}
+                      />
+                    </div>
+                    <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
+                      <p className="kiddo-font m-0 p-0 w-auto fs-2">
+                        Learning Vowels
+                      </p>
+                      <img
+                        src={featuresContentList}
+                        alt=""
+                        className="m-0 p-0"
+                        style={{ height: "0.6rem", width: "80%" }}
+                      />
+                    </div>
+                    <div className="w-auto mt-3">
+                      <Button content='LEARN MORE' />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+      {/** ================= About-Urdu-section ==================  */}
+      <section className="about-urdu row  m-0 p-0 justify-content-center"></section>
     </div>
   );
 };

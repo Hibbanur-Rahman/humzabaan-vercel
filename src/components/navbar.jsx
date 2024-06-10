@@ -30,7 +30,7 @@ const Navbar = () => {
         </div>
 
         <div className="logo col-3 d-flex align-items-center justify-content-center m-0 p-0">
-            <Button/>
+            <Button content='DOWNLOAD NOW'/>
         </div>
 
       </div>
