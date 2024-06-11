@@ -5,6 +5,7 @@ import welcomeUrdu from "../assets/images/welcome-urdu-text.svg";
 import headingBg1 from "../assets/images/heading-bg.svg";
 import headingBg2 from "../assets/images/heading-bg-2.svg";
 import headingBg3 from "../assets/images/heading-bg-3.svg";
+import headingSubBg from "../assets/images/heading-sub-bg.svg";
 import videoFrame from "../assets/images/video-frame.svg";
 import playBtn from "../assets/images/play-btn.svg";
 import teacherGif from "../assets/images/teacher-img.gif";
@@ -26,6 +27,9 @@ import featuresCardHead2 from "../assets/images/features-card-head-2.svg";
 import featuresContentList1 from "../assets/images/features-content-list-1.svg";
 import featuresContentList2 from "../assets/images/features-content-list-2.svg";
 import aboutUrduBg from "../assets/images/HISTORIC-PAGE.svg";
+import VideoPlayerFrame from '../assets/images/video-player-frame.svg';
+import GhalibThumbNailVideo from '../assets/images/ghalib-thumbnail-video.svg';
+import AboutUrduInk from '../assets/images/about-urdu-ink.svg';
 const Home = () => {
   return (
     <div className="row m-0 p-0 overflow-hidden">
@@ -126,7 +130,6 @@ const Home = () => {
                 src={teacherGif}
                 alt=""
                 className="teacher-gif m-0 p-0 position-absolute z-3"
-                // style={{cursor:'pointer'}}
               />
             </div>
           </div>
@@ -426,19 +429,81 @@ const Home = () => {
 
       {/** ================= About-Urdu-section ==================  */}
       <section className="about-urdu row  m-0 p-0 pt-5 justify-content-center">
-        <div className="row col-10 m-0 p-0 position-relative justify-content-center">
-          <img src={aboutUrduBg} alt="" className="m-0 p-0 w-100" />
+        <div className="row col-11 m-0 p-0 position-relative justify-content-center">
+          <img src={aboutUrduBg} alt="" className="about-urdu-bg m-0 p-0 w-100" />
+          <img src={AboutUrduInk} alt="" className="about-urdu-ink-img m-0 p-0 position-absolute" />
+
           <div className="about-urdu-content row col-11 m-0 p-0 position-absolute justify-content-center">
             <div className="heading m-0 p-0 mt-5 position-relative d-flex align-items-center justify-content-center">
               <img src={headingBg3} alt="heading-bg" className="m-0 p-0 " />
               <h1 className="m-0 p-0 position-absolute">ABOUT URDU</h1>
             </div>
-            <p className="kiddo-font m-0 p-0 text-center mt-4 fs-5">Urdu, known for its soul-stirring poetry and profound literary heritage, serves as a beacon of cultural identity for millions worldwide. Originating from the Indo-Aryan lineage, Urdu's linguistic tapestry is woven with influences from Persian, Arabic, and Turkish, enriching its vocabulary with depth and diversity. Spoken predominantly in South Asia, notably in Pakistan and parts of India, Urdu's influence resonates deeply with diaspora communities across the globe, including in countries like the United Arab Emirates, United Kingdom, Saudi Arabia, United States, Canada, Australia, and South Africa.</p>
-            <p className="kiddo-font m-0 p-0 text-center fs-1 mt-5">URDU FOR ALL</p>
-            <p className="kiddo-font m-0 p-0 text-center fs-5">With an estimated more than 100 million speakers worldwide, Urdu holds a prominent position in global linguistic diversity. Pakistan stands as its heartland, with around 70-80 million native speakers, while in India, it thrives alongside other regional languages, boasting approximately 50-60 million speakers. Beyond South Asia, countries like the United Arab Emirates and the United Kingdom host significant Urdu-speaking populations.</p>
+            <p className="kiddo-font m-0 p-0 text-center mt-4 fs-5">
+              Urdu, known for its soul-stirring poetry and profound literary
+              heritage, serves as a beacon of cultural identity for millions
+              worldwide. Originating from the Indo-Aryan lineage, Urdu's
+              linguistic tapestry is woven with influences from Persian, Arabic,
+              and Turkish, enriching its vocabulary with depth and diversity.
+              Spoken predominantly in South Asia, notably in Pakistan and parts
+              of India, Urdu's influence resonates deeply with diaspora
+              communities across the globe, including in countries like the
+              United Arab Emirates, United Kingdom, Saudi Arabia, United States,
+              Canada, Australia, and South Africa.
+            </p>
+            <p className="kiddo-font m-0 p-0 text-center fs-2 mt-5">
+              URDU FOR ALL
+            </p>
+            <p className="kiddo-font m-0 p-0 text-center fs-5">
+              With an estimated more than 100 million speakers worldwide, Urdu
+              holds a prominent position in global linguistic diversity.
+              Pakistan stands as its heartland, with around 70-80 million native
+              speakers, while in India, it thrives alongside other regional
+              languages, boasting approximately 50-60 million speakers. Beyond
+              South Asia, countries like the United Arab Emirates and the United
+              Kingdom host significant Urdu-speaking populations.
+            </p>
+            <div className="row m-0 p-0 justify-content-center align-items-center">
+              <div className="sub-heading m-0 p-0 mt-5 mb-5 position-relative d-flex align-items-center justify-content-center">
+                <img src={headingSubBg} alt="heading-bg" className="m-0 p-0 " />
+                <h1 className="kiddo-font m-0 p-0 position-absolute">
+                  HISTORY OF URDU
+                </h1>
+              </div>
+
+              <div className="col-5 m-0 p-0 d-flex align-content-end justify-content-end">
+                  <div className="video-player position-relative d-flex justify-content-center align-items-center">
+                    <img src={VideoPlayerFrame} alt="Video Player Frame" className="m-0 p-0 z-3" />
+                    <img src={GhalibThumbNailVideo} alt="video thumbnail" className="m-0 p-0 position-absolute z-1"/>
+                    <img src={playBtn} alt="" className="m-0 p-0 position-absolute " style={{zIndex:'7',cursor:'pointer'}} />
+                  </div>
+              </div>
+              <div className="col-6 m-0 p-0 ms-5">
+                <p className="kiddo-font m-0 p-0 text-center fs-5">
+                  Urdu, originating in the 13th century in North India, emerged
+                  as a linguistic synthesis of Persian, Arabic, Turkish, and
+                  local dialects, initially known as "Rekhta." Flourishing
+                  during the Mughal era, it served as a language of the courts
+                  and cultural exchange among diverse communities. With the
+                  patronage of Mughal rulers, Urdu evolved into a literary
+                  language, fostering masterpieces of poetry, prose, and art.
+                </p>
+                <p className="kiddo-font m-0 p-0 text-center fs-5 mt-5">
+                  During British colonial rule, it became a symbol of resistance
+                  and cultural identity, propelling Urdu literature and
+                  journalism movements. Partition in 1947 saw Urdu become the
+                  official language of Pakistan, while Hindi became India's
+                  language, marking a pivotal moment in Urdu's history. Despite
+                  political divisions, Urdu retained its status as a unifying
+                  force,
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
+      {/** ================= Testimonial-section ==================  */}
+
     </div>
   );
 };

@@ -275,10 +275,28 @@ $purple-primary:#752CAE;
     top: -5.56rem !important;
     // background-color: $purple-primary !important;
     background: linear-gradient(to bottom, $purple-primary 80%,$primary-color 50%);
+    min-height: max-content !important;
+    max-height: max-content !important;
     .heading{
         h1{
 
             color: #FFD8A8 !important;
         }
+    }
+    .about-urdu-bg{
+        max-width: 92.8125rem !important;
+        max-height: 79rem !important;
+        min-height: 79rem !important;
+    }
+    .about-urdu-content{
+        max-width: 85rem !important;
+        max-height: 70rem !important;
+        min-height: 70rem !important;
+    }
+    .about-urdu-ink-img{
+        height: 400px !important;
+        bottom: -50px !important;
+        right: 120px;
+        z-index: 8 !important;
     }
 }
