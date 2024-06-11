@@ -9,7 +9,7 @@ $red-primary: #D75438;
 $brown-primary: #582C1A;
 $purple-primary: #752CAE;
 
-body{
+body {
     background-color: #7FD839;
 }
 
@@ -332,6 +332,7 @@ body{
 
     .testimonial-content {
         margin-top: 7rem !important;
+
         .heading {
             h1 {
 
@@ -339,32 +340,39 @@ body{
             }
         }
     }
-    .testimonial-list-item{
+
+    .testimonial-list-item {
         max-width: 25rem !important;
-        .card{
+
+        .card {
             max-width: 25rem !important;
             position: relative;
             z-index: 7 !important;
-            .image{
+
+            .image {
                 height: 90px !important;
                 width: 90px !important;
                 border-color: $brown-primary !important;
                 background-color: #FFD912 !important;
-                img{
+
+                img {
                     height: 80px !important;
                     width: 80px !important;
                 }
             }
+
             .sub-heading {
-                h2{
+                h2 {
                     color: #FFD912 !important;
                 }
             }
-            p{
+
+            p {
                 z-index: 8;
             }
         }
-        .card::after{
+
+        .card::after {
             content: "";
             position: absolute;
             bottom: -40px !important;
@@ -379,45 +387,103 @@ body{
     }
 }
 
-.contact-us{
+.contact-us {
     position: relative;
     z-index: 9 !important;
     top: -7rem !important;
-    background:linear-gradient(to bottom, $primary-color 70%,#7FD839 30%) ;
-    .contact-content{
-       
+    background: linear-gradient(to bottom, $primary-color 70%, #7FD839 30%);
+
+    .contact-us-frame {
+        min-height: 60rem !important;
+        max-height: 60rem !important;
+        max-width: 80rem !important;
+    }
+
+    .contact-content {
+        max-width: 80rem !important;
+
+        .contact-ghalib-img {
+            max-width: 41rem !important;
+        }
+
+        form{
+            max-width: 35rem !important;
+            z-index: 9;
+        }
+        input{
+            height: 4rem !important;
+            border: 3px dashed $primary-color !important;
+            outline: none;
+            background-color: rgba(180, 205, 76, 0.3) !important;
+            font-family: 'hey-kiddo';
+
+            &::placeholder {
+                font-family: 'hey-kiddo';
+                font-size: 2rem !important;
+                line-height: 2rem !important;
+                color: #000;
+                margin-top: 5px !important;
+            }
+        }
+        textarea {
+            border: 3px dashed $primary-color !important;
+            outline: none;
+            background-color: rgba(180, 205, 76, 0.3) !important;
+            font-family: 'hey-kiddo';
+            height: 12rem !important;
+            &::placeholder {
+                font-family: 'hey-kiddo';
+                font-size: 2rem !important;
+                line-height: 2rem !important;
+                color: #000;
+            }
+        }
+        .line{
+            height: 12px !important;
+            width: 44rem !important;
+            position: absolute;
+            bottom: 86px;
+            left: 2px;
+            background-color: #84B5FF !important;
+        }
     }
 }
 
 
-.footer{
+.footer {
     padding-bottom: -8rem !important;
     // height: 50vh !important;
-    background-color:#7FD839 !important ;
+    background-color: #7FD839 !important;
     position: relative;
     top: -7.1rem !important;
-    h3{
+
+    h3 {
         color: $primary-color !important;
     }
-    .icon{
+
+    .icon {
         background-color: #1D3AE2 !important;
         height: 45px !important;
         width: 45px !important;
-        i{
+
+        i {
             color: #7FD839 !important;
         }
     }
-    .quicks-links{
-        a{
+
+    .quicks-links {
+        a {
             color: #1D3AE2 !important;
         }
     }
-    input{
-        color:#255102 !important;
+
+    input {
+        color: #255102 !important;
         border: 2px dashed #255102;
         outline: none;
         background-color: #579B22 !important;
-        &::placeholder{
+
+        &::placeholder {
             color: #255102 !important;
             font-family: 'hey-kiddo';
             text-align: center;

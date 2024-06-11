@@ -6,7 +6,7 @@ import headingBg1 from "../assets/images/heading-bg.svg";
 import headingBg2 from "../assets/images/heading-bg-2.svg";
 import headingBg3 from "../assets/images/heading-bg-3.svg";
 import headingBg4 from "../assets/images/heading-bg-4.svg";
-import headingBg5 from '../assets/images/heading-bg-5.svg';
+import headingBg5 from "../assets/images/heading-bg-5.svg";
 import headingSubBg from "../assets/images/heading-sub-bg.svg";
 import videoFrame from "../assets/images/video-frame.svg";
 import playBtn from "../assets/images/play-btn.svg";
@@ -37,7 +37,9 @@ import testimonialProfileImg from "../assets/images/testimonial-profile-img.svg"
 import testimonialSubHeading from "../assets/images/testimonial-sub-heading.svg";
 import star from "../assets/images/star.svg";
 import startFill from "../assets/images/star-fill.svg";
-import contactUsFrame from '../assets/images/contact-us-frame.svg';
+import contactUsFrame from "../assets/images/contact-us-frame.svg";
+import ContactGhalib from "../assets/images/contact-ghalib.gif";
+
 import Footer from "../components/footer";
 const Home = () => {
   return (
@@ -689,20 +691,54 @@ const Home = () => {
       {/** ================= Contact-us-section ==================  */}
       <section className="contact-us row m-0 p-0 justify-content-center">
         <div className="col-11 m-0 p-0 mt-5 position-relative d-flex justify-content-center">
-          <img src={contactUsFrame} alt="contact us frame" className="contact-us-frame m-0 p-0" />
+          <img
+            src={contactUsFrame}
+            alt="contact us frame"
+            className="contact-us-frame m-0 p-0"
+          />
           <div className="contact-content row col-10 m-0 p-0 mt-5 position-absolute justify-content-center align-items-center ">
             <div className="heading m-0 p-0 mt-5 position-relative d-flex align-items-center justify-content-center">
               <img src={headingBg5} alt="heading-bg" className="m-0 p-0 " />
               <h1 className="m-0 p-0 position-absolute">CONTACT US</h1>
             </div>
-           
+            <div className="row m-0 p-0 w-100  justify-content-center">
+              <div className="col-6 m-0 p-0 d-flex justify-content-end pt-4 mt-1">
+                <form action="" className="m-0 p-0 mt-5 pt-5">
+                  <input
+                    className="m-0 p-3 mb-4 rounded-5 w-100"
+                    name="name"
+                    id="name"
+                    placeholder="Full Name"
+                  />
+                  <input
+                    className="m-0 p-3 mb-4 rounded-5 w-100"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                  />
+                  <textarea name="message" id="message" className="m-0 p-0 mb-4 rounded-5 w-100 p-3" placeholder="Message"></textarea>
+                  <div className="d-flex w-100 justify-content-center align-items-center">
+                    <Button content="Submit" />
+                  </div>
+                </form>
+                <div className="line"></div>
+              </div>
+              <div className="col-6 d-flex justify-content-start">
+                <div className="w-auto">
+                  <img
+                    src={ContactGhalib}
+                    alt="ghalib img"
+                    className="contact-ghalib-img m-0 p-0"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-
       {/** ================= Footer-section ==================  */}
-      <Footer/>
+      <Footer />
     </div>
   );
 };
