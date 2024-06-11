@@ -5,6 +5,8 @@ import welcomeUrdu from "../assets/images/welcome-urdu-text.svg";
 import headingBg1 from "../assets/images/heading-bg.svg";
 import headingBg2 from "../assets/images/heading-bg-2.svg";
 import headingBg3 from "../assets/images/heading-bg-3.svg";
+import headingBg4 from "../assets/images/heading-bg-4.svg";
+import headingBg5 from '../assets/images/heading-bg-5.svg';
 import headingSubBg from "../assets/images/heading-sub-bg.svg";
 import videoFrame from "../assets/images/video-frame.svg";
 import playBtn from "../assets/images/play-btn.svg";
@@ -27,9 +29,16 @@ import featuresCardHead2 from "../assets/images/features-card-head-2.svg";
 import featuresContentList1 from "../assets/images/features-content-list-1.svg";
 import featuresContentList2 from "../assets/images/features-content-list-2.svg";
 import aboutUrduBg from "../assets/images/HISTORIC-PAGE.svg";
-import VideoPlayerFrame from '../assets/images/video-player-frame.svg';
-import GhalibThumbNailVideo from '../assets/images/ghalib-thumbnail-video.svg';
-import AboutUrduInk from '../assets/images/about-urdu-ink.svg';
+import VideoPlayerFrame from "../assets/images/video-player-frame.svg";
+import GhalibThumbNailVideo from "../assets/images/ghalib-thumbnail-video.svg";
+import AboutUrduInk from "../assets/images/about-urdu-ink.svg";
+import testimonialFrame from "../assets/images/testimonial-frame.svg";
+import testimonialProfileImg from "../assets/images/testimonial-profile-img.svg";
+import testimonialSubHeading from "../assets/images/testimonial-sub-heading.svg";
+import star from "../assets/images/star.svg";
+import startFill from "../assets/images/star-fill.svg";
+import contactUsFrame from '../assets/images/contact-us-frame.svg';
+import Footer from "../components/footer";
 const Home = () => {
   return (
     <div className="row m-0 p-0 overflow-hidden">
@@ -430,8 +439,16 @@ const Home = () => {
       {/** ================= About-Urdu-section ==================  */}
       <section className="about-urdu row  m-0 p-0 pt-5 justify-content-center">
         <div className="row col-11 m-0 p-0 position-relative justify-content-center">
-          <img src={aboutUrduBg} alt="" className="about-urdu-bg m-0 p-0 w-100" />
-          <img src={AboutUrduInk} alt="" className="about-urdu-ink-img m-0 p-0 position-absolute" />
+          <img
+            src={aboutUrduBg}
+            alt=""
+            className="about-urdu-bg m-0 p-0 w-100"
+          />
+          <img
+            src={AboutUrduInk}
+            alt=""
+            className="about-urdu-ink-img m-0 p-0 position-absolute"
+          />
 
           <div className="about-urdu-content row col-11 m-0 p-0 position-absolute justify-content-center">
             <div className="heading m-0 p-0 mt-5 position-relative d-flex align-items-center justify-content-center">
@@ -471,11 +488,24 @@ const Home = () => {
               </div>
 
               <div className="col-5 m-0 p-0 d-flex align-content-end justify-content-end">
-                  <div className="video-player position-relative d-flex justify-content-center align-items-center">
-                    <img src={VideoPlayerFrame} alt="Video Player Frame" className="m-0 p-0 z-3" />
-                    <img src={GhalibThumbNailVideo} alt="video thumbnail" className="m-0 p-0 position-absolute z-1"/>
-                    <img src={playBtn} alt="" className="m-0 p-0 position-absolute " style={{zIndex:'7',cursor:'pointer'}} />
-                  </div>
+                <div className="video-player position-relative d-flex justify-content-center align-items-center">
+                  <img
+                    src={VideoPlayerFrame}
+                    alt="Video Player Frame"
+                    className="m-0 p-0 z-3"
+                  />
+                  <img
+                    src={GhalibThumbNailVideo}
+                    alt="video thumbnail"
+                    className="m-0 p-0 position-absolute z-1"
+                  />
+                  <img
+                    src={playBtn}
+                    alt=""
+                    className="m-0 p-0 position-absolute "
+                    style={{ zIndex: "7", cursor: "pointer" }}
+                  />
+                </div>
               </div>
               <div className="col-6 m-0 p-0 ms-5">
                 <p className="kiddo-font m-0 p-0 text-center fs-5">
@@ -503,7 +533,176 @@ const Home = () => {
       </section>
 
       {/** ================= Testimonial-section ==================  */}
+      <section className="testimonial row m-0 p-0 pt-5  justify-content-center position-relative">
+        <div className="col-11 m-0 p-0 mt-5 position-relative d-flex justify-content-center">
+          <img
+            src={testimonialFrame}
+            alt="testimonial frame"
+            className="testimonial-frame m-0 p-0 "
+          />
+          <div className="testimonial-content row col-10 m-0 p-0 position-absolute justify-content-center align-items-center ">
+            <div className="heading m-0 p-0 mt-5 position-relative d-flex align-items-center justify-content-center">
+              <img src={headingBg4} alt="heading-bg" className="m-0 p-0 " />
+              <h1 className="m-0 p-0 position-absolute">TESTIMONIAL</h1>
+            </div>
+            <div className="testimonial-list row m-0 p-0 justify-content-center mt-4">
+              <div className="testimonial-list-item col-4 d-flex justify-content-end">
+                <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
+                  <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
+                    <img
+                      src={testimonialProfileImg}
+                      className="m-0 p-0 rounded-circle"
+                      alt="profile-img"
+                    />
+                  </div>
+                  <div className="sub-heading crunch-font m-0 p-0 mt-2 position-relative d-flex align-items-center justify-content-center">
+                    <img
+                      src={testimonialSubHeading}
+                      alt="heading-bg"
+                      className="m-0 p-0 "
+                    />
+                    <h2 className="m-0 p-0 position-absolute">MIRZA GHALIB</h2>
+                  </div>
+                  <div className="rating row m-0 p-0 mt-2">
+                    <img src={startFill} alt="" className="m-0 p-0  w-auto" />
+                    <img
+                      src={startFill}
+                      alt=""
+                      className="m-0 p-0 ps-1 w-auto"
+                    />
+                    <img
+                      src={startFill}
+                      alt=""
+                      className="m-0 p-0 ps-1 w-auto"
+                    />
+                    <img
+                      src={startFill}
+                      alt=""
+                      className="m-0 p-0 ps-1 w-auto"
+                    />
+                    <img src={star} alt="" className="m-0 p-0 ps-1 w-auto" />
+                  </div>
+                  <p className="review m-0 p-0 text-center kiddo-font col-10 mt-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque scelerisque lorem dolor, non maximus est hendrerit
+                    ac.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque scelerisque lorem dolor, non maximus est hendrerit
+                    ac.
+                  </p>
+                </div>
+              </div>
+              <div className="testimonial-list-item col-4 d-flex justify-content-start">
+                <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
+                  <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
+                    <img
+                      src={testimonialProfileImg}
+                      className="m-0 p-0 rounded-circle"
+                      alt="profile-img"
+                    />
+                  </div>
+                  <div className="sub-heading crunch-font m-0 p-0 mt-2 position-relative d-flex align-items-center justify-content-center">
+                    <img
+                      src={testimonialSubHeading}
+                      alt="heading-bg"
+                      className="m-0 p-0 "
+                    />
+                    <h2 className="m-0 p-0 position-absolute">MIRZA GHALIB</h2>
+                  </div>
+                  <div className="rating row m-0 p-0 mt-2">
+                    <img src={startFill} alt="" className="m-0 p-0  w-auto" />
+                    <img
+                      src={startFill}
+                      alt=""
+                      className="m-0 p-0 ps-1 w-auto"
+                    />
+                    <img
+                      src={startFill}
+                      alt=""
+                      className="m-0 p-0 ps-1 w-auto"
+                    />
+                    <img
+                      src={startFill}
+                      alt=""
+                      className="m-0 p-0 ps-1 w-auto"
+                    />
+                    <img src={star} alt="" className="m-0 p-0 ps-1 w-auto" />
+                  </div>
+                  <p className="review m-0 p-0 text-center kiddo-font col-10 mt-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque scelerisque lorem dolor, non maximus est hendrerit
+                    ac.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque scelerisque lorem dolor, non maximus est hendrerit
+                    ac.
+                  </p>
+                </div>
+              </div>
+              <div className="testimonial-list-item col-4 d-flex justify-content-start">
+                <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
+                  <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
+                    <img
+                      src={testimonialProfileImg}
+                      className="m-0 p-0 rounded-circle"
+                      alt="profile-img"
+                    />
+                  </div>
+                  <div className="sub-heading crunch-font m-0 p-0 mt-2 position-relative d-flex align-items-center justify-content-center">
+                    <img
+                      src={testimonialSubHeading}
+                      alt="heading-bg"
+                      className="m-0 p-0 "
+                    />
+                    <h2 className="m-0 p-0 position-absolute">MIRZA GHALIB</h2>
+                  </div>
+                  <div className="rating row m-0 p-0 mt-2">
+                    <img src={startFill} alt="" className="m-0 p-0  w-auto" />
+                    <img
+                      src={startFill}
+                      alt=""
+                      className="m-0 p-0 ps-1 w-auto"
+                    />
+                    <img
+                      src={startFill}
+                      alt=""
+                      className="m-0 p-0 ps-1 w-auto"
+                    />
+                    <img
+                      src={startFill}
+                      alt=""
+                      className="m-0 p-0 ps-1 w-auto"
+                    />
+                    <img src={star} alt="" className="m-0 p-0 ps-1 w-auto" />
+                  </div>
+                  <p className="review m-0 p-0 text-center kiddo-font col-10 mt-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque scelerisque lorem dolor, non maximus est hendrerit
+                    ac.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque scelerisque lorem dolor, non maximus est hendrerit
+                    ac.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      {/** ================= Contact-us-section ==================  */}
+      <section className="contact-us row m-0 p-0 justify-content-center">
+        <div className="col-11 m-0 p-0 mt-5 position-relative d-flex justify-content-center">
+          <img src={contactUsFrame} alt="contact us frame" className="contact-us-frame m-0 p-0" />
+          <div className="contact-content row col-10 m-0 p-0 mt-5 position-absolute justify-content-center align-items-center ">
+            <div className="heading m-0 p-0 mt-5 position-relative d-flex align-items-center justify-content-center">
+              <img src={headingBg5} alt="heading-bg" className="m-0 p-0 " />
+              <h1 className="m-0 p-0 position-absolute">CONTACT US</h1>
+            </div>
+           
+          </div>
+        </div>
+      </section>
+
+
+      {/** ================= Footer-section ==================  */}
+      <Footer/>
     </div>
   );
 };

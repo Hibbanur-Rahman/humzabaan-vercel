@@ -7,8 +7,11 @@ $btn-outline-color: rgba(109, 128, 4, 1);
 $btn-color: rgba(195, 216, 10, 1);
 $red-primary: #D75438;
 $brown-primary: #582C1A;
-$purple-primary:#752CAE;
+$purple-primary: #752CAE;
 
+body{
+    background-color: #7FD839;
+}
 
 @keyframes movingLine {
     0% {
@@ -167,7 +170,8 @@ $purple-primary:#752CAE;
         margin-top: 11.3rem !important;
         align-items: flex-start !important;
     }
-    .who-we-are-right{
+
+    .who-we-are-right {
         max-width: 45rem !important;
     }
 }
@@ -191,112 +195,233 @@ $purple-primary:#752CAE;
     top: -5.5627rem !important;
     background: $red-primary url('../images/red-bg.svg') bottom/cover repeat;
     background-blend-mode: multiply !important;
+
     .heading {
         h1 {
             color: $brown-primary !important;
         }
     }
 
-    .features{
-        img{
-            height: 33rem ;
+    .features {
+        img {
+            height: 33rem;
         }
-        .features-center-mobile{
+
+        .features-center-mobile {
             z-index: 6 !important;
             width: 50rem !important;
             height: 28rem !important;
             bottom: -12rem;
         }
+
         .content {
             width: 300px !important;
             color: $brown-primary !important;
         }
-    
+
         .content-1 {
             top: 15% !important;
             right: 4rem !important;
         }
-        .content-2{
+
+        .content-2 {
             top: 15% !important;
             left: 2.6rem !important;
         }
     }
-  .features-card{
-    color: $brown-primary !important;
-    background: linear-gradient(0deg,  $purple-primary 50%,rgba(255, 255, 255, 0) 50%), url('../images/red-bg.svg') repeat;
-    z-index: 7 !important;
-    .card-item-1{
-        .card{
-            background-color: #FFD912 !important;
-            max-width: fit-content;
-            .head{
-                p{
-                    color: $brown-primary !important;
-                    margin-top: 2rem !important;
-                    font-size: 3.2rem !important;
+
+    .features-card {
+        color: $brown-primary !important;
+        background: linear-gradient(0deg, $purple-primary 50%, rgba(255, 255, 255, 0) 50%), url('../images/red-bg.svg') repeat;
+        z-index: 7 !important;
+
+        .card-item-1 {
+            .card {
+                background-color: #FFD912 !important;
+                max-width: fit-content;
+
+                .head {
+                    p {
+                        color: $brown-primary !important;
+                        margin-top: 2rem !important;
+                        font-size: 3.2rem !important;
+                    }
                 }
-            }
-            .content-list{
-                p{
-                    position: relative;
-                    bottom: -0.9rem !important;
-                    color: $brown-primary !important;
-                }
-            }
-        }
-    }
-    .card-item-2{
-        .card{
-            background-color: #00C6D0 !important;
-            max-width: fit-content;
-            .head{
-                p{
-                    color: #1D3AE2 !important;
-                    margin-top: 2rem !important;
-                    font-size: 3.2rem !important;
-                }
-            }
-            .content-list{
-                p{
-                    position: relative;
-                    bottom: -0.9rem !important;
-                    color: #1D3AE2 !important;
+
+                .content-list {
+                    p {
+                        position: relative;
+                        bottom: -0.9rem !important;
+                        color: $brown-primary !important;
+                    }
                 }
             }
         }
+
+        .card-item-2 {
+            .card {
+                background-color: #00C6D0 !important;
+                max-width: fit-content;
+
+                .head {
+                    p {
+                        color: #1D3AE2 !important;
+                        margin-top: 2rem !important;
+                        font-size: 3.2rem !important;
+                    }
+                }
+
+                .content-list {
+                    p {
+                        position: relative;
+                        bottom: -0.9rem !important;
+                        color: #1D3AE2 !important;
+                    }
+                }
+            }
+        }
+
     }
-   
-  }
-   
+
 }
 
-.about-urdu{
+.about-urdu {
     position: relative;
     top: -5.56rem !important;
     // background-color: $purple-primary !important;
-    background: linear-gradient(to bottom, $purple-primary 80%,$primary-color 50%);
+    background: linear-gradient(to bottom, $purple-primary 80%, $primary-color 50%);
     min-height: max-content !important;
     max-height: max-content !important;
-    .heading{
-        h1{
+
+    .heading {
+        h1 {
 
             color: #FFD8A8 !important;
         }
     }
-    .about-urdu-bg{
+
+    .about-urdu-bg {
         max-width: 92.8125rem !important;
         max-height: 79rem !important;
         min-height: 79rem !important;
     }
-    .about-urdu-content{
+
+    .about-urdu-content {
         max-width: 85rem !important;
         max-height: 70rem !important;
         min-height: 70rem !important;
     }
-    .about-urdu-ink-img{
+
+    .about-urdu-ink-img {
         height: 400px !important;
         bottom: -50px !important;
         right: 120px;
         z-index: 8 !important;
+    }
+}
+
+.testimonial {
+    top: -6.56rem !important;
+    // height: 100vh !important;
+    background-color: $primary-color !important;
+
+    .testimonial-frame {
+        max-height: 60rem !important;
+        width: 100% !important;
+    }
+
+    .testimonial-content {
+        margin-top: 7rem !important;
+        .heading {
+            h1 {
+
+                color: $brown-primary !important;
+            }
+        }
+    }
+    .testimonial-list-item{
+        max-width: 25rem !important;
+        .card{
+            max-width: 25rem !important;
+            position: relative;
+            z-index: 7 !important;
+            .image{
+                height: 90px !important;
+                width: 90px !important;
+                border-color: $brown-primary !important;
+                background-color: #FFD912 !important;
+                img{
+                    height: 80px !important;
+                    width: 80px !important;
+                }
+            }
+            .sub-heading {
+                h2{
+                    color: #FFD912 !important;
+                }
+            }
+            p{
+                z-index: 8;
+            }
+        }
+        .card::after{
+            content: "";
+            position: absolute;
+            bottom: -40px !important;
+            display: block;
+            width: 100px !important;
+            height: 100px;
+            background-color: #fff !important;
+            transform: rotate(45deg);
+            border-radius: 20px;
+            z-index: 0;
+        }
+    }
+}
+
+.contact-us{
+    position: relative;
+    z-index: 9 !important;
+    top: -7rem !important;
+    background:linear-gradient(to bottom, $primary-color 70%,#7FD839 30%) ;
+    .contact-content{
+       
+    }
+}
+
+
+.footer{
+    padding-bottom: -8rem !important;
+    // height: 50vh !important;
+    background-color:#7FD839 !important ;
+    position: relative;
+    top: -7.1rem !important;
+    h3{
+        color: $primary-color !important;
+    }
+    .icon{
+        background-color: #1D3AE2 !important;
+        height: 45px !important;
+        width: 45px !important;
+        i{
+            color: #7FD839 !important;
+        }
+    }
+    .quicks-links{
+        a{
+            color: #1D3AE2 !important;
+        }
+    }
+    input{
+        color:#255102 !important;
+        border: 2px dashed #255102;
+        outline: none;
+        background-color: #579B22 !important;
+        &::placeholder{
+            color: #255102 !important;
+            font-family: 'hey-kiddo';
+            text-align: center;
+            font-size: 1.5rem;
+        }
     }
 }
