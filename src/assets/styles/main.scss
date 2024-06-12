@@ -451,12 +451,14 @@ body {
 
 
 .footer {
-    padding-bottom: -8rem !important;
-    // height: 50vh !important;
+    
     background-color: #7FD839 !important;
     position: relative;
     top: -7.1rem !important;
-
+    .footer-content{
+        max-width: 82rem !important;
+    }
+   
     h3 {
         color: $primary-color !important;
     }
@@ -490,4 +492,8 @@ body {
             font-size: 1.5rem;
         }
     }
+}
+.bottom-last{
+    background-color: #579B22 !important;
+    margin-top: -60px !important;
 }

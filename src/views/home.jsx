@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navbar from "../components/navbar";
 import heroImg from "../assets/images/hero-img.png";
 import heroAnimation from "../assets/images/hero-animation.png";
@@ -739,6 +740,7 @@ const Home = () => {
 
       {/** ================= Footer-section ==================  */}
       <Footer />
+      
     </div>
   );
 };
