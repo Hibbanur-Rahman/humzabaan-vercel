@@ -32,6 +32,7 @@ import featuresCardHead2 from "../assets/images/features-card-head-2.svg";
 import featuresContentList1 from "../assets/images/features-content-list-1.svg";
 import featuresContentList2 from "../assets/images/features-content-list-2.svg";
 import aboutUrduBg from "../assets/images/HISTORIC-PAGE.svg";
+import aboutUrduBgMobile from '../assets/images/about-urdu-bg-mobile.svg';
 import VideoPlayerFrame from "../assets/images/video-player-frame.svg";
 import GhalibThumbNailVideo from "../assets/images/ghalib-thumbnail-video.svg";
 import AboutUrduInk from "../assets/images/about-urdu-ink.svg";
@@ -215,16 +216,16 @@ const Home = () => {
           <img src={headingBg2} alt="heading-bg" className="m-0 p-0 " />
           <h1 className="m-0 p-0 position-absolute">WHY HUMZABAAN ?</h1>
         </div>
-        <div className="features col-lg-10 m-0 p-0 mt-5">
-          <div className=" row m-0 p-0">
-            <div className="col-lg-6 m-0 p-0 position-relative d-flex justify-content-end ">
+        <div className="features col-lg-10 m-0 p-0 mt-lg-5">
+          <div className=" row m-0 p-0 justify-content-center">
+            <div className="col-lg-6 features-item features-item-margin-top  m-0 p-0 position-relative d-flex justify-content-end ">
               <img
                 src={featureImg1}
                 alt="feature image-1"
                 className="m-0 p-0 "
               />
               <div className="content content-1 position-absolute">
-                <h2 className="m-0 p-0 crunch-font text-center mb-4">
+                <h2 className="m-0 p-0 crunch-font text-center mb-lg-4 mb-2">
                   HISTORY OF URDU
                 </h2>
                 <p className="m-0 p-0 kiddo-font text-center">
@@ -236,14 +237,14 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <div className="col-lg-6 m-0 p-0 ps-2 position-relative d-flex justify-content-start ">
+            <div className="col-lg-6 features-item m-0 p-0 ps-2 position-relative d-flex justify-content-start ">
               <img
                 src={featureImg2}
                 alt="feature image-1"
-                className="m-0 p-0 "
+                className="feature-Img-2 m-0 p-0 "
               />
               <div className="content content-2 position-absolute">
-                <h2 className="m-0 p-0 crunch-font text-center mb-4">
+                <h2 className="m-0 p-0 crunch-font text-center mb-lg-4 mb-0">
                   COURSES / QUIZ
                 </h2>
                 <p className="m-0 p-0 kiddo-font text-center">
@@ -257,22 +258,22 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="row m-0 p-0 mb-3 d-lg-flex d-none position-relative align-items-center ">
+          <div className="row m-0 p-0 mb-3 d-lg-flex d-none position-relative align-items-center justify-content-center ">
             <img
               src={featuresCenterMobile}
               alt=""
               className="features-center-mobile position-absolute m-0 p-0"
             />
           </div>
-          <div className=" row m-0 p-0 mt-5">
-            <div className="col-lg-6 m-0 p-0 position-relative d-flex justify-content-end ">
+          <div className=" row m-0 p-0 mt-lg-5 justify-content-center">
+            <div className="col-lg-6 features-item m-0 p-0 position-relative d-flex justify-content-end ">
               <img
                 src={featureImg3}
                 alt="feature image-1"
                 className="m-0 p-0 "
               />
               <div className="content content-1 position-absolute">
-                <h2 className="m-0 p-0 crunch-font text-center mb-4">
+                <h2 className="m-0 p-0 crunch-font text-center mb-lg-4 mb-2">
                   DICTIONARY
                 </h2>
                 <p className="m-0 p-0 kiddo-font text-center">
@@ -284,14 +285,14 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <div className="col-lg-6 m-0 p-0 ps-2 position-relative d-flex justify-content-start ">
+            <div className="col-lg-6 features-item m-0 p-0 ps-2 position-relative d-flex justify-content-start ">
               <img
                 src={featureImg4}
                 alt="feature image-1"
                 className="m-0 p-0 "
               />
               <div className="content content-2 position-absolute">
-                <h2 className="m-0 p-0 crunch-font text-center mb-4">
+                <h2 className="m-0 p-0 crunch-font text-center mb-lg-4 mb-2">
                   LITERATURE
                 </h2>
                 <p className="m-0 p-0 kiddo-font text-center">
@@ -304,8 +305,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="features-card row m-0 p-0 mt-5 pb-5 position-relative">
-          <div className="col-lg-6 card-item-1 d-flex justify-content-end">
+        <div className="features-card row m-0 p-0 mt-lg-5 pb-lg-5 position-relative">
+          <div className="col-lg-6 card-item-1 d-flex justify-content-lg-end justify-content-center">
             <div className="card rounded-5">
               <div className="head row m-0 p-0 position-relative align-items-center justify-content-center">
                 <img
@@ -388,7 +389,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-6 card-item-2 mt-lg-0 mt-4 d-flex justify-content-start">
+          <div className="col-lg-6 card-item-2 mt-lg-0 mt-4 d-flex justify-content-lg-start justify-content-center">
             <div className="card rounded-5">
               <div className="head row m-0 p-0 position-relative align-items-center justify-content-center">
                 <img
@@ -480,7 +481,12 @@ const Home = () => {
           <img
             src={aboutUrduBg}
             alt=""
-            className="about-urdu-bg m-0 p-0 w-100"
+            className="about-urdu-bg d-lg-flex d-none m-0 p-0 w-100"
+          />
+          <img
+            src={aboutUrduBgMobile}
+            alt=""
+            className="about-urdu-bg d-lg-none d-flex m-0 p-0 w-100"
           />
           <img
             src={AboutUrduInk}
@@ -572,19 +578,19 @@ const Home = () => {
 
       {/** ================= Testimonial-section ==================  */}
       <section className="testimonial row m-0 p-0 pt-5  justify-content-center position-relative">
-        <div className="col-11 m-0 p-0 mt-5 position-relative d-flex justify-content-center">
+        <div className="col-lg-11 m-0 p-0 mt-5 position-relative d-flex justify-content-center">
           <img
             src={testimonialFrame}
             alt="testimonial frame"
             className="testimonial-frame m-0 p-0 "
           />
-          <div className="testimonial-content row col-10 m-0 p-0 position-absolute justify-content-center align-items-center ">
+          <div className="testimonial-content row col-lg-10 m-0 p-0 position-absolute justify-content-center align-items-center ">
             <div className="heading m-0 p-0 mt-5 position-relative d-flex align-items-center justify-content-center">
               <img src={headingBg4} alt="heading-bg" className="m-0 p-0 " />
               <h1 className="m-0 p-0 position-absolute">TESTIMONIAL</h1>
             </div>
             <div className="testimonial-list row m-0 p-0 justify-content-center mt-4">
-              <div className="testimonial-list-item col-4 d-flex justify-content-end">
+              <div className="testimonial-list-item col-lg-4 d-flex justify-content-end">
                 <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
                   <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
                     <img
@@ -629,7 +635,7 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-              <div className="testimonial-list-item col-4 d-flex justify-content-start">
+              <div className="testimonial-list-item col-lg-4 d-flex justify-content-start">
                 <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
                   <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
                     <img
@@ -674,7 +680,7 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-              <div className="testimonial-list-item col-4 d-flex justify-content-start">
+              <div className="testimonial-list-item col-lg-4 d-flex justify-content-start">
                 <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
                   <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
                     <img
@@ -726,19 +732,19 @@ const Home = () => {
 
       {/** ================= Contact-us-section ==================  */}
       <section className="contact-us row m-0 p-0 justify-content-center">
-        <div className="col-11 m-0 p-0 mt-5 position-relative d-flex justify-content-center">
+        <div className="col-lg-11 m-0 p-0 mt-5 position-relative d-flex justify-content-center">
           <img
             src={contactUsFrame}
             alt="contact us frame"
             className="contact-us-frame m-0 p-0"
           />
-          <div className="contact-content row col-10 m-0 p-0 mt-5 position-absolute justify-content-center align-items-center ">
+          <div className="contact-content row col-lg-10 m-0 p-0 mt-5 position-absolute justify-content-center align-items-center ">
             <div className="heading m-0 p-0 mt-5 position-relative d-flex align-items-center justify-content-center">
               <img src={headingBg5} alt="heading-bg" className="m-0 p-0 " />
               <h1 className="m-0 p-0 position-absolute">CONTACT US</h1>
             </div>
             <div className="row m-0 p-0 w-100  justify-content-center">
-              <div className="col-6 m-0 p-0 d-flex justify-content-end pt-4 mt-1">
+              <div className="col-lg-6 m-0 p-0 d-flex justify-content-lg-end justify-content-center pt-4 mt-1">
                 <form action="" className="m-0 p-0 mt-5 pt-5">
                   <input
                     className="m-0 p-3 mb-4 rounded-5 w-100"
@@ -757,9 +763,9 @@ const Home = () => {
                     <Button content="Submit" />
                   </div>
                 </form>
-                <div className="line"></div>
+                <div className="line d-lg-flex d-none"></div>
               </div>
-              <div className="col-6 d-flex justify-content-start">
+              <div className="col-lg-6 d-flex justify-content-lg-start justify-content-center">
                 <div className="w-auto">
                   <img
                     src={ContactGhalib}

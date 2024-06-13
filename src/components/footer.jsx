@@ -10,7 +10,7 @@ const Footer = () => {
     <>
       <div className="footer row m-0 p-0 pt-5 justify-content-center">
         <div className="footer-content row col-10 justify-content-center">
-          <div className="col-3 d-flex flex-column align-items-center">
+          <div className="col-lg-3 d-flex flex-column align-items-center order-last order-lg-first">
             <h3 className="crunch-font m-0 p-0 mb-4">FOLLOW US</h3>
             <div className="row m-0 p-0">
               <Link
@@ -82,7 +82,7 @@ const Footer = () => {
               />
             </Link>
           </div>
-          <div className="col-3 d-flex flex-column align-items-center">
+          <div className="col-lg-3 d-flex flex-column align-items-center">
             <h3 className="crunch-font m-0 p-0 mb-4">DOWNLOAD APP</h3>
             <div className="" style={{ width: "15rem" }}>
               <PlayStoreBtn
@@ -99,7 +99,7 @@ const Footer = () => {
               />
             </div>
           </div>
-          <div className="col-3 d-flex flex-column align-items-center">
+          <div className="col-lg-3 d-flex flex-column align-items-center">
             <h3 className="crunch-font m-0 p-0 mb-4">SUBSCRIBE</h3>
             <form action="" className="m-0 p-0 w-100">
               <input
@@ -119,7 +119,7 @@ const Footer = () => {
               </div>
             </form>
           </div>
-          <div className=" quicks-links col-3 d-flex flex-column align-items-center">
+          <div className=" quicks-links col-lg-3 d-flex flex-column align-items-center">
             <h3 className="crunch-font m-0 p-0 mb-4">QUICK LINKS</h3>
             <Link to="/" className="kiddo-font m-0 p-0">
               <p className="m-0 p-0 kiddo-font fs-3">Courses</p>

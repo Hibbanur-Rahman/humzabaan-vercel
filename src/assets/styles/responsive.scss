@@ -40,7 +40,7 @@ $purple-primary: #752CAE;
 
     .who-we-are-section {
         background-color: $primary-color;
-        background:$primary-color;
+        background: $primary-color;
         /* Fill with primary color */
 
         .heading-p {
@@ -72,10 +72,12 @@ $purple-primary: #752CAE;
             background-blend-mode: multiply !important;
             margin-top: 0rem !important;
             padding-top: 30px !important;
-            img{
-                position:  relative !important;
+
+            img {
+                position: relative !important;
             }
-            .downloads-btns{
+
+            .downloads-btns {
                 align-items: center;
             }
         }
@@ -85,4 +87,40 @@ $purple-primary: #752CAE;
         background: none;
     }
 
+    .features {
+        img {
+            height: 31.25rem !important;
+            width: 27.25rem !important;
+        }
+
+        .content {
+            width: 285px !important;
+        }
+
+
+        .content-1 {
+            top: 22% !important;
+            right: 0.8rem !important;
+        }
+        .content-2 {
+            top: 23% !important;
+            left: 1.1rem !important;
+        }
+        .feature-Img-2{
+            height: 33rem !important;
+        }
+
+        .features-item {
+          
+            width: auto !important;
+            margin-top: -139px !important;
+        }
+        .features-item-margin-top{
+            margin-top: 0px !important;
+        }
+       
+    }
+    .features-card {
+        background: linear-gradient(0deg, #752CAE 80%, rgba(255, 255, 255, 0) 50%), url(/Humzabaan/src/assets/images/red-bg.svg) repeat !important;
+    }
 }
