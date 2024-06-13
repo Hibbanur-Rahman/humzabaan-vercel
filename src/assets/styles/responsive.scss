@@ -102,25 +102,84 @@ $purple-primary: #752CAE;
             top: 22% !important;
             right: 0.8rem !important;
         }
+
         .content-2 {
             top: 23% !important;
             left: 1.1rem !important;
         }
-        .feature-Img-2{
+
+        .feature-Img-2 {
             height: 33rem !important;
         }
 
         .features-item {
-          
+
             width: auto !important;
             margin-top: -139px !important;
         }
-        .features-item-margin-top{
+
+        .features-item-margin-top {
             margin-top: 0px !important;
         }
-       
+
     }
+
     .features-card {
+        .card{
+
+            max-width: 25rem !important;
+        }
         background: linear-gradient(0deg, #752CAE 80%, rgba(255, 255, 255, 0) 50%), url(/Humzabaan/src/assets/images/red-bg.svg) repeat !important;
+    }
+
+    .about-urdu {
+        p{
+            font-size: 14px !important;
+        }
+        .heading {
+            img {
+                height: 40px !important;
+                width: 393px !important;
+            }
+    
+            h1 {
+                font-size: 30px !important;
+            }
+        }
+        .sub-heading {
+            h1{
+                font-size: 24px !important;
+            }
+            img {
+
+                height: 39px !important;
+                width: 367px !important;
+            }
+        }
+        .about-urdu-content{
+            max-width: 24rem !important;
+            max-height: auto !important;
+        }
+        .history-urdu{
+            order:3 !important;
+        }
+        .video-player{
+            height:186.22px !important ;
+            width: 328.5px !important;
+            .ghalib-video-thumbnail{
+                height:186.22px !important ;
+                width: 328.5px !important;
+            }
+            .ghalib-video-frame{
+                height:186.22px !important ;
+                width: 328.5px !important;
+            }
+        }
+        .about-urdu-ink-img {
+            height: 259px !important;
+            bottom: -50px !important;
+            right: 3px;
+            z-index: 8 !important;
+        }
     }
 }

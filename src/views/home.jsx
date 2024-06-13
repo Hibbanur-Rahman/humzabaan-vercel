@@ -476,8 +476,8 @@ const Home = () => {
       </div>
 
       {/** ================= About-Urdu-section ==================  */}
-      <section className="about-urdu row  m-0 p-0 pt-5 justify-content-center">
-        <div className="row col-11 m-0 p-0 position-relative justify-content-center">
+      <section className="about-urdu row  m-0 p-0  ps-lg-0 ps-2 pe-lg-0 pe-2 pt-5 justify-content-center">
+        <div className="row col-lg-11 m-0 p-0 position-relative justify-content-center">
           <img
             src={aboutUrduBg}
             alt=""
@@ -499,7 +499,7 @@ const Home = () => {
               <img src={headingBg3} alt="heading-bg" className="m-0 p-0 " />
               <h1 className="m-0 p-0 position-absolute">ABOUT URDU</h1>
             </div>
-            <p className="kiddo-font m-0 p-0 text-center mt-4 fs-5">
+            <p className="kiddo-font m-0 p-0 text-center mt-lg-4 fs-5">
               Urdu, known for its soul-stirring poetry and profound literary
               heritage, serves as a beacon of cultural identity for millions
               worldwide. Originating from the Indo-Aryan lineage, Urdu's
@@ -511,7 +511,7 @@ const Home = () => {
               United Arab Emirates, United Kingdom, Saudi Arabia, United States,
               Canada, Australia, and South Africa.
             </p>
-            <p className="kiddo-font m-0 p-0 text-center fs-2 mt-5">
+            <p className="kiddo-font m-0 p-0 text-center fs-2 mt-lg-5">
               URDU FOR ALL
             </p>
             <p className="kiddo-font m-0 p-0 text-center fs-5">
@@ -524,24 +524,24 @@ const Home = () => {
               Kingdom host significant Urdu-speaking populations.
             </p>
             <div className="row m-0 p-0 justify-content-center align-items-center">
-              <div className="sub-heading m-0 p-0 mt-5 mb-5 position-relative d-flex align-items-center justify-content-center">
+              <div className="sub-heading m-0 p-0 mt-lg-5 mb-lg-5 position-relative d-flex align-items-center justify-content-center">
                 <img src={headingSubBg} alt="heading-bg" className="m-0 p-0 " />
                 <h1 className="kiddo-font m-0 p-0 position-absolute">
                   HISTORY OF URDU
                 </h1>
               </div>
 
-              <div className="col-5 m-0 p-0 d-flex align-content-end justify-content-end">
+              <div className="history-urdu col-lg-5 m-0 p-0 d-flex align-content-end justify-content-lg-end justify-content-center ">
                 <div className="video-player position-relative d-flex justify-content-center align-items-center">
                   <img
                     src={VideoPlayerFrame}
                     alt="Video Player Frame"
-                    className="m-0 p-0 z-3"
+                    className="ghalib-video-frame m-0 p-0 z-3"
                   />
                   <img
                     src={GhalibThumbNailVideo}
                     alt="video thumbnail"
-                    className="m-0 p-0 position-absolute z-1"
+                    className="ghalib-video-thumbnail m-0 p-0 position-absolute z-1"
                   />
                   <img
                     src={playBtn}
@@ -551,7 +551,7 @@ const Home = () => {
                   />
                 </div>
               </div>
-              <div className="col-6 m-0 p-0 ms-5">
+              <div className="col-lg-6 m-0 p-0 ms-lg-5">
                 <p className="kiddo-font m-0 p-0 text-center fs-5">
                   Urdu, originating in the 13th century in North India, emerged
                   as a linguistic synthesis of Persian, Arabic, Turkish, and
