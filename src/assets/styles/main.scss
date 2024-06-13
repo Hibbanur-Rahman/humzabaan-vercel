@@ -11,6 +11,7 @@ $purple-primary: #752CAE;
 
 body {
     background-color: #7FD839;
+    scroll-behavior: smooth;
 }
 
 @keyframes movingLine {
@@ -172,6 +173,7 @@ body {
     .teacher-gif {
         height: 700px !important;
         right: -100% !important;
+        margin-bottom: -27px !important;
     }
 
     .mobile {

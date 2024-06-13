@@ -1,19 +1,88 @@
+$primary-color: rgba(7, 90, 94, 1);
+$secondary-color: rgba(180, 205, 76, 1);
+$btn-outline-color: rgba(109, 128, 4, 1);
+$btn-color: rgba(195, 216, 10, 1);
+$red-primary: #D75438;
+$brown-primary: #582C1A;
+$purple-primary: #752CAE;
+
 @media (max-width: 999px) {
 
-    .Navbar{
-        a{
-            color:#fff !important;
+    .Navbar {
+        a {
+            color: #fff !important;
         }
-        .btn-close{
+
+        .btn-close {
             color: #fff !important;
             background-color: #fff !important;
         }
     }
+
     .hero-section {
         top: -4.9rem !important;
     }
-    .hero-animation.hero-animation{
+
+    .hero-animation.hero-animation {
         animation: movingHeroSection 4s linear infinite;
 
     }
+
+    .heading {
+        img {
+            height: 40px !important;
+        }
+
+        h1 {
+            font-size: 30px !important;
+        }
+    }
+
+    .who-we-are-section {
+        background-color: $primary-color;
+        background:$primary-color;
+        /* Fill with primary color */
+
+        .heading-p {
+            font-size: 24px !important;
+        }
+
+        .who-we-are-left {
+            max-width: 100% !important;
+            justify-content: center !important;
+            background: linear-gradient(to right bottom, $primary-color 50%, $secondary-color 50%);
+            padding-bottom: 18px !important;
+        }
+
+        .video-frame-img {
+            height: 319px !important;
+            width: 301.1px !important;
+        }
+
+        .teacher-gif {
+            right: -87% !important;
+            height: 480px !important;
+            margin-top: -40px !important;
+            margin-bottom: -0px !important;
+
+        }
+
+        .mobile {
+            background: $red-primary url('../images/red-bg.svg') bottom/cover repeat;
+            background-blend-mode: multiply !important;
+            margin-top: 0rem !important;
+            padding-top: 30px !important;
+            img{
+                position:  relative !important;
+            }
+            .downloads-btns{
+                align-items: center;
+            }
+        }
+    }
+
+    .who-we-are-section::before {
+        background: none;
+    }
+
 }

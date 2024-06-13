@@ -131,9 +131,9 @@ const Home = () => {
 
       {/** ================= Who-we-are-section ==================  */}
       <div className="who-we-are-section row m-0 p-0 pt-3 justify-content-center">
-        <p className="heading-p m-0 p-0 mt-5 text-center fs-1">WHO WE ARE</p>
-        <div className="row col-10 m-0 p-0 z-2 justify-content-center">
-          <div className="who-we-are-right col-6 m-0 p-3 d-flex flex-column justify-content-center">
+        <p className="heading-p m-0 p-0 mt-lg-5 text-center fs-1">WHO WE ARE</p>
+        <div className="row col-lg-10 m-0 p-0  z-2 justify-content-center">
+          <div className="who-we-are-right col-lg-6 m-0 p-lg-3 p-3 d-flex flex-column justify-content-center">
             <p className="m-0 p-0 text-light kiddo-font text-center">
               Welcome to Humzabaan – your ultimate destination for delving into
               the enchanting world of Urdu! We're passionate about merging the
@@ -152,14 +152,14 @@ const Home = () => {
             </p>
           </div>
           <div
-            className="col-6 m-0 p-3 d-flex align-items-center  position-relative"
+            className="who-we-are-left col-lg-6 m-0 p-lg-3 d-flex align-items-center  position-relative"
             style={{ maxWidth: "fit-content" }}
           >
             <div className="video-frame m-0 p-0 w-auto d-flex justify-content-center align-items-center position-relative">
               <img
                 src={videoFrame}
                 alt="video frame"
-                className="m-0 p-0 z-2"
+                className="video-frame-img  m-0 p-0 z-2"
                 style={{ height: "400px", width: "400px" }}
               />
               <img
@@ -181,8 +181,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="mobile row m-0 p-0 col-10 position-relative z-5 justify-content-between">
-          <div className="col-5 m-0 p-0 position-relative d-flex justify-content-end align-items-center">
+        <div className="mobile row m-0 p-0 col-lg-10 position-relative z-5 justify-content-between">
+          <div className="col-lg-5 m-0 p-0 position-relative d-flex justify-content-lg-end justify-content-center align-items-center">
             <img
               src={mobileGif}
               alt=""
@@ -190,7 +190,7 @@ const Home = () => {
               style={{ height: "400px", zIndex: "6" }}
             />
           </div>
-          <div className="col-6 d-flex flex-column justify-content-end align-baseline">
+          <div className="downloads-btns col-lg-6 mt-lg-0 mt-3 pb-3 d-flex flex-column justify-content-lg-end align-lg-baseline">
             <div className="" style={{ width: "15rem" }}>
               <PlayStoreBtn
                 logo={playStoreLogo}
@@ -215,9 +215,9 @@ const Home = () => {
           <img src={headingBg2} alt="heading-bg" className="m-0 p-0 " />
           <h1 className="m-0 p-0 position-absolute">WHY HUMZABAAN ?</h1>
         </div>
-        <div className="features col-10 m-0 p-0 mt-5">
+        <div className="features col-lg-10 m-0 p-0 mt-5">
           <div className=" row m-0 p-0">
-            <div className="col-6 m-0 p-0 position-relative d-flex justify-content-end">
+            <div className="col-lg-6 m-0 p-0 position-relative d-flex justify-content-end ">
               <img
                 src={featureImg1}
                 alt="feature image-1"
@@ -236,7 +236,7 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <div className="col-6 m-0 p-0 ps-2 position-relative d-flex justify-content-start">
+            <div className="col-lg-6 m-0 p-0 ps-2 position-relative d-flex justify-content-start ">
               <img
                 src={featureImg2}
                 alt="feature image-1"
@@ -257,7 +257,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="row m-0 p-0 mb-3 position-relative align-items-center justify-content-center">
+          <div className="row m-0 p-0 mb-3 d-lg-flex d-none position-relative align-items-center ">
             <img
               src={featuresCenterMobile}
               alt=""
@@ -265,7 +265,7 @@ const Home = () => {
             />
           </div>
           <div className=" row m-0 p-0 mt-5">
-            <div className="col-6 m-0 p-0 position-relative d-flex justify-content-end">
+            <div className="col-lg-6 m-0 p-0 position-relative d-flex justify-content-end ">
               <img
                 src={featureImg3}
                 alt="feature image-1"
@@ -284,7 +284,7 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <div className="col-6 m-0 p-0 ps-2 position-relative d-flex justify-content-start">
+            <div className="col-lg-6 m-0 p-0 ps-2 position-relative d-flex justify-content-start ">
               <img
                 src={featureImg4}
                 alt="feature image-1"
@@ -305,7 +305,7 @@ const Home = () => {
           </div>
         </div>
         <div className="features-card row m-0 p-0 mt-5 pb-5 position-relative">
-          <div className="col-6 card-item-1 d-flex justify-content-end">
+          <div className="col-lg-6 card-item-1 d-flex justify-content-end">
             <div className="card rounded-5">
               <div className="head row m-0 p-0 position-relative align-items-center justify-content-center">
                 <img
@@ -388,7 +388,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="col-6 card-item-2 d-flex justify-content-start">
+          <div className="col-lg-6 card-item-2 mt-lg-0 mt-4 d-flex justify-content-start">
             <div className="card rounded-5">
               <div className="head row m-0 p-0 position-relative align-items-center justify-content-center">
                 <img
