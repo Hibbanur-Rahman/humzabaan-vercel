@@ -187,7 +187,7 @@ const Home = () => {
             <img
               src={mobileGif}
               alt=""
-              className="m-0 p-0 position-absolute w-auto"
+              className="mobile-gif m-0 p-0 position-absolute w-auto"
               style={{ height: "400px", zIndex: "6" }}
             />
           </div>
