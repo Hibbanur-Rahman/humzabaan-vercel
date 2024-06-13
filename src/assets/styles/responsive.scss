@@ -1,0 +1,19 @@
+@media (max-width: 999px) {
+
+    .Navbar{
+        a{
+            color:#fff !important;
+        }
+        .btn-close{
+            color: #fff !important;
+            background-color: #fff !important;
+        }
+    }
+    .hero-section {
+        top: -4.9rem !important;
+    }
+    .hero-animation.hero-animation{
+        animation: movingHeroSection 4s linear infinite;
+
+    }
+}

@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/navbar";
 import heroImg from "../assets/images/hero-img.png";
+import heroImgMobile from '../assets/images/hero-Img-mobile.svg';
 import heroAnimation from "../assets/images/hero-animation.png";
+import heroAnimationMobile from '../assets/images/hero-animation-mobile.svg';
 import welcomeUrdu from "../assets/images/welcome-urdu-text.svg";
 import headingBg1 from "../assets/images/heading-bg.svg";
 import headingBg2 from "../assets/images/heading-bg-2.svg";
@@ -50,8 +52,9 @@ const Home = () => {
 
       {/** ================= Hero-section ==================  */}
       <div className="hero-section row m-0 p-0 position-relative">
-        <img src={heroImg} alt="" className="m-0 p-0" />
-        <div className="hero-animation w-100  d-flex m-0 p-0  position-relative">
+        <img src={heroImg} alt="" className="d-lg-flex d-none m-0 p-0" />
+        <img src={heroImgMobile} alt="" className="d-lg-none d-flex m-0 p-0" style={{}} />
+        <div className="d-lg-flex d-none hero-animation w-100  d-flex m-0 p-0  position-relative">
           <img
             src={heroAnimation}
             alt="hero animation"
@@ -69,6 +72,38 @@ const Home = () => {
           />
           <img
             src={heroAnimation}
+            alt="hero animation"
+            className="m-0 p-0 w-100"
+          />
+        </div>
+        <div className="d-lg-none d-flex hero-animation w-100  d-flex m-0 p-0  position-relative">
+          <img
+            src={heroAnimationMobile}
+            alt="hero animation"
+            className="m-0 p-0 w-100"
+          />
+          <img
+            src={heroAnimationMobile}
+            alt="hero animation"
+            className="m-0 p-0 w-100"
+          />
+          <img
+            src={heroAnimationMobile}
+            alt="hero animation"
+            className="m-0 p-0 w-100"
+          />
+          <img
+            src={heroAnimationMobile}
+            alt="hero animation"
+            className="m-0 p-0 w-100"
+          />
+          <img
+            src={heroAnimationMobile}
+            alt="hero animation"
+            className="m-0 p-0 w-100"
+          />
+          <img
+            src={heroAnimationMobile}
             alt="hero animation"
             className="m-0 p-0 w-100"
           />

@@ -112,6 +112,14 @@ body {
             "slnt" 0;
         color: $primary-color !important;
     }
+    i{
+        font-size: 4rem !important;
+        color: $primary-color !important;
+        cursor: pointer !important;
+    }
+    .offcanvas{
+        background-color: $primary-color !important;
+    }
 }
 
 .hero-section {
@@ -286,6 +294,7 @@ body {
 }
 
 .about-urdu {
+    padding-bottom: 20px !important;
     position: relative;
     top: -5.56rem !important;
     // background-color: $purple-primary !important;
@@ -321,7 +330,7 @@ body {
 }
 
 .testimonial {
-    top: -6.56rem !important;
+    top: -6.4rem !important;
     // height: 100vh !important;
     background-color: $primary-color !important;
 
