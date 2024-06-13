@@ -561,7 +561,7 @@ const Home = () => {
                   patronage of Mughal rulers, Urdu evolved into a literary
                   language, fostering masterpieces of poetry, prose, and art.
                 </p>
-                <p className="kiddo-font m-0 p-0 text-center fs-5 mt-5">
+                <p className="kiddo-font m-0 p-0 text-center fs-5 mt-lg-5 mt-4">
                   During British colonial rule, it became a symbol of resistance
                   and cultural identity, propelling Urdu literature and
                   journalism movements. Partition in 1947 saw Urdu become the
@@ -744,8 +744,8 @@ const Home = () => {
               <h1 className="m-0 p-0 position-absolute">CONTACT US</h1>
             </div>
             <div className="row m-0 p-0 w-100  justify-content-center">
-              <div className="col-lg-6 m-0 p-0 d-flex justify-content-lg-end justify-content-center pt-4 mt-1">
-                <form action="" className="m-0 p-0 mt-5 pt-5">
+              <div className="col-lg-6 m-0 p-0 d-flex justify-content-lg-end justify-content-center pt-lg-4 mt-lg-1">
+                <form action="" className="m-0 p-0 mt-lg-5 pt-lg-5 pt-4">
                   <input
                     className="m-0 p-3 mb-4 rounded-5 w-100"
                     name="name"
