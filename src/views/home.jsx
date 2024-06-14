@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/navbar";
 import heroImg from "../assets/images/hero-img.png";
-import heroImgMobile from '../assets/images/hero-Img-mobile.svg';
+import heroImgMobile from "../assets/images/hero-Img-mobile.svg";
 import heroAnimation from "../assets/images/hero-animation.png";
-import heroAnimationMobile from '../assets/images/hero-animation-mobile.svg';
+import heroAnimationMobile from "../assets/images/hero-animation-mobile.svg";
 import welcomeUrdu from "../assets/images/welcome-urdu-text.svg";
 import headingBg1 from "../assets/images/heading-bg.svg";
 import headingBg2 from "../assets/images/heading-bg-2.svg";
@@ -32,7 +32,7 @@ import featuresCardHead2 from "../assets/images/features-card-head-2.svg";
 import featuresContentList1 from "../assets/images/features-content-list-1.svg";
 import featuresContentList2 from "../assets/images/features-content-list-2.svg";
 import aboutUrduBg from "../assets/images/HISTORIC-PAGE.svg";
-import aboutUrduBgMobile from '../assets/images/about-urdu-bg-mobile.svg';
+import aboutUrduBgMobile from "../assets/images/about-urdu-bg-mobile.svg";
 import VideoPlayerFrame from "../assets/images/video-player-frame.svg";
 import GhalibThumbNailVideo from "../assets/images/ghalib-thumbnail-video.svg";
 import AboutUrduInk from "../assets/images/about-urdu-ink.svg";
@@ -45,6 +45,15 @@ import contactUsFrame from "../assets/images/contact-us-frame.svg";
 import ContactGhalib from "../assets/images/contact-ghalib.gif";
 
 import Footer from "../components/footer";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+// import required modules
+import { Autoplay, Pagination } from "swiper/modules";
 const Home = () => {
   return (
     <div className="row m-0 p-0 overflow-hidden">
@@ -54,7 +63,12 @@ const Home = () => {
       {/** ================= Hero-section ==================  */}
       <div className="hero-section row m-0 p-0 position-relative">
         <img src={heroImg} alt="" className="d-lg-flex d-none m-0 p-0" />
-        <img src={heroImgMobile} alt="" className="d-lg-none d-flex m-0 p-0" style={{}} />
+        <img
+          src={heroImgMobile}
+          alt=""
+          className="d-lg-none d-flex m-0 p-0"
+          style={{}}
+        />
         <div className="d-lg-flex d-none hero-animation w-100  d-flex m-0 p-0  position-relative">
           <img
             src={heroAnimation}
@@ -589,7 +603,7 @@ const Home = () => {
               <img src={headingBg4} alt="heading-bg" className="m-0 p-0 " />
               <h1 className="m-0 p-0 position-absolute">TESTIMONIAL</h1>
             </div>
-            <div className="testimonial-list row m-0 p-0 justify-content-center mt-4">
+            <div className="testimonial-list row m-0 p-0 justify-content-center mt-4 d-lg-flex d-none">
               <div className="testimonial-list-item col-lg-4 d-flex justify-content-end">
                 <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
                   <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
@@ -726,6 +740,198 @@ const Home = () => {
                 </div>
               </div>
             </div>
+            <div className="testimonial-list row d-lg-none d-flex m-0 p-0 justify-content-center mt-4 ">
+              <Swiper
+                slidesPerView={1}
+                spaceBetween={0}
+                loop={true}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                pagination={{
+                  clickable: true,
+                  className: "swiper-pagination-top-spacing",
+                }}
+                modules={[Autoplay, Pagination]}
+                className="mySwiper position-absolute"
+              >
+                <SwiperSlide>
+                  {" "}
+                  <div className="testimonial-list-item col-12 d-flex justify-content-center">
+                    <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
+                      <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
+                        <img
+                          src={testimonialProfileImg}
+                          className="m-0 p-0 rounded-circle"
+                          alt="profile-img"
+                        />
+                      </div>
+                      <div className="sub-heading crunch-font m-0 p-0 mt-2 position-relative d-flex align-items-center justify-content-center">
+                        <img
+                          src={testimonialSubHeading}
+                          alt="heading-bg"
+                          className="m-0 p-0 "
+                        />
+                        <h2 className="m-0 p-0 position-absolute">
+                          MIRZA GHALIB
+                        </h2>
+                      </div>
+                      <div className="rating row m-0 p-0 mt-2">
+                        <img
+                          src={startFill}
+                          alt=""
+                          className="m-0 p-0  w-auto"
+                        />
+                        <img
+                          src={startFill}
+                          alt=""
+                          className="m-0 p-0 ps-1 w-auto"
+                        />
+                        <img
+                          src={startFill}
+                          alt=""
+                          className="m-0 p-0 ps-1 w-auto"
+                        />
+                        <img
+                          src={startFill}
+                          alt=""
+                          className="m-0 p-0 ps-1 w-auto"
+                        />
+                        <img
+                          src={star}
+                          alt=""
+                          className="m-0 p-0 ps-1 w-auto"
+                        />
+                      </div>
+                      <p className="review m-0 p-0 text-center kiddo-font col-10 mt-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Quisque scelerisque lorem dolor, non maximus est
+                        hendrerit ac.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Quisque scelerisque lorem dolor, non
+                        maximus est hendrerit ac.
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  {" "}
+                  <div className="testimonial-list-item col-12 d-flex justify-content-center">
+                    <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
+                      <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
+                        <img
+                          src={testimonialProfileImg}
+                          className="m-0 p-0 rounded-circle"
+                          alt="profile-img"
+                        />
+                      </div>
+                      <div className="sub-heading crunch-font m-0 p-0 mt-2 position-relative d-flex align-items-center justify-content-center">
+                        <img
+                          src={testimonialSubHeading}
+                          alt="heading-bg"
+                          className="m-0 p-0 "
+                        />
+                        <h2 className="m-0 p-0 position-absolute">
+                          MIRZA GHALIB
+                        </h2>
+                      </div>
+                      <div className="rating row m-0 p-0 mt-2">
+                        <img
+                          src={startFill}
+                          alt=""
+                          className="m-0 p-0  w-auto"
+                        />
+                        <img
+                          src={startFill}
+                          alt=""
+                          className="m-0 p-0 ps-1 w-auto"
+                        />
+                        <img
+                          src={startFill}
+                          alt=""
+                          className="m-0 p-0 ps-1 w-auto"
+                        />
+                        <img
+                          src={startFill}
+                          alt=""
+                          className="m-0 p-0 ps-1 w-auto"
+                        />
+                        <img
+                          src={star}
+                          alt=""
+                          className="m-0 p-0 ps-1 w-auto"
+                        />
+                      </div>
+                      <p className="review m-0 p-0 text-center kiddo-font col-10 mt-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Quisque scelerisque lorem dolor, non maximus est
+                        hendrerit ac.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Quisque scelerisque lorem dolor, non
+                        maximus est hendrerit ac.
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  {" "}
+                  <div className="testimonial-list-item col-12 d-flex justify-content-center">
+                    <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
+                      <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
+                        <img
+                          src={testimonialProfileImg}
+                          className="m-0 p-0 rounded-circle"
+                          alt="profile-img"
+                        />
+                      </div>
+                      <div className="sub-heading crunch-font m-0 p-0 mt-2 position-relative d-flex align-items-center justify-content-center">
+                        <img
+                          src={testimonialSubHeading}
+                          alt="heading-bg"
+                          className="m-0 p-0 "
+                        />
+                        <h2 className="m-0 p-0 position-absolute">
+                          MIRZA GHALIB
+                        </h2>
+                      </div>
+                      <div className="rating row m-0 p-0 mt-2">
+                        <img
+                          src={startFill}
+                          alt=""
+                          className="m-0 p-0  w-auto"
+                        />
+                        <img
+                          src={startFill}
+                          alt=""
+                          className="m-0 p-0 ps-1 w-auto"
+                        />
+                        <img
+                          src={startFill}
+                          alt=""
+                          className="m-0 p-0 ps-1 w-auto"
+                        />
+                        <img
+                          src={startFill}
+                          alt=""
+                          className="m-0 p-0 ps-1 w-auto"
+                        />
+                        <img
+                          src={star}
+                          alt=""
+                          className="m-0 p-0 ps-1 w-auto"
+                        />
+                      </div>
+                      <p className="review m-0 p-0 text-center kiddo-font col-10 mt-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Quisque scelerisque lorem dolor, non maximus est
+                        hendrerit ac.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Quisque scelerisque lorem dolor, non
+                        maximus est hendrerit ac.
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              </Swiper>
+            </div>
           </div>
         </div>
       </section>
@@ -758,7 +964,12 @@ const Home = () => {
                     id="email"
                     placeholder="Email"
                   />
-                  <textarea name="message" id="message" className="m-0 p-0 mb-4 rounded-5 w-100 p-3" placeholder="Message"></textarea>
+                  <textarea
+                    name="message"
+                    id="message"
+                    className="m-0 p-0 mb-4 rounded-5 w-100 p-3"
+                    placeholder="Message"
+                  ></textarea>
                   <div className="d-flex w-100 justify-content-center align-items-center">
                     <Button content="Submit" />
                   </div>
@@ -781,7 +992,6 @@ const Home = () => {
 
       {/** ================= Footer-section ==================  */}
       <Footer />
-      
     </div>
   );
 };

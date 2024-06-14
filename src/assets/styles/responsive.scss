@@ -76,7 +76,8 @@ $purple-primary: #752CAE;
             img {
                 position: relative !important;
             }
-            .mobile-gif{
+
+            .mobile-gif {
                 margin-left: 95px !important;
             }
 
@@ -128,58 +129,69 @@ $purple-primary: #752CAE;
     }
 
     .features-card {
-        .card{
+        .card {
 
             max-width: 25rem !important;
         }
-        background: linear-gradient(0deg, #752CAE 80%, rgba(255, 255, 255, 0) 50%), url(/Humzabaan/src/assets/images/red-bg.svg) repeat !important;
+
+        background: linear-gradient(0deg, #752CAE 80%, rgba(255, 255, 255, 0) 50%),
+        url(/Humzabaan/src/assets/images/red-bg.svg) repeat !important;
     }
 
     .about-urdu {
         background: linear-gradient(to bottom, $purple-primary 50%, $primary-color 50%);
 
-        p{
+        p {
             font-size: 14px !important;
         }
+
         .heading {
             img {
                 height: 40px !important;
                 width: 393px !important;
             }
-    
+
             h1 {
                 font-size: 30px !important;
             }
         }
+
         .sub-heading {
-            h1{
+            h1 {
                 font-size: 24px !important;
             }
+
             img {
 
                 height: 39px !important;
                 width: 367px !important;
             }
         }
-        .about-urdu-content{
+
+        .about-urdu-content {
             max-width: 24rem !important;
             max-height: auto !important;
         }
-        .history-urdu{
-            order:3 !important;
+
+        .history-urdu {
+            order: 3 !important;
         }
-        .video-player{
-            height:186.22px !important ;
+
+        .video-player {
+            height: 186.22px !important;
             width: 328.5px !important;
-            .ghalib-video-thumbnail{
-                height:186.22px !important ;
+
+            .ghalib-video-thumbnail {
+                height: 186.22px !important;
                 width: 328.5px !important;
             }
-            .ghalib-video-frame{
-                height:186.22px !important ;
+
+            .ghalib-video-frame {
+                height: 186.22px !important;
                 width: 328.5px !important;
             }
         }
+
         .about-urdu-ink-img {
             height: 259px !important;
             bottom: -50px !important;
@@ -187,18 +199,55 @@ $purple-primary: #752CAE;
             z-index: 8 !important;
         }
     }
-    .contact-us{
+
+    .testimonial {
+        min-height: 33rem !important;
+        max-height: 42rem !important;
+
+        .testimonial-content {
+            margin-top: 0px !important;
+        }
+
+        .testimonial-list-item {
+            max-width: 100% !important;
+
+            .card {}
+
+            .card::after {
+                bottom: 39% !important;
+                left: 86% !important;
+                display: block;
+                width: 80px !important;
+                height: 80px;
+            }
+        }
+    }
+
+    .mySwiper {
+        z-index: 10 !important;
+        overflow-y: auto !important;
+    }
+
+    .swiper-pagination {
+
+        bottom: -25px;
+        z-index: 12;
+    }
+
+    .contact-us {
         .contact-content {
             max-width: 24rem !important;
+
             .contact-ghalib-img {
                 max-width: 26rem !important;
                 top: -132px !important;
                 position: relative;
             }
-        }   
+        }
     }
-    .footer{
-        .footer-content{
+
+    .footer {
+        .footer-content {
             max-width: 24rem !important;
         }
     }
