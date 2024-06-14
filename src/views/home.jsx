@@ -37,6 +37,7 @@ import VideoPlayerFrame from "../assets/images/video-player-frame.svg";
 import GhalibThumbNailVideo from "../assets/images/ghalib-thumbnail-video.svg";
 import AboutUrduInk from "../assets/images/about-urdu-ink.svg";
 import testimonialFrame from "../assets/images/testimonial-frame.svg";
+import testimonialFrameTab from '../assets/images/testimonial-frame-tab.svg'
 import testimonialProfileImg from "../assets/images/testimonial-profile-img.svg";
 import testimonialSubHeading from "../assets/images/testimonial-sub-heading.svg";
 import star from "../assets/images/star.svg";
@@ -596,7 +597,12 @@ const Home = () => {
           <img
             src={testimonialFrame}
             alt="testimonial frame"
-            className="testimonial-frame m-0 p-0 "
+            className="testimonial-frame testimonial-frame-mobile-desktop m-0 p-0 "
+          />
+          <img
+            src={testimonialFrameTab}
+            alt="testimonial frame"
+            className="testimonial-frame testimonial-frame-tab d-sm-flex d-lg-none d-flex m-0 p-0 "
           />
           <div className="testimonial-content row col-lg-10 m-0 p-0 position-absolute justify-content-center align-items-center ">
             <div className="heading m-0 p-0 mt-5 position-relative d-flex align-items-center justify-content-center">
@@ -743,7 +749,7 @@ const Home = () => {
             <div className="testimonial-list row d-lg-none d-flex m-0 p-0 justify-content-center mt-4 ">
               <Swiper
                 slidesPerView={1}
-                spaceBetween={0}
+                spaceBetween={40}
                 loop={true}
                 autoplay={{
                   delay: 2500,

@@ -203,29 +203,62 @@ $purple-primary: #752CAE;
     .testimonial {
         min-height: 33rem !important;
         max-height: 42rem !important;
-
+        .heading {
+            img {
+                height: 31px !important;
+            }
+            h1{
+                font-size: 26px !important;
+            }
+        }
+        .testimonial-frame{
+            top: -162px;
+            display: flex;
+            height: 62rem !important;
+            width: 63rem !important;
+            position: relative;
+            left: 312px;
+            z-index: 12;
+        }
         .testimonial-content {
             margin-top: 0px !important;
         }
+        .testimonial-list{
+            width: 390px !important;
+        }
 
+        .sub-heading{
+            h2{
+                font-size: 20px !important;
+            }
+            img{
+
+                height: 40px !important;
+                width: 293px !important;
+            }
+        }
         .testimonial-list-item {
             max-width: 100% !important;
 
-            .card {}
+            .card {
+                width: 313.96px !important;
+                height: 441px !important;            }
 
             .card::after {
                 bottom: 39% !important;
                 left: 86% !important;
                 display: block;
-                width: 80px !important;
-                height: 80px;
+                width: 70px !important;
+                height: 70px;
             }
         }
     }
 
     .mySwiper {
+        padding-left: 7px !important;
         z-index: 10 !important;
         overflow-y: auto !important;
+        width: 390px !important
     }
 
     .swiper-pagination {
@@ -234,7 +267,21 @@ $purple-primary: #752CAE;
         z-index: 12;
     }
 
+    .swiper-pagination-bullet {
+        background: #cd0d0d !important;
+    }
+
+    .swiper-pagination-bullet-active {
+
+        background: #C3D80A !important;
+    }
+    .swiper-slide{
+        width: 360px !important;
+        margin-right: 63px !important;
+    } 
+
     .contact-us {
+        padding-top: 126px !important;
         .contact-content {
             max-width: 24rem !important;
 
@@ -250,5 +297,70 @@ $purple-primary: #752CAE;
         .footer-content {
             max-width: 24rem !important;
         }
+    }
+}
+
+@media (min-width:550px) and (max-width:999px) {
+    .testimonial {
+        min-height: 33rem !important;
+        max-height: 42rem !important;
+        .heading {
+            img {
+                height: 31px !important;
+            }
+            h1{
+                font-size: 26px !important;
+            }
+        }
+        .testimonial-frame-mobile-desktop{
+            display: none !important;
+        }
+        .testimonial-frame-tab{
+            display: flex !important;
+        }
+        .testimonial-frame {
+            top: -61px;
+            display: flex;
+            height: 53rem !important;
+            width: 56rem !important;
+            position: relative;
+            left: 0px;
+            z-index: 12;
+        }
+        .testimonial-content {
+            margin-top: 48px !important;
+        }
+        .testimonial-list{
+            width: 390px !important;
+        }
+
+        .sub-heading{
+            h2{
+                font-size: 20px !important;
+            }
+            img{
+
+                height: 40px !important;
+                width: 293px !important;
+            }
+        }
+        .testimonial-list-item {
+            max-width: 100% !important;
+
+            .card {
+                width: 313.96px !important;
+                height: 441px !important;            }
+
+            .card::after {
+                bottom: 39% !important;
+                left: 86% !important;
+                display: block;
+                width: 70px !important;
+                height: 70px;
+            }
+        }
+    }
+    .contact-us {
+        padding-top: 210px !important;
     }
 }
