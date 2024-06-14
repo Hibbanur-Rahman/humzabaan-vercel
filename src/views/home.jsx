@@ -597,13 +597,13 @@ const Home = () => {
           <img
             src={testimonialFrame}
             alt="testimonial frame"
-            className="testimonial-frame testimonial-frame-mobile-desktop m-0 p-0 "
+            className="testimonial-frame  m-0 p-0 "
           />
-          <img
+          {/* <img
             src={testimonialFrameTab}
             alt="testimonial frame"
             className="testimonial-frame testimonial-frame-tab d-sm-flex d-lg-none d-flex m-0 p-0 "
-          />
+          /> */}
           <div className="testimonial-content row col-lg-10 m-0 p-0 position-absolute justify-content-center align-items-center ">
             <div className="heading m-0 p-0 mt-5 position-relative d-flex align-items-center justify-content-center">
               <img src={headingBg4} alt="heading-bg" className="m-0 p-0 " />
