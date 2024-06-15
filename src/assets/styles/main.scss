@@ -414,6 +414,8 @@ body {
         min-height: 60rem !important;
         max-height: 60rem !important;
         max-width: 80rem !important;
+        left: 0px !important;
+        position: relative;
     }
 
     .contact-content {
@@ -497,6 +499,7 @@ body {
     }
 
     input {
+        font-family: 'hey-kiddo';
         color: #255102 !important;
         border: 2px dashed #255102;
         outline: none;

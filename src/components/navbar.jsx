@@ -37,7 +37,7 @@ const Navbar = () => {
                 </Link>
               </div>
               <div className="col-3 d-flex align-items-center justify-content-center">
-                <Link to="#" className="text-decoration-none">
+                <Link to="contact-us-section" className="text-decoration-none">
                   CONTACT
                 </Link>
               </div>
@@ -100,7 +100,7 @@ const Navbar = () => {
                 <Link to="#" className="text-decoration-none mb-3 mt-3">
                   FEATURES
                 </Link>
-                <Link to="#" className="text-decoration-none mb-3 mt-3">
+                <Link to="/#contact-us-section" className="text-decoration-none mb-3 mt-3">
                   CONTACT
                 </Link>
                 <Button content="DOWNLOAD NOW" />

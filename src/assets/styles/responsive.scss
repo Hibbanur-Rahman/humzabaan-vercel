@@ -306,6 +306,20 @@ $purple-primary: #752CAE;
         .footer-content {
             max-width: 24rem !important;
         }
+        
+    }
+   
+}
+@media (min-width:200px) and (max-width:575px) {
+    .bottom-last {
+        background-color: #325F0F !important;
+
+        .left-part{
+            background-color: #579B22 !important;
+        }
+        .right-part{
+            background-color: #325F0F !important;
+        }
     }
 }
 
