@@ -6,7 +6,12 @@ import './assets/styles/responsive.scss';
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function App() {
+  AOS.init();
   return (
     <>
      <Routes>
