@@ -63,7 +63,7 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import { useEffect, useState } from "react";
 const Home = () => {
-
+  AOS.init();
   const [contactDetails, setContactDetails] = useState({
     name: "",
     email: "",
@@ -101,7 +101,7 @@ const Home = () => {
 
   useEffect(() => {
     AOS.init();
-  });
+  },[]);
 
   return (
     <div className="row m-0 p-0 overflow-hidden">
