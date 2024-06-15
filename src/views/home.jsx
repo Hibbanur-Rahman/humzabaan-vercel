@@ -104,7 +104,7 @@ const Home = () => {
   },[]);
 
   return (
-    <div className="row m-0 p-0 overflow-hidden">
+    <div className="home row m-0 p-0 overflow-hidden">
       {/** ================= Navbar-section ==================  */}
       <Navbar />
 

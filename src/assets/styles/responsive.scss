@@ -8,6 +8,10 @@ $purple-primary: #752CAE;
 
 @media (max-width: 999px) {
 
+    .second-outer {
+        width: 165px !important;
+    }
+
     .Navbar {
         a {
             color: #fff !important;
@@ -204,15 +208,18 @@ $purple-primary: #752CAE;
     .testimonial {
         min-height: 33rem !important;
         max-height: 42rem !important;
+
         .heading {
             img {
                 height: 31px !important;
             }
-            h1{
+
+            h1 {
                 font-size: 26px !important;
             }
         }
-        .testimonial-frame{
+
+        .testimonial-frame {
             top: -162px;
             display: flex;
             height: 62rem !important;
@@ -221,30 +228,35 @@ $purple-primary: #752CAE;
             left: 312px;
             z-index: 12;
         }
+
         .testimonial-content {
             margin-top: 0px !important;
             z-index: 13;
         }
-        .testimonial-list{
+
+        .testimonial-list {
             width: 390px !important;
         }
 
-        .sub-heading{
-            h2{
+        .sub-heading {
+            h2 {
                 font-size: 20px !important;
             }
-            img{
+
+            img {
 
                 height: 40px !important;
                 width: 293px !important;
             }
         }
+
         .testimonial-list-item {
             max-width: 100% !important;
 
             .card {
                 width: 313.96px !important;
-                height: 441px !important;            }
+                height: 441px !important;
+            }
 
             .card::after {
                 bottom: 39% !important;
@@ -277,22 +289,26 @@ $purple-primary: #752CAE;
 
         background: #C3D80A !important;
     }
-    .swiper-slide{
+
+    .swiper-slide {
         width: 360px !important;
         margin-right: 63px !important;
-    } 
+    }
 
     .contact-us {
         padding-top: 126px !important;
+
         .contact-content {
             max-width: 24rem !important;
             width: 340px !important;
+
             .contact-ghalib-img {
                 max-width: 26rem !important;
                 top: -132px !important;
                 position: relative;
             }
         }
+
         .contact-us-frame {
             min-height: 60rem !important;
             max-height: 60rem !important;
@@ -300,7 +316,8 @@ $purple-primary: #752CAE;
             left: -458px !important;
             position: relative;
         }
-        form{
+
+        form {
             z-index: 20 !important;
             position: relative;
         }
@@ -310,18 +327,20 @@ $purple-primary: #752CAE;
         .footer-content {
             max-width: 24rem !important;
         }
-        
+
     }
-   
+
 }
+
 @media (min-width:200px) and (max-width:575px) {
     .bottom-last {
         background-color: #325F0F !important;
 
-        .left-part{
+        .left-part {
             background-color: #579B22 !important;
         }
-        .right-part{
+
+        .right-part {
             background-color: #325F0F !important;
         }
     }

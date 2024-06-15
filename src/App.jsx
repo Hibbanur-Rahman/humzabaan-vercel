@@ -9,6 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Login from './views/login';
 
 function App() {
   AOS.init();
@@ -16,6 +17,7 @@ function App() {
     <>
      <Routes>
       <Route exact path="/" element={<Home/>}/>
+      <Route exact path="/login" element={<Login/>}/>
      </Routes>
      <ToastContainer/>
     </>

@@ -10,8 +10,10 @@ $brown-primary: #582C1A;
 $purple-primary: #752CAE;
 
 body {
-    background-color: #7FD839;
     scroll-behavior: smooth;
+}
+.home{
+    // background-color: #7FD839;
 }
 
 @keyframes movingLine {
