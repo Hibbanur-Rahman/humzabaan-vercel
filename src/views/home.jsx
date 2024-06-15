@@ -17,6 +17,7 @@ import teacherGif from "../assets/images/teacher-img.gif";
 import teacherVideoThumbnail from "../assets/images/teacher-video-thumbnail.svg";
 import mobileGif from "../assets/images/mobile-gif.gif";
 import Button from "../components/button";
+import ButtonNew from '../components/buttonNew';
 import PlayStoreBtn from "../components/playStoreBtn";
 import appleLogo from "../assets/images/Apple_logo.svg";
 import playStoreLogo from "../assets/images/playStoreLogo.svg";
@@ -459,7 +460,7 @@ const Home = () => {
                     />
                   </div>
                   <div className="w-auto mt-3">
-                    <Button content="LEARN MORE" />
+                    <ButtonNew content="LEARN MORE" />
                   </div>
                 </div>
               </div>

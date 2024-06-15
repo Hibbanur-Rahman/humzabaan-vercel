@@ -140,7 +140,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="bottom-last row m-0 p-lg-3 p-0  justify-content-sm-between justify-content-center align-items-center">
-        <div className="left-part col-sm-6 m-0 p-2 p-sm-0 col-12 d-flex justify-content-center">
+        <div className="left-part col-sm-6 m-0 p-2 p-sm-0 col-12 d-flex justify-content-center justify-content-lg-start">
           <Link to="/privacy" className="text-light w-auto">
             PRIVACY POLICY
           </Link>
@@ -153,7 +153,7 @@ const Footer = () => {
             COPYRIGHT
           </Link>
         </div>
-        <div className="right-part col-sm-6 col-12 m-0 p-2 p-sm-0  d-flex justify-content-center">
+        <div className="right-part col-sm-6 col-12 m-0 p-2 p-sm-0 d-flex  justify-content-center justify-content-lg-end">
           <p className="m-0 p-0 text-light">© 2024 Hamzabaan™ |  All rights reserved.</p>
         </div>
       </div>

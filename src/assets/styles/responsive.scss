@@ -300,6 +300,10 @@ $purple-primary: #752CAE;
             left: -458px !important;
             position: relative;
         }
+        form{
+            z-index: 20 !important;
+            position: relative;
+        }
     }
 
     .footer {

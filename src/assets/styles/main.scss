@@ -24,6 +24,16 @@ body {
     }
 }
 
+@keyframes movingLineNew {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-35.5%);
+    }
+}
+
 @keyframes movingHeroSection {
     0% {
         transform: translateX(0%);
@@ -46,7 +56,7 @@ body {
 .btn-ctm {
     font-family: 'crunch-chips';
     background-color: $btn-color !important;
-    border: 3px solid $btn-outline-color;
+    // border: 3px solid $btn-outline-color;
 
     .inner-btn-border {
         border: 2px dashed $primary-color !important;
@@ -92,6 +102,45 @@ body {
 
 }
 
+.btn-ctm-new {
+    background: radial-gradient(#C3D80A, #BED30A, #AFC50C, #98AD10, #8AA012) !important;
+
+    .line-group {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .line-up {
+        transform: rotate(24deg);
+        width: 9px !important;
+        height: 74px !important;
+        background-color: #C3D80A !important;
+        margin-left: 10px;
+
+    }
+
+    .animation-div {
+        animation: movingLineNew 2s linear infinite;
+
+    }
+
+    .line-upper-overlay {
+        background-color: #b3cb147e !important;
+        height: 35px !important;
+    }
+
+   
+}
+
+.second-outer {
+    position: absolute;
+    border: 1px solid rgb(110, 112, 98);
+    bottom: -3px !important;
+    height: 62px !important;
+    width: 11rem !important;
+    background-color: #6D8004 !important;
+}
+
 .Navbar {
 
     height: 6rem !important;
@@ -113,12 +162,14 @@ body {
             "slnt" 0;
         color: $primary-color !important;
     }
-    i{
+
+    i {
         font-size: 4rem !important;
         color: $primary-color !important;
         cursor: pointer !important;
     }
-    .offcanvas{
+
+    .offcanvas {
         background-color: $primary-color !important;
     }
 }
@@ -225,18 +276,18 @@ body {
         }
 
         .content {
-            width: 300px ;
+            width: 300px;
             color: $brown-primary !important;
         }
 
         .content-1 {
-            top: 15% ;
-            right: 4rem ;
+            top: 15%;
+            right: 4rem;
         }
 
         .content-2 {
-            top: 15% ;
-            left: 2.6rem ;
+            top: 15%;
+            left: 2.6rem;
         }
     }
 
@@ -318,8 +369,8 @@ body {
     }
 
     .about-urdu-content {
-        max-width: 85rem ;
-        max-height: 70rem ;
+        max-width: 85rem;
+        max-height: 70rem;
         min-height: 70rem !important;
     }
 
@@ -341,12 +392,14 @@ body {
         width: 100% !important;
     }
 
-    .testimonial-frame-mobile-desktop{
+    .testimonial-frame-mobile-desktop {
         display: flex !important;
     }
-    .testimonial-frame-tab{
+
+    .testimonial-frame-tab {
         display: none !important;
     }
+
     .testimonial-content {
         margin-top: 7rem !important;
 
@@ -425,11 +478,12 @@ body {
             max-width: 41rem !important;
         }
 
-        form{
+        form {
             max-width: 35rem !important;
             z-index: 9;
         }
-        input{
+
+        input {
             height: 4rem !important;
             border: 3px dashed $primary-color !important;
             outline: none;
@@ -444,12 +498,14 @@ body {
                 margin-top: 5px !important;
             }
         }
+
         textarea {
             border: 3px dashed $primary-color !important;
             outline: none;
             background-color: rgba(180, 205, 76, 0.3) !important;
             font-family: 'hey-kiddo';
             height: 12rem !important;
+
             &::placeholder {
                 font-family: 'hey-kiddo';
                 font-size: 2rem !important;
@@ -457,7 +513,8 @@ body {
                 color: #000;
             }
         }
-        .line{
+
+        .line {
             height: 12px !important;
             width: 44rem !important;
             position: absolute;
@@ -470,14 +527,15 @@ body {
 
 
 .footer {
-    
+
     background-color: #7FD839 !important;
     position: relative;
     top: -7.1rem !important;
-    .footer-content{
+
+    .footer-content {
         max-width: 82rem !important;
     }
-   
+
     h3 {
         color: $primary-color !important;
     }
@@ -513,7 +571,8 @@ body {
         }
     }
 }
-.bottom-last{
+
+.bottom-last {
     background-color: #579B22 !important;
     margin-top: -60px !important;
 }
