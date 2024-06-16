@@ -1,13 +1,15 @@
-import { Link } from 'react-router-dom';
+import { Link,useNavigate} from 'react-router-dom';
 import logo from '../assets/images/LOGO.svg'
 import signupImg1 from '../assets/images/login-img-2.svg';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 import DOMAIN from '../../environmentVariables';
+
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigate=useNavigate();
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!email || !password) {
@@ -22,6 +24,7 @@ const Login = () => {
                 localStorage.setItem('humzabaan-token',token);
                 setEmail('');
                 setPassword('');
+                navigate('/dashboard')
             }
         } catch (error) {
             toast.error("Failed to login");
