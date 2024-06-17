@@ -58,7 +58,7 @@ body {
 .btn-ctm {
     font-family: 'crunch-chips';
     background-color: $btn-color !important;
-    // border: 3px solid $btn-outline-color;
+    border: 3px solid $btn-outline-color;
 
     .inner-btn-border {
         border: 2px dashed $primary-color !important;
@@ -105,8 +105,9 @@ body {
 }
 
 .btn-ctm-new {
+    // border: 2px #b3cb147e;
     background: radial-gradient(#C3D80A, #BED30A, #AFC50C, #98AD10, #8AA012) !important;
-
+    box-shadow: 0px 4px #C3D80A !important;
     .line-group {
         padding-left: 0px !important;
         padding-right: 0px !important;
@@ -134,13 +135,10 @@ body {
    
 }
 
-.second-outer {
-    position: absolute;
-    border: 1px solid rgb(110, 112, 98);
-    bottom: -3px !important;
-    height: 62px !important;
-    width: 11rem !important;
-    background-color: #6D8004 !important;
+.playStoreBtn{
+    .line-up {
+        height: 90px !important;
+    }
 }
 
 .Navbar {

@@ -3,6 +3,7 @@ import Button from "./button";
 import NavbarBg from "../assets/images/Rectangle-5.png";
 import NavbarBgMobile from "../assets/images/NavbarBgMobile.png";
 import logo from "../assets/images/LOGO.svg";
+import ButtonNew from "./buttonNew";
 const Navbar = () => {
   return (
     <>
@@ -45,7 +46,9 @@ const Navbar = () => {
           </div>
 
           <div className="logo col-3 d-flex align-items-center justify-content-center m-0 p-0">
-            <Button content="DOWNLOAD NOW" />
+            {/* <Button content="DOWNLOAD NOW" /> */}
+            <ButtonNew content="DOWNLOAD NOW" />
+
           </div>
         </div>
       </div>
