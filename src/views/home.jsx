@@ -34,6 +34,7 @@ import featuresContentList1 from "../assets/images/features-content-list-1.svg";
 import featuresContentList2 from "../assets/images/features-content-list-2.svg";
 import aboutUrduBg from "../assets/images/HISTORIC-PAGE.svg";
 import aboutUrduBgMobile from "../assets/images/about-urdu-bg-mobile.svg";
+import aboutUrduBg1k from '../assets/images/about-urdu-bg-13-15-1.svg'
 import VideoPlayerFrame from "../assets/images/video-player-frame.svg";
 import GhalibThumbNailVideo from "../assets/images/ghalib-thumbnail-video.svg";
 import AboutUrduInk from "../assets/images/about-urdu-ink.svg";
@@ -63,12 +64,26 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import { useEffect, useState } from "react";
 const Home = () => {
+
   AOS.init();
   const [contactDetails, setContactDetails] = useState({
     name: "",
     email: "",
     message: "",
   });
+
+  const screenWidth = window.screen.width;
+
+  const getBgImage = () => {
+    if (screenWidth > 1000 && screenWidth < 1564) {
+      return aboutUrduBg1k;
+    } else if (screenWidth >= 1464) {
+      return aboutUrduBg;
+    }
+    return null;
+  };
+  let bgImage;
+  bgImage = getBgImage();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -99,8 +114,11 @@ const Home = () => {
     setContactDetails({ ...contactDetails, [e.target.name]: e.target.value });
   };
 
+ 
   useEffect(() => {
     AOS.init();
+    bgImage = getBgImage();
+
   },[]);
 
   return (
@@ -558,11 +576,13 @@ const Home = () => {
         className="about-urdu row  m-0 p-0  ps-lg-0 ps-2 pe-lg-0 pe-2 pt-5 justify-content-center"
       >
         <div className="row col-lg-11 m-0 p-0 position-relative justify-content-center">
+        {bgImage && (
           <img
-            src={aboutUrduBg}
-            alt=""
+            src={bgImage}
+            alt="About Urdu Background"
             className="about-urdu-bg d-lg-flex d-none m-0 p-0 w-100"
           />
+        )}
           <img
             src={aboutUrduBgMobile}
             alt=""
