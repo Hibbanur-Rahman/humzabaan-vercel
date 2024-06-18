@@ -108,6 +108,7 @@ body {
     // border: 2px #b3cb147e;
     background: radial-gradient(#C3D80A, #BED30A, #AFC50C, #98AD10, #8AA012) !important;
     box-shadow: 0px 4px #C3D80A !important;
+
     .line-group {
         padding-left: 0px !important;
         padding-right: 0px !important;
@@ -132,10 +133,10 @@ body {
         height: 35px !important;
     }
 
-   
+
 }
 
-.playStoreBtn{
+.playStoreBtn {
     .line-up {
         height: 90px !important;
     }
@@ -375,11 +376,40 @@ body {
     }
 
     .about-urdu-ink-img {
-        height: 400px !important;
-        bottom: -50px !important;
-        right: 120px;
-        z-index: 8 !important;
+        height: 412px !important;
+        bottom: -70px !important;
+        right: 45%;
+        z-index: 1 !important;
+        width: 390px !important;
+        transition: all 0.5s ease-in-out;
+
     }
+
+
+
+    .ghalib-video-frame {
+        width: 560px !important;
+        height: 315px !important
+    }
+
+    .urdu-iframe {
+        position: absolute !important;
+        z-index: 2 !important;
+        width: 528px !important;
+        height: 286px !important;
+
+    }
+
+    .ghalib-video-thumbnail {
+        z-index: 1 !important;
+        width: 524px !important;
+        height: 294px !important;
+    }
+}
+
+.about-urdu-ink-img-slide {
+    right: 30% !important;
+    transition: all 0.5s ease-in-out;
 }
 
 .testimonial {
@@ -577,31 +607,38 @@ body {
     margin-top: -60px !important;
 }
 
-.login{
+.login {
     background-color: $primary-color !important;
     height: 100vh !important;
-    .logo{
+
+    .logo {
         height: 100px !important;
         width: 200px !important;
     }
-    .wrapper{
+
+    .wrapper {
         background-color: #19757a !important;
         height: fit-content !important;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
-    button{
+
+    button {
         border: 2px solid #116367;
         background-color: $primary-color !important;
-        &:hover{
+
+        &:hover {
             background-color: #05c498 !important;
         }
     }
-    input{
-        border:2px solid #05c498 !important;
-        &:focus{
+
+    input {
+        border: 2px solid #05c498 !important;
+
+        &:focus {
             outline: none !important;
         }
-        &::placeholder{
+
+        &::placeholder {
             color: #00C6D0 !important;
         }
     }

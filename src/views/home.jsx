@@ -70,6 +70,7 @@ const Home = () => {
     email: "",
     message: "",
   });
+  const [isIframeShow, setIsIframeShow] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -98,6 +99,10 @@ const Home = () => {
   };
   const handleInputChange = (e) => {
     setContactDetails({ ...contactDetails, [e.target.name]: e.target.value });
+  };
+
+  const handlePlay = () => {
+    setIsIframeShow(!isIframeShow);
   };
 
   useEffect(() => {
@@ -606,7 +611,7 @@ const Home = () => {
           <img
             src={AboutUrduInk}
             alt=""
-            className="about-urdu-ink-img m-0 p-0 position-absolute"
+            className={`about-urdu-ink-img ${isIframeShow?'about-urdu-ink-img-slide':''} m-0 p-0 position-absolute`}
           />
 
           <div className="about-urdu-content row col-11 m-0 p-0 position-absolute justify-content-center">
@@ -669,19 +674,35 @@ const Home = () => {
                   <img
                     src={VideoPlayerFrame}
                     alt="Video Player Frame"
-                    className="ghalib-video-frame m-0 p-0 z-3"
+                    className="ghalib-video-frame m-0 p-0 z-2"
                   />
-                  <img
-                    src={GhalibThumbNailVideo}
-                    alt="video thumbnail"
-                    className="ghalib-video-thumbnail m-0 p-0 position-absolute z-1"
-                  />
-                  <img
-                    src={playBtn}
-                    alt=""
-                    className="m-0 p-0 position-absolute "
-                    style={{ zIndex: "7", cursor: "pointer" }}
-                  />
+                  {isIframeShow ? (
+                    <iframe
+                     
+                      className="urdu-iframe"
+                      src="https://www.youtube.com/embed/kvgrjjYTp0Y?si=Pivj2W-qwcQau6zr&amp;start=1"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  ) : (
+                    <>
+                      <img
+                        src={GhalibThumbNailVideo}
+                        alt="video thumbnail"
+                        className="ghalib-video-thumbnail m-0 p-0 position-absolute z-1"
+                      />
+                      <img
+                        src={playBtn}
+                        alt=""
+                        className="m-0 p-0 position-absolute "
+                        style={{ zIndex: "20", cursor: "pointer" }}
+                        onClick={handlePlay}
+                      />
+                    </>
+                  )}
                 </div>
               </div>
               <div className="col-lg-6 m-0 p-0 ms-lg-5" data-aos="fade-left">
