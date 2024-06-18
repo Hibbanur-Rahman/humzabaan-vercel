@@ -209,11 +209,16 @@ $purple-primary: #752CAE;
             height: 259px !important;
             bottom: -50px !important;
             right: 3px;
-            z-index: 8 !important;
+            z-index: 8 ;
             width: 100% !important;
         }
     }
-
+    .about-urdu-ink-img-slide {
+        
+        z-index: 0 !important;
+        right: 3px !important;
+        transition: all 0.5s ease-in-out;
+    }
     .testimonial {
         min-height: 33rem !important;
         max-height: 42rem !important;
