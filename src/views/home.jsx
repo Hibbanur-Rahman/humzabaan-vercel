@@ -576,13 +576,18 @@ const Home = () => {
         className="about-urdu row  m-0 p-0  ps-lg-0 ps-2 pe-lg-0 pe-2 pt-5 justify-content-center"
       >
         <div className="row col-lg-11 m-0 p-0 position-relative justify-content-center">
-        {bgImage && (
+        {/* {bgImage && (
           <img
             src={bgImage}
             alt="About Urdu Background"
             className="about-urdu-bg d-lg-flex d-none m-0 p-0 w-100"
           />
-        )}
+        )} */}
+         <img
+            src={aboutUrduBg}
+            alt="About Urdu Background"
+            className="about-urdu-bg d-lg-flex d-none m-0 p-0 w-100"
+          />
           <img
             src={aboutUrduBgMobile}
             alt=""
