@@ -75,7 +75,7 @@ const Home = () => {
   const screenWidth = window.screen.width;
 
   const getBgImage = () => {
-    if (screenWidth > 1000 && screenWidth < 1564) {
+    if (screenWidth > 990 && screenWidth < 1564) {
       return aboutUrduBg1k;
     } else if (screenWidth >= 1464) {
       return aboutUrduBg;
