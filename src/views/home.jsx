@@ -71,19 +71,19 @@ const Home = () => {
     email: "",
     message: "",
   });
+  const [bgImage, setBgImage] = useState(null);
+  // const screenWidth = window.screen.width;
 
-  const screenWidth = window.screen.width;
-
-  const getBgImage = () => {
-    if (screenWidth > 990 && screenWidth < 1564) {
-      return aboutUrduBg1k;
-    } else if (screenWidth >= 1464) {
-      return aboutUrduBg;
-    }
-    return null;
-  };
-  let bgImage;
-  bgImage = getBgImage();
+  // const getBgImage = () => {
+  //   if (screenWidth > 990 && screenWidth < 1564) {
+  //     return aboutUrduBg1k;
+  //   } else if (screenWidth >= 1464) {
+  //     return aboutUrduBg;
+  //   }
+  //   return null;
+  // };
+  // let bgImage;
+  // bgImage = getBgImage();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -117,7 +117,17 @@ const Home = () => {
  
   useEffect(() => {
     AOS.init();
-    bgImage = getBgImage();
+    const screenWidth = window.screen.width;
+    const getBgImage = () => {
+      if (screenWidth > 990 && screenWidth < 1564) {
+        return aboutUrduBg1k;
+      } else if (screenWidth >= 1464) {
+        return aboutUrduBg;
+      }
+      return null;
+    };
+
+    setBgImage(getBgImage());
 
   },[]);
 
@@ -576,18 +586,18 @@ const Home = () => {
         className="about-urdu row  m-0 p-0  ps-lg-0 ps-2 pe-lg-0 pe-2 pt-5 justify-content-center"
       >
         <div className="row col-lg-11 m-0 p-0 position-relative justify-content-center">
-        {/* {bgImage && (
+        {bgImage && (
           <img
             src={bgImage}
             alt="About Urdu Background"
             className="about-urdu-bg d-lg-flex d-none m-0 p-0 w-100"
           />
-        )} */}
-         <img
+        )}
+         {/* <img
             src={aboutUrduBg}
             alt="About Urdu Background"
             className="about-urdu-bg d-lg-flex d-none m-0 p-0 w-100"
-          />
+          /> */}
           <img
             src={aboutUrduBgMobile}
             alt=""
