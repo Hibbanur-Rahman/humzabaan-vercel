@@ -6,7 +6,7 @@ $red-primary: #D75438;
 $brown-primary: #582C1A;
 $purple-primary: #752CAE;
 
-@media (max-width: 999px) {
+@media (max-width: 990px) {
 
     .second-outer {
         width: 165px !important;
@@ -197,14 +197,28 @@ $purple-primary: #752CAE;
             }
         }
 
+        .urdu-iframe {
+            position: absolute !important;
+            z-index: 2 !important;
+            height: 169.22px !important;
+            width: 310.5px !important;
+
+        }
+
         .about-urdu-ink-img {
             height: 259px !important;
             bottom: -50px !important;
             right: 3px;
-            z-index: 8 !important;
+            z-index: 8 ;
+            width: 100% !important;
         }
     }
-
+    .about-urdu-ink-img-slide {
+        
+        z-index: 0 !important;
+        right: 3px !important;
+        transition: all 0.5s ease-in-out;
+    }
     .testimonial {
         min-height: 33rem !important;
         max-height: 42rem !important;
@@ -347,15 +361,17 @@ $purple-primary: #752CAE;
 }
 
 @media (min-width:1000px) and (max-width:1464px) {
-    .about-urdu-content{
-        .heading{
+    .about-urdu-content {
+        .heading {
             margin-top: 6rem !important;
-            img{
+
+            img {
                 height: 78px;
             }
         }
     }
 }
+
 // @media (min-width:550px) and (max-width:999px) {
 //     .testimonial {
 //         min-height: 33rem !important;

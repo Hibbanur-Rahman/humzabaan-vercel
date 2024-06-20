@@ -17,7 +17,7 @@ import teacherGif from "../assets/images/teacher-img.gif";
 import teacherVideoThumbnail from "../assets/images/teacher-video-thumbnail.svg";
 import mobileGif from "../assets/images/mobile-gif.gif";
 import Button from "../components/button";
-import ButtonNew from '../components/buttonNew';
+import ButtonNew from "../components/buttonNew";
 import PlayStoreBtn from "../components/playStoreBtn";
 import appleLogo from "../assets/images/Apple_logo.svg";
 import playStoreLogo from "../assets/images/playStoreLogo.svg";
@@ -34,7 +34,7 @@ import featuresContentList1 from "../assets/images/features-content-list-1.svg";
 import featuresContentList2 from "../assets/images/features-content-list-2.svg";
 import aboutUrduBg from "../assets/images/HISTORIC-PAGE.svg";
 import aboutUrduBgMobile from "../assets/images/about-urdu-bg-mobile.svg";
-import aboutUrduBg1k from '../assets/images/about-urdu-bg-13-15-1.svg'
+import aboutUrduBg1k from "../assets/images/about-urdu-bg-13-15-1.svg";
 import VideoPlayerFrame from "../assets/images/video-player-frame.svg";
 import GhalibThumbNailVideo from "../assets/images/ghalib-thumbnail-video.svg";
 import AboutUrduInk from "../assets/images/about-urdu-ink.svg";
@@ -64,26 +64,13 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import { useEffect, useState } from "react";
 const Home = () => {
-
   AOS.init();
   const [contactDetails, setContactDetails] = useState({
     name: "",
     email: "",
     message: "",
   });
-
-  const screenWidth = window.screen.width;
-
-  const getBgImage = () => {
-    if (screenWidth > 1000 && screenWidth < 1564) {
-      return aboutUrduBg1k;
-    } else if (screenWidth >= 1464) {
-      return aboutUrduBg;
-    }
-    return null;
-  };
-  let bgImage;
-  bgImage = getBgImage();
+  const [isIframeShow, setIsIframeShow] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -114,12 +101,13 @@ const Home = () => {
     setContactDetails({ ...contactDetails, [e.target.name]: e.target.value });
   };
 
- 
+  const handlePlay = () => {
+    setIsIframeShow(!isIframeShow);
+  };
+
   useEffect(() => {
     AOS.init();
-    bgImage = getBgImage();
-
-  },[]);
+  }, []);
 
   return (
     <div className="home row m-0 p-0 overflow-hidden">
@@ -199,7 +187,7 @@ const Home = () => {
         id="welcome-section"
         className="welcome-section row m-0 p-0 justify-content-center position-relative"
       >
-        <div className="col-10 d-flex align-items-center justify-content-center m-0 p-0 flex-column" >
+        <div className="col-10 d-flex align-items-center justify-content-center m-0 p-0 flex-column">
           <img
             src={welcomeUrdu}
             alt=""
@@ -207,10 +195,16 @@ const Home = () => {
             style={{ height: "auto", width: "17rem" }}
             data-aos="fade-up"
           />
-          <p className="khush-aamdeed-text text-light fs-1 m-0 p-0 text-center"  data-aos="fade-up">
+          <p
+            className="khush-aamdeed-text text-light fs-1 m-0 p-0 text-center"
+            data-aos="fade-up"
+          >
             Khush Aamdeed !
           </p>
-          <div className="heading m-0 p-0 mt-4 position-relative d-flex align-items-center justify-content-center" data-aos="fade-right" >
+          <div
+            className="heading m-0 p-0 mt-4 position-relative d-flex align-items-center justify-content-center"
+            data-aos="fade-right"
+          >
             <img src={headingBg1} alt="heading-bg" className="m-0 p-0 " />
             <h1 className="m-0 p-0 position-absolute">WELCOME TO HUMZABAAN</h1>
           </div>
@@ -219,13 +213,15 @@ const Home = () => {
 
       {/** ================= Who-we-are-section ==================  */}
       <div
-        
         id="about-us-section"
         className="who-we-are-section row m-0 p-0 pt-3 justify-content-center"
       >
         <p className="heading-p m-0 p-0 mt-lg-5 text-center fs-1">WHO WE ARE</p>
         <div className="row col-lg-10 m-0 p-0  z-2 justify-content-center">
-          <div className="who-we-are-right col-lg-6 m-0 p-lg-3 p-3 d-flex flex-column justify-content-center" data-aos="fade-right">
+          <div
+            className="who-we-are-right col-lg-6 m-0 p-lg-3 p-3 d-flex flex-column justify-content-center"
+            data-aos="fade-right"
+          >
             <p className="m-0 p-0 text-light kiddo-font text-center">
               Welcome to Humzabaan – your ultimate destination for delving into
               the enchanting world of Urdu! We're passionate about merging the
@@ -275,7 +271,10 @@ const Home = () => {
           </div>
         </div>
         <div className="mobile row m-0 p-0 col-lg-10 position-relative z-5 justify-content-between">
-          <div className="col-lg-5 m-0 p-0 position-relative d-flex justify-content-lg-end justify-content-center align-items-center" data-aos="fade-right">
+          <div
+            className="col-lg-5 m-0 p-0 position-relative d-flex justify-content-lg-end justify-content-center align-items-center"
+            data-aos="fade-right"
+          >
             <img
               src={mobileGif}
               alt=""
@@ -283,7 +282,10 @@ const Home = () => {
               style={{ height: "400px", zIndex: "6" }}
             />
           </div>
-          <div className="downloads-btns col-lg-6 mt-lg-0 mt-3 pb-3 d-flex flex-column justify-content-lg-end align-lg-baseline" data-aos="fade-left">
+          <div
+            className="downloads-btns col-lg-6 mt-lg-0 mt-3 pb-3 d-flex flex-column justify-content-lg-end align-lg-baseline"
+            data-aos="fade-left"
+          >
             <div className="" style={{ width: "15rem" }}>
               <PlayStoreBtn
                 logo={playStoreLogo}
@@ -307,13 +309,19 @@ const Home = () => {
         id="features-section"
         className="why-humzabaan-section row m-0 p-0 justify-content-center"
       >
-        <div className="heading m-0 p-0 mt-5 position-relative d-flex align-items-center justify-content-center" data-aos="fade-right">
+        <div
+          className="heading m-0 p-0 mt-5 position-relative d-flex align-items-center justify-content-center"
+          data-aos="fade-right"
+        >
           <img src={headingBg2} alt="heading-bg" className="m-0 p-0 " />
           <h1 className="m-0 p-0 position-absolute">WHY HUMZABAAN ?</h1>
         </div>
         <div className="features col-lg-10 m-0 p-0 mt-lg-5">
           <div className=" row m-0 p-0 justify-content-center">
-            <div className="col-lg-6 features-item features-item-margin-top  m-0 p-0 position-relative d-flex justify-content-end " data-aos="fade-right">
+            <div
+              className="col-lg-6 features-item features-item-margin-top  m-0 p-0 position-relative d-flex justify-content-end "
+              data-aos="fade-right"
+            >
               <img
                 src={featureImg1}
                 alt="feature image-1"
@@ -332,7 +340,10 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <div className="col-lg-6 features-item m-0 p-0 ps-2 position-relative d-flex justify-content-start " data-aos="fade-left">
+            <div
+              className="col-lg-6 features-item m-0 p-0 ps-2 position-relative d-flex justify-content-start "
+              data-aos="fade-left"
+            >
               <img
                 src={featureImg2}
                 alt="feature image-1"
@@ -353,7 +364,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="row m-0 p-0 mb-3 d-lg-flex d-none position-relative align-items-center justify-content-center " >
+          <div className="row m-0 p-0 mb-3 d-lg-flex d-none position-relative align-items-center justify-content-center ">
             <img
               src={featuresCenterMobile}
               alt=""
@@ -361,7 +372,10 @@ const Home = () => {
             />
           </div>
           <div className=" row m-0 p-0 mt-lg-5 justify-content-center">
-            <div className="col-lg-6 features-item m-0 p-0 position-relative d-flex justify-content-end " data-aos="fade-right">
+            <div
+              className="col-lg-6 features-item m-0 p-0 position-relative d-flex justify-content-end "
+              data-aos="fade-right"
+            >
               <img
                 src={featureImg3}
                 alt="feature image-1"
@@ -380,7 +394,10 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <div className="col-lg-6 features-item m-0 p-0 ps-2 position-relative d-flex justify-content-start " data-aos="fade-left">
+            <div
+              className="col-lg-6 features-item m-0 p-0 ps-2 position-relative d-flex justify-content-start "
+              data-aos="fade-left"
+            >
               <img
                 src={featureImg4}
                 alt="feature image-1"
@@ -576,13 +593,16 @@ const Home = () => {
         className="about-urdu row  m-0 p-0  ps-lg-0 ps-2 pe-lg-0 pe-2 pt-5 justify-content-center"
       >
         <div className="row col-lg-11 m-0 p-0 position-relative justify-content-center">
-        {bgImage && (
           <img
-            src={bgImage}
+            src={aboutUrduBg}
             alt="About Urdu Background"
-            className="about-urdu-bg d-lg-flex d-none m-0 p-0 w-100"
+            className="about-urdu-bg d-xxl-flex d-none m-0 p-0 w-100"
           />
-        )}
+          <img
+            src={aboutUrduBg1k}
+            alt="About Urdu Background"
+            className="about-urdu-bg d-lg-flex d-none d-xxl-none m-0 p-0 w-100"
+          />
           <img
             src={aboutUrduBgMobile}
             alt=""
@@ -591,15 +611,21 @@ const Home = () => {
           <img
             src={AboutUrduInk}
             alt=""
-            className="about-urdu-ink-img m-0 p-0 position-absolute"
+            className={`about-urdu-ink-img ${isIframeShow?'about-urdu-ink-img-slide':''} m-0 p-0 position-absolute`}
           />
 
           <div className="about-urdu-content row col-11 m-0 p-0 position-absolute justify-content-center">
-            <div className="heading m-0 p-0 mt-5 position-relative d-flex align-items-center justify-content-center" data-aos="fade-left">
+            <div
+              className="heading m-0 p-0 mt-5 position-relative d-flex align-items-center justify-content-center"
+              data-aos="fade-left"
+            >
               <img src={headingBg3} alt="heading-bg" className="m-0 p-0 " />
               <h1 className="m-0 p-0 position-absolute">ABOUT URDU</h1>
             </div>
-            <p className="kiddo-font m-0 p-0 text-center mt-lg-4 fs-5" data-aos="fade-right">
+            <p
+              className="kiddo-font m-0 p-0 text-center mt-lg-4 fs-5"
+              data-aos="fade-right"
+            >
               Urdu, known for its soul-stirring poetry and profound literary
               heritage, serves as a beacon of cultural identity for millions
               worldwide. Originating from the Indo-Aryan lineage, Urdu's
@@ -611,10 +637,16 @@ const Home = () => {
               United Arab Emirates, United Kingdom, Saudi Arabia, United States,
               Canada, Australia, and South Africa.
             </p>
-            <p className="kiddo-font m-0 p-0 text-center fs-2 mt-lg-5" data-aos="fade-left">
+            <p
+              className="kiddo-font m-0 p-0 text-center fs-2 mt-lg-5"
+              data-aos="fade-left"
+            >
               URDU FOR ALL
             </p>
-            <p className="kiddo-font m-0 p-0 text-center fs-5" data-aos="fade-right">
+            <p
+              className="kiddo-font m-0 p-0 text-center fs-5"
+              data-aos="fade-right"
+            >
               With an estimated more than 100 million speakers worldwide, Urdu
               holds a prominent position in global linguistic diversity.
               Pakistan stands as its heartland, with around 70-80 million native
@@ -624,7 +656,10 @@ const Home = () => {
               Kingdom host significant Urdu-speaking populations.
             </p>
             <div className="row m-0 p-0 justify-content-center align-items-center">
-              <div className="sub-heading m-0 p-0 mt-lg-5 mb-lg-5 position-relative d-flex align-items-center justify-content-center" data-aos="fade-left">
+              <div
+                className="sub-heading m-0 p-0 mt-lg-5 mb-lg-5 position-relative d-flex align-items-center justify-content-center"
+                data-aos="fade-left"
+              >
                 <img src={headingSubBg} alt="heading-bg" className="m-0 p-0 " />
                 <h1 className="kiddo-font m-0 p-0 position-absolute">
                   HISTORY OF URDU
@@ -632,23 +667,43 @@ const Home = () => {
               </div>
 
               <div className="history-urdu col-lg-5 m-0 p-0 d-flex align-content-end justify-content-lg-end justify-content-center ">
-                <div className="video-player position-relative d-flex justify-content-center align-items-center" data-aos="fade-right">
+                <div
+                  className="video-player position-relative d-flex justify-content-center align-items-center"
+                  data-aos="fade-right"
+                >
                   <img
                     src={VideoPlayerFrame}
                     alt="Video Player Frame"
-                    className="ghalib-video-frame m-0 p-0 z-3"
+                    className="ghalib-video-frame m-0 p-0 z-2"
                   />
-                  <img
-                    src={GhalibThumbNailVideo}
-                    alt="video thumbnail"
-                    className="ghalib-video-thumbnail m-0 p-0 position-absolute z-1"
-                  />
-                  <img
-                    src={playBtn}
-                    alt=""
-                    className="m-0 p-0 position-absolute "
-                    style={{ zIndex: "7", cursor: "pointer" }}
-                  />
+                  {isIframeShow ? (
+                    <iframe
+                     
+                      className="urdu-iframe"
+                      src="https://www.youtube.com/embed/tq_b_HkixEY?si=L_wM3uXYb-_8mcOd"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="fullscreen;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                     
+                    ></iframe>
+                  ) : (
+                    <>
+                      <img
+                        src={GhalibThumbNailVideo}
+                        alt="video thumbnail"
+                        className="ghalib-video-thumbnail m-0 p-0 position-absolute z-1"
+                      />
+                      <img
+                        src={playBtn}
+                        alt=""
+                        className="m-0 p-0 position-absolute "
+                        style={{ zIndex: "20", cursor: "pointer" }}
+                        onClick={handlePlay}
+                      />
+                    </>
+                  )}
                 </div>
               </div>
               <div className="col-lg-6 m-0 p-0 ms-lg-5" data-aos="fade-left">
@@ -693,11 +748,17 @@ const Home = () => {
             className="testimonial-frame testimonial-frame-tab d-sm-flex d-lg-none d-flex m-0 p-0 "
           /> */}
           <div className="testimonial-content row col-lg-10 m-0 p-0 position-absolute justify-content-center align-items-center ">
-            <div className="heading m-0 p-0 mt-5 position-relative d-flex align-items-center justify-content-center" data-aos="fade-left">
+            <div
+              className="heading m-0 p-0 mt-5 position-relative d-flex align-items-center justify-content-center"
+              data-aos="fade-left"
+            >
               <img src={headingBg4} alt="heading-bg" className="m-0 p-0 " />
               <h1 className="m-0 p-0 position-absolute">TESTIMONIAL</h1>
             </div>
-            <div className="testimonial-list row m-0 p-0 justify-content-center mt-4 d-lg-flex d-none" data-aos="fade-right">
+            <div
+              className="testimonial-list row m-0 p-0 justify-content-center mt-4 d-lg-flex d-none"
+              data-aos="fade-right"
+            >
               <div className="testimonial-list-item col-lg-4 d-flex justify-content-end">
                 <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
                   <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
@@ -834,7 +895,10 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="testimonial-list row d-lg-none d-flex m-0 p-0 justify-content-center mt-4 " data-aos="fade-left">
+            <div
+              className="testimonial-list row d-lg-none d-flex m-0 p-0 justify-content-center mt-4 "
+              data-aos="fade-left"
+            >
               <Swiper
                 slidesPerView={1}
                 spaceBetween={40}
@@ -1042,12 +1106,18 @@ const Home = () => {
             className="contact-us-frame m-0 p-0"
           />
           <div className="contact-content row col-lg-10 m-0 p-0 mt-5 position-absolute justify-content-center align-items-center ">
-            <div className="heading m-0 p-0 mt-5 position-relative d-flex align-items-center justify-content-center" data-aos="fade-left">
+            <div
+              className="heading m-0 p-0 mt-5 position-relative d-flex align-items-center justify-content-center"
+              data-aos="fade-left"
+            >
               <img src={headingBg5} alt="heading-bg" className="m-0 p-0 " />
               <h1 className="m-0 p-0 position-absolute">CONTACT US</h1>
             </div>
             <div className="row m-0 p-0 w-100  justify-content-center">
-              <div className="col-lg-6 m-0 p-0 d-flex justify-content-lg-end justify-content-center pt-lg-4 mt-lg-1" data-aos="fade-right">
+              <div
+                className="col-lg-6 m-0 p-0 d-flex justify-content-lg-end justify-content-center pt-lg-4 mt-lg-1"
+                data-aos="fade-right"
+              >
                 <form
                   action=""
                   className="m-0 p-0 mt-lg-5 pt-lg-5 pt-4"
@@ -1105,7 +1175,10 @@ const Home = () => {
                 </form>
                 <div className="line d-lg-flex d-none"></div>
               </div>
-              <div className="col-lg-6 d-flex justify-content-lg-start justify-content-center" data-aos="fade-left">
+              <div
+                className="col-lg-6 d-flex justify-content-lg-start justify-content-center"
+                data-aos="fade-left"
+              >
                 <div className="w-auto">
                   <img
                     src={ContactGhalib}
