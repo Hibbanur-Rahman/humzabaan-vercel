@@ -57,17 +57,19 @@ body {
 
 .btn-ctm {
     font-family: 'crunch-chips';
-    background-color: $btn-color !important;
-    border: 3px solid $btn-outline-color;
+    // background-color: $btn-color !important;
+    // border: 3px solid $btn-outline-color;
 
     .inner-btn-border {
-        border: 2px dashed $primary-color !important;
+        // border: 2px dashed $primary-color !important;
         z-index: 1 !important;
         position: relative;
+        border-radius: 12px !important;
     }
 
     .outer-btn-border {
-        border: 1px solid $primary-color !important;
+        margin: 1px !important;
+        // border: 1px solid rgb(7, 90, 94) !important;
         z-index: 1 !important;
         position: relative;
     }
@@ -106,8 +108,8 @@ body {
 
 .btn-ctm-new {
     // border: 2px #b3cb147e;
-    background: radial-gradient(#C3D80A, #BED30A, #AFC50C, #98AD10, #8AA012) !important;
-    box-shadow: 0px 4px #C3D80A !important;
+    // background: radial-gradient(#C3D80A, #BED30A, #AFC50C, #98AD10, #8AA012) !important;
+    // box-shadow: 0px 4px #5b6404 !important;
 
     .line-group {
         padding-left: 0px !important;
@@ -117,8 +119,8 @@ body {
     .line-up {
         transform: rotate(24deg);
         width: 9px !important;
-        height: 74px !important;
-        background-color: #C3D80A !important;
+        height: 100px !important;
+        // background-color:#dcf314 !important;
         margin-left: 10px;
 
     }
@@ -129,7 +131,7 @@ body {
     }
 
     .line-upper-overlay {
-        background-color: #b3cb147e !important;
+        // background-color: #b3cb147e !important;
         height: 35px !important;
     }
 
@@ -235,6 +237,13 @@ body {
 
     .who-we-are-right {
         max-width: 45rem !important;
+    }
+
+    iframe {
+        position: absolute;
+        height: 228px;
+        width: 373px;
+        z-index: 6;
     }
 }
 
@@ -379,7 +388,7 @@ body {
         height: 412px !important;
         bottom: -70px !important;
         right: 45%;
-        z-index: 1 ;
+        z-index: 1;
         width: 390px !important;
         transition: all 0.5s ease-in-out;
 
@@ -405,6 +414,21 @@ body {
         width: 524px !important;
         height: 294px !important;
     }
+
+}
+
+.video-stream {
+    width: 529px !important;
+    height: 289px !important;
+    left: 0px !important;
+    top: 0px !important;
+}
+
+.html5-main-video {
+    width: 529px !important;
+    height: 289px !important;
+    left: 0px !important;
+    top: 0px !important;
 }
 
 .about-urdu-ink-img-slide {
@@ -505,6 +529,7 @@ body {
         max-width: 80rem !important;
 
         .contact-ghalib-img {
+            margin-top: 66px !important;
             max-width: 41rem !important;
         }
 
@@ -546,11 +571,11 @@ body {
 
         .line {
             height: 12px !important;
-            width: 44rem !important;
+            width: 62rem !important;
             position: absolute;
-            bottom: 86px;
+            bottom: 24px;
             left: 2px;
-            background-color: #84B5FF !important;
+            background-color: #005a5a !important;
         }
     }
 }
@@ -612,8 +637,10 @@ body {
     height: 100vh !important;
 
     .logo {
-        height: 100px !important;
-        width: 200px !important;
+
+        height: 90px !important;
+        width: 181px !important;
+
     }
 
     .wrapper {

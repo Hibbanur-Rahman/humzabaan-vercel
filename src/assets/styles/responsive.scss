@@ -89,6 +89,12 @@ $purple-primary: #752CAE;
                 align-items: center;
             }
         }
+        iframe {
+            position: absolute;
+            height: 172px;
+            width: 280px;
+            z-index: 6;
+        }
     }
 
     .who-we-are-section::before {
@@ -317,8 +323,8 @@ $purple-primary: #752CAE;
             width: 340px !important;
 
             .contact-ghalib-img {
-                max-width: 26rem !important;
-                top: -132px !important;
+                max-width: 22rem !important;
+                top: 0px !important;
                 position: relative;
             }
         }

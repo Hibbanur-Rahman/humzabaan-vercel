@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import Navbar from "../components/navbar";
 import heroImg from "../assets/images/hero-img.png";
 import heroImgMobile from "../assets/images/hero-Img-mobile.svg";
@@ -71,6 +72,7 @@ const Home = () => {
     message: "",
   });
   const [isIframeShow, setIsIframeShow] = useState(false);
+  const [isTeacherIframeShow,setIsTeacherIframeShow]=useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -104,6 +106,10 @@ const Home = () => {
   const handlePlay = () => {
     setIsIframeShow(!isIframeShow);
   };
+
+  const handlePlayTeacherVideo=()=>{
+    setIsTeacherIframeShow(!isTeacherIframeShow);
+  }
 
   useEffect(() => {
     AOS.init();
@@ -251,17 +257,34 @@ const Home = () => {
                 className="video-frame-img  m-0 p-0 z-2"
                 style={{ height: "400px", width: "400px" }}
               />
-              <img
-                src={teacherVideoThumbnail}
-                alt="thumbnail"
-                className=" thumbnail position-absolute w-100"
-              />
-              <img
-                src={playBtn}
-                alt="playbtn"
-                className="m-0 p-0 position-absolute"
-                style={{ cursor: "pointer", zIndex: "6" }}
-              />
+
+              {isTeacherIframeShow ? (
+                <iframe
+                  className="urdu-iframe"
+                  src="https://www.youtube.com/embed/IUhCA1ZLV7c?si=Y8UygaMEFXv3wCGq"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="fullscreen;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+                
+              ) : (
+                <>
+                  <img
+                    src={teacherVideoThumbnail}
+                    alt="thumbnail"
+                    className=" thumbnail position-absolute w-100"
+                  />
+                  <img
+                    src={playBtn}
+                    alt="playbtn"
+                    className="m-0 p-0 position-absolute"
+                    style={{ cursor: "pointer", zIndex: "6" }}
+                    onClick={handlePlayTeacherVideo}
+                  />
+                </>
+              )}
               <img
                 src={teacherGif}
                 alt=""
@@ -291,6 +314,12 @@ const Home = () => {
                 logo={playStoreLogo}
                 para="GET IT ON"
                 head="GOOGLE PLAY"
+                btnCtmBackground="radial-gradient(#006b6b, #015a5e)"
+                boxShadow="0px 4px #053f3e"
+                lineBackground=" #006b6b"
+                outerBtnBorder="1px solid #fff"
+                innerBtnBorder="2px dashed #fff"
+                lineUpperOverlayBg="#006465"
               />
             </div>
             <div className="mt-4 " style={{ width: "15rem" }}>
@@ -298,6 +327,12 @@ const Home = () => {
                 logo={appleLogo}
                 para="DOWNLOAD ON THE"
                 head="APP STORE"
+                btnCtmBackground="radial-gradient(#C3D80A, #BED30A, #AFC50C, #98AD10, #8AA012)"
+                boxShadow="0px 4px #5b6404"
+                lineBackground="#dcf314"
+                outerBtnBorder="1px solid rgb(7, 90, 94)"
+                innerBtnBorder="2px dashed rgba(7, 90, 94, 1)"
+                lineUpperOverlayBg="#b3cb147e"
               />
             </div>
           </div>
@@ -369,6 +404,7 @@ const Home = () => {
               src={featuresCenterMobile}
               alt=""
               className="features-center-mobile position-absolute m-0 p-0"
+              data-aos="fade-right"
             />
           </div>
           <div className=" row m-0 p-0 mt-lg-5 justify-content-center">
@@ -440,9 +476,16 @@ const Home = () => {
                 />
                 <div className="content-list  row m-0 p-0 position-absolute justify-content-center align-items-center">
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
-                    <p className="kiddo-font m-0 p-0 w-auto fs-2">
-                      Learning Alphabet
-                    </p>
+                    <Link
+                      to="https://www.w3schools.com/css/css3_masking.asp"
+                      target="_blank"
+                      style={{ cursor: "pointer" }}
+                      className="m-0 p-0 text-center text-decoration-none"
+                    >
+                      <p className="kiddo-font m-0 p-0 w-auto fs-2">
+                        Learning Alphabet
+                      </p>
+                    </Link>
                     <img
                       src={featuresContentList1}
                       alt=""
@@ -451,9 +494,17 @@ const Home = () => {
                     />
                   </div>
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
-                    <p className="kiddo-font m-0 p-0 w-auto fs-2">
-                      Alphabets Groups
-                    </p>
+                    <Link
+                      to="https://www.w3schools.com/css/css3_masking.asp"
+                      target="_blank"
+                      style={{ cursor: "pointer" }}
+                      className="m-0 p-0 text-center text-decoration-none"
+                    >
+                      <p className="kiddo-font m-0 p-0 w-auto fs-2">
+                        Alphabets Groups
+                      </p>
+                    </Link>
+
                     <img
                       src={featuresContentList1}
                       alt=""
@@ -462,9 +513,15 @@ const Home = () => {
                     />
                   </div>
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
-                    <p className="kiddo-font m-0 p-0 w-auto fs-2">
-                      Understanding Shapes
-                    </p>
+                    <ScrollLink
+                      to="contact-us-section"
+                      style={{ cursor: "pointer" }}
+                      className="m-0 p-0 text-center text-decoration-none"
+                    >
+                      <p className="kiddo-font m-0 p-0 w-auto fs-2">
+                        Understanding Shapes
+                      </p>
+                    </ScrollLink>
                     <img
                       src={featuresContentList1}
                       alt=""
@@ -473,9 +530,15 @@ const Home = () => {
                     />
                   </div>
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
-                    <p className="kiddo-font m-0 p-0 w-auto fs-2">
-                      Forming Words
-                    </p>
+                    <ScrollLink
+                      to="contact-us-section"
+                      style={{ cursor: "pointer" }}
+                      className="m-0 p-0 text-center text-decoration-none"
+                    >
+                      <p className="kiddo-font m-0 p-0 w-auto fs-2">
+                        Forming Words
+                      </p>
+                    </ScrollLink>
                     <img
                       src={featuresContentList1}
                       alt=""
@@ -495,7 +558,15 @@ const Home = () => {
                     />
                   </div>
                   <div className="w-auto mt-3">
-                    <ButtonNew content="LEARN MORE" />
+                    <ButtonNew
+                      content="LEARN MORE"
+                      btnCtmBackground="radial-gradient(#ffd912 , #e5bd13)"
+                      boxShadow="0px 4px #af900e"
+                      lineBackground="#ffd912"
+                      outerBtnBorder="1px solid #582c1a"
+                      innerBtnBorder="2px dashed #582c1a"
+                      lineUpperOverlayBg="#ffce00"
+                    />
                   </div>
                 </div>
               </div>
@@ -578,7 +649,15 @@ const Home = () => {
                     />
                   </div>
                   <div className="w-auto mt-3">
-                    <Button content="LEARN MORE" />
+                    <ButtonNew
+                      content="LEARN MORE"
+                      btnCtmBackground="radial-gradient(#3e60f4 , #041ec8)"
+                      boxShadow="0px 4px #00139e"
+                      lineBackground="#3e60f4"
+                      outerBtnBorder="1px solid #000d9c"
+                      innerBtnBorder="2px dashed #fff"
+                      lineUpperOverlayBg="#1d3ae2 "
+                    />
                   </div>
                 </div>
               </div>
@@ -611,7 +690,9 @@ const Home = () => {
           <img
             src={AboutUrduInk}
             alt=""
-            className={`about-urdu-ink-img ${isIframeShow?'about-urdu-ink-img-slide':''} m-0 p-0 position-absolute`}
+            className={`about-urdu-ink-img ${
+              isIframeShow ? "about-urdu-ink-img-slide" : ""
+            } m-0 p-0 position-absolute`}
           />
 
           <div className="about-urdu-content row col-11 m-0 p-0 position-absolute justify-content-center">
@@ -678,7 +759,6 @@ const Home = () => {
                   />
                   {isIframeShow ? (
                     <iframe
-                     
                       className="urdu-iframe"
                       src="https://www.youtube.com/embed/tq_b_HkixEY?si=L_wM3uXYb-_8mcOd"
                       title="YouTube video player"
@@ -686,7 +766,6 @@ const Home = () => {
                       allow="fullscreen;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       referrerpolicy="strict-origin-when-cross-origin"
                       allowfullscreen
-                     
                     ></iframe>
                   ) : (
                     <>
@@ -1156,7 +1235,7 @@ const Home = () => {
                   ></textarea>
                   <div className="d-flex w-100 justify-content-center align-items-center">
                     {/* <Button content="Submit" onClick={handleSubmit} /> */}
-                    <div
+                    {/* <div
                       className="btn-ctm btn rounded-4 m-0 p-0 position-relative overflow-hidden w-auto"
                       onClick={handleSubmit}
                     >
@@ -1170,7 +1249,17 @@ const Home = () => {
                           <h4 className="m-0 p-0 text-light">Submit</h4>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
+                    <ButtonNew
+                      onClick={handleSubmit}
+                      content="Submit"
+                      btnCtmBackground="radial-gradient(#C3D80A, #BED30A, #AFC50C, #98AD10, #8AA012)"
+                      boxShadow="0px 4px #5b6404"
+                      lineBackground="#dcf314"
+                      outerBtnBorder="1px solid rgb(7, 90, 94)"
+                      innerBtnBorder="2px dashed rgba(7, 90, 94, 1)"
+                      lineUpperOverlayBg="#b3cb147e"
+                    />
                   </div>
                 </form>
                 <div className="line d-lg-flex d-none"></div>

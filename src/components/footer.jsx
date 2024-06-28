@@ -1,9 +1,10 @@
-import LogoDark from "../assets/images/logo-dark.svg";
+import LogoDark from "../assets/images/Humzabaan_Footer_Logo.svg";
 import { Link } from "react-router-dom";
 import PlayStoreBtn from "./playStoreBtn";
 import playStoreLogo from "../assets/images/playStoreLogo.svg";
 import appleLogo from "../assets/images/Apple_logo.svg";
 import Button from "./button";
+import ButtonNew from "./buttonNew";
 
 const Footer = () => {
   return (
@@ -79,23 +80,36 @@ const Footer = () => {
                 src={LogoDark}
                 alt="Logo dark"
                 className=" m-0 p-0 mt-4 w-auto"
+                style={{height:'93px'}}
               />
             </Link>
           </div>
           <div className="col-lg-3 mt-lg-0 mt-5 d-flex flex-column align-items-center">
             <h3 className="crunch-font m-0 p-0 mb-4">DOWNLOAD APP</h3>
             <div className="" style={{ width: "15rem" }}>
-              <PlayStoreBtn
+            <PlayStoreBtn
                 logo={playStoreLogo}
                 para="GET IT ON"
                 head="GOOGLE PLAY"
+                btnCtmBackground="radial-gradient(#006b6b, #015a5e)"
+                boxShadow="0px 4px #053f3e"
+                lineBackground=" #006b6b"
+                outerBtnBorder="1px solid #fff"
+                innerBtnBorder="2px dashed #fff"
+                lineUpperOverlayBg="#006465"
               />
             </div>
             <div className="mt-4" style={{ width: "15rem" }}>
-              <PlayStoreBtn
+            <PlayStoreBtn
                 logo={appleLogo}
                 para="DOWNLOAD ON THE"
                 head="APP STORE"
+                btnCtmBackground="radial-gradient(#C3D80A, #BED30A, #AFC50C, #98AD10, #8AA012)"
+                boxShadow="0px 4px #5b6404"
+                lineBackground="#dcf314"
+                outerBtnBorder="1px solid rgb(7, 90, 94)"
+                innerBtnBorder="2px dashed rgba(7, 90, 94, 1)"
+                lineUpperOverlayBg="#b3cb147e"
               />
             </div>
           </div>
@@ -115,7 +129,16 @@ const Footer = () => {
                 placeholder="Your Email"
               />
               <div className="d-flex w-100 justify-content-center align-items-center">
-                <Button content="Submit" />
+                {/* <Button content="Submit" /> */}
+                <ButtonNew
+                  content="Submit"
+                  btnCtmBackground="radial-gradient(#3e60f4 , #041ec8)"
+                  boxShadow="0px 4px #00139e"
+                  lineBackground="#3e60f4"
+                  outerBtnBorder="1px solid #000d9c"
+                  innerBtnBorder="2px dashed #fff"
+                  lineUpperOverlayBg="#1d3ae2 "
+                />
               </div>
             </form>
           </div>
@@ -154,7 +177,9 @@ const Footer = () => {
           </Link>
         </div>
         <div className="right-part col-sm-6 col-12 m-0 p-2 p-sm-0 d-flex  justify-content-center justify-content-lg-end">
-          <p className="m-0 p-0 text-light">© 2024 Hamzabaan™ |  All rights reserved.</p>
+          <p className="m-0 p-0 text-light">
+            © 2024 Hamzabaan™ | All rights reserved.
+          </p>
         </div>
       </div>
     </>
