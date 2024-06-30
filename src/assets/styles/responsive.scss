@@ -371,8 +371,15 @@ $purple-primary: #752CAE;
     .modal-heading{
         padding-left: 10px !important;
     }
+    .close-btn-img{
+        width: 45px !important;
+        height: 51px !important;
+        top: 33px;
+        right: -10px;
+    }
     .modal-content-section {
         width: 80% !important;
+        top: 75px;
         .content-img {
             height: 202px !important;
             width: 202px !important
