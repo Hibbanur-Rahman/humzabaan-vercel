@@ -15,7 +15,7 @@ import headingSubBg from "../assets/images/heading-sub-bg.svg";
 import videoFrame from "../assets/images/video-frame.svg";
 import playBtn from "../assets/images/play-btn.svg";
 import teacherGif from "../assets/images/teacher-img.gif";
-import teacherVideoThumbnail from "../assets/images/teacher-video-thumbnail.svg";
+import teacherVideoThumbnail from "../assets/images/teacher-video-thumbnail.png";
 import mobileGif from "../assets/images/mobile-gif.gif";
 import Button from "../components/button";
 import ButtonNew from "../components/buttonNew";
@@ -453,7 +453,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="features-card row m-0 p-0 mt-lg-5 pb-lg-5 position-relative">
+        <div className="features-card row m-0 p-0 mt-lg-5 pb-lg-5 position-relative" id='features-card-section'>
           <div className="col-lg-6 card-item-1 d-flex justify-content-lg-end justify-content-center">
             <div className="card rounded-5" data-aos="fade-right">
               <div className="head row m-0 p-0 position-relative align-items-center justify-content-center">

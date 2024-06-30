@@ -39,9 +39,9 @@ const Navbar = () => {
                 </Link>
               </div>
               <div className="col-3 d-flex align-items-center justify-content-center">
-                <Link to="#" className="text-decoration-none">
+                <ScrollLink to="features-card-section" className="text-decoration-none"  style={{ cursor: "pointer" }}>
                   FEATURES
-                </Link>
+                </ScrollLink>
               </div>
               <div className="col-3 d-flex align-items-center justify-content-center">
                 <ScrollLink
@@ -122,15 +122,18 @@ const Navbar = () => {
                 <Link to="#" className="text-decoration-none mb-3 mt-3">
                   CURRICULUM
                 </Link>
-                <Link to="#" className="text-decoration-none mb-3 mt-3">
+                <ScrollLink to="features-card-section" className="text-decoration-none mb-3 mt-3"  data-bs-dismiss="offcanvas"
+                aria-label="Close">
                   FEATURES
-                </Link>
-                <Link
-                  to="/#contact-us-section"
+                </ScrollLink>
+                <ScrollLink
+                  to="contact-us-section"
                   className="text-decoration-none mb-3 mt-3"
+                   data-bs-dismiss="offcanvas"
+                aria-label="Close"
                 >
                   CONTACT
-                </Link>
+                </ScrollLink>
                 <ButtonNew
                   content="DOWNLOAD NOW"
                   btnCtmBackground="radial-gradient(#C3D80A, #BED30A, #AFC50C, #98AD10, #8AA012)"
