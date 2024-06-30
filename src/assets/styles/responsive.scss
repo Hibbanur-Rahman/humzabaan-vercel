@@ -89,6 +89,7 @@ $purple-primary: #752CAE;
                 align-items: center;
             }
         }
+
         iframe {
             position: absolute;
             height: 172px;
@@ -215,16 +216,18 @@ $purple-primary: #752CAE;
             height: 259px !important;
             bottom: -50px !important;
             right: 3px;
-            z-index: 8 ;
+            z-index: 8;
             width: 100% !important;
         }
     }
+
     .about-urdu-ink-img-slide {
-        
+
         z-index: 0 !important;
         right: 3px !important;
         transition: all 0.5s ease-in-out;
     }
+
     .testimonial {
         min-height: 33rem !important;
         max-height: 42rem !important;
@@ -349,6 +352,41 @@ $purple-primary: #752CAE;
         }
 
     }
+
+    // .modal {
+    //     display: block !important;
+    //     align-items: center !important;
+    //     justify-content: center !important;
+    // }
+
+    .modal-dialog {
+        max-width: 380px !important;
+    }
+
+    .modal-bg-img {
+        height: 595px !important;
+        width: 367px !important;
+    }
+
+    .modal-heading{
+        padding-left: 10px !important;
+    }
+    .modal-content-section {
+        width: 80% !important;
+        .content-img {
+            height: 202px !important;
+            width: 202px !important
+        }
+        p{
+            font-size: 13px !important;
+            
+        }
+        .content-img-wrapper {
+            height: 202px !important;
+            width: 202px !important
+        }
+    }
+
 
 }
 

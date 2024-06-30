@@ -480,12 +480,13 @@ const Home = () => {
                 <div className="content-list  row m-0 p-0 position-absolute justify-content-center align-items-center">
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
                     <p
-                      className="kiddo-font m-0 p-0 w-auto fs-2"
+                      className="para-hover kiddo-font m-0 p-0 w-auto fs-2"
                       style={{ cursor: "pointer" }}
                       data-bs-toggle="modal"
                       data-bs-target="#exampleModal"
+                      data-hover="Learning Alphabet"
                     >
-                      Learning Alphabet
+                      <span>Learning Alphabet</span>
                     </p>
 
                     <img
@@ -501,9 +502,10 @@ const Home = () => {
                       style={{ cursor: "pointer" }}
                       data-bs-toggle="modal"
                       data-bs-target="#exampleModal"
-                      className="kiddo-font m-0 p-0 w-auto fs-2"
+                      className="para-hover  kiddo-font m-0 p-0 w-auto fs-2"
+                      data-hover="Alphabets Groups"
                     >
-                      Alphabets Groups
+                      <span>Alphabets Groups</span>
                     </p>
 
                     <img
@@ -518,9 +520,10 @@ const Home = () => {
                       style={{ cursor: "pointer" }}
                       data-bs-toggle="modal"
                       data-bs-target="#exampleModal"
-                      className="kiddo-font m-0 p-0 w-auto fs-2"
+                      className="para-hover kiddo-font m-0 p-0 w-auto fs-2"
+                      data-hover=" Understanding Shapes"
                     >
-                      Understanding Shapes
+                      <span>Understanding Shapes</span>
                     </p>
 
                     <img
@@ -535,9 +538,10 @@ const Home = () => {
                       style={{ cursor: "pointer" }}
                       data-bs-toggle="modal"
                       data-bs-target="#exampleModal"
-                      className="kiddo-font m-0 p-0 w-auto fs-2"
+                      className="para-hover kiddo-font m-0 p-0 w-auto fs-2"
+                      data-hover="Forming Words"
                     >
-                      Forming Words
+                      <span>Forming Words</span>
                     </p>
 
                     <img
@@ -552,9 +556,10 @@ const Home = () => {
                       style={{ cursor: "pointer" }}
                       data-bs-toggle="modal"
                       data-bs-target="#exampleModal"
-                      className="kiddo-font m-0 p-0 w-auto fs-2"
+                      className="para-hover kiddo-font m-0 p-0 w-auto fs-2"
+                      data-hover="Learning Vowels"
                     >
-                      Learning Vowels
+                      <span>Learning Vowels</span>
                     </p>
                     <img
                       src={featuresContentList1}
@@ -601,12 +606,13 @@ const Home = () => {
                 <div className="content-list  row m-0 p-0 position-absolute justify-content-center align-items-center">
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
                     <p
+                      className="para-hover kiddo-font m-0 p-0 w-auto fs-2"
                       style={{ cursor: "pointer" }}
                       data-bs-toggle="modal"
                       data-bs-target="#exampleModal"
-                      className="kiddo-font m-0 p-0 w-auto fs-2"
+                      data-hover="Learning Alphabet"
                     >
-                      Learning Alphabet
+                      <span>Learning Alphabet</span>
                     </p>
                     <img
                       src={featuresContentList2}
@@ -616,14 +622,16 @@ const Home = () => {
                     />
                   </div>
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
-                    <p
+                  <p
                       style={{ cursor: "pointer" }}
                       data-bs-toggle="modal"
                       data-bs-target="#exampleModal"
-                      className="kiddo-font m-0 p-0 w-auto fs-2"
+                      className="para-hover  kiddo-font m-0 p-0 w-auto fs-2"
+                      data-hover="Alphabets Groups"
                     >
-                      Alphabets Groups
+                      <span>Alphabets Groups</span>
                     </p>
+
                     <img
                       src={featuresContentList2}
                       alt=""
@@ -632,14 +640,16 @@ const Home = () => {
                     />
                   </div>
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
-                    <p
+                  <p
                       style={{ cursor: "pointer" }}
                       data-bs-toggle="modal"
                       data-bs-target="#exampleModal"
-                      className="kiddo-font m-0 p-0 w-auto fs-2"
+                      className="para-hover kiddo-font m-0 p-0 w-auto fs-2"
+                      data-hover=" Understanding Shapes"
                     >
-                      Understanding Shapes
+                      <span>Understanding Shapes</span>
                     </p>
+
                     <img
                       src={featuresContentList2}
                       alt=""
@@ -648,14 +658,16 @@ const Home = () => {
                     />
                   </div>
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
-                    <p
+                  <p
                       style={{ cursor: "pointer" }}
                       data-bs-toggle="modal"
                       data-bs-target="#exampleModal"
-                      className="kiddo-font m-0 p-0 w-auto fs-2"
+                      className="para-hover kiddo-font m-0 p-0 w-auto fs-2"
+                      data-hover="Forming Words"
                     >
-                      Forming Words
+                      <span>Forming Words</span>
                     </p>
+
                     <img
                       src={featuresContentList2}
                       alt=""
@@ -664,13 +676,14 @@ const Home = () => {
                     />
                   </div>
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
-                    <p
+                  <p
                       style={{ cursor: "pointer" }}
                       data-bs-toggle="modal"
                       data-bs-target="#exampleModal"
-                      className="kiddo-font m-0 p-0 w-auto fs-2"
+                      className="para-hover kiddo-font m-0 p-0 w-auto fs-2"
+                      data-hover="Learning Vowels"
                     >
-                      Learning Vowels
+                      <span>Learning Vowels</span>
                     </p>
                     <img
                       src={featuresContentList2}
@@ -696,8 +709,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <FeaturesModal/>
-     
+      <FeaturesModal />
 
       {/** ================= About-Urdu-section ==================  */}
       <section
@@ -1267,7 +1279,6 @@ const Home = () => {
                     value={contactDetails.message}
                   ></textarea>
                   <div className="d-flex w-100 justify-content-center align-items-center">
-                    
                     <div onClick={handleSubmit}>
                       <ButtonNew
                         content="Submit"
