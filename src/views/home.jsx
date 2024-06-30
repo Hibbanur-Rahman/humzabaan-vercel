@@ -64,6 +64,7 @@ import "swiper/css/pagination";
 // import required modules
 import { Autoplay, Pagination } from "swiper/modules";
 import { useEffect, useState } from "react";
+import FeaturesModal from "../components/modal";
 const Home = () => {
   AOS.init();
   const [contactDetails, setContactDetails] = useState({
@@ -72,7 +73,7 @@ const Home = () => {
     message: "",
   });
   const [isIframeShow, setIsIframeShow] = useState(false);
-  const [isTeacherIframeShow,setIsTeacherIframeShow]=useState(false);
+  const [isTeacherIframeShow, setIsTeacherIframeShow] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -107,9 +108,9 @@ const Home = () => {
     setIsIframeShow(!isIframeShow);
   };
 
-  const handlePlayTeacherVideo=()=>{
+  const handlePlayTeacherVideo = () => {
     setIsTeacherIframeShow(!isTeacherIframeShow);
-  }
+  };
 
   useEffect(() => {
     AOS.init();
@@ -268,7 +269,6 @@ const Home = () => {
                   referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen
                 ></iframe>
-                
               ) : (
                 <>
                   <img
@@ -453,7 +453,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="features-card row m-0 p-0 mt-lg-5 pb-lg-5 position-relative" id='features-card-section'>
+        <div
+          className="features-card row m-0 p-0 mt-lg-5 pb-lg-5 position-relative"
+          id="features-card-section"
+        >
           <div className="col-lg-6 card-item-1 d-flex justify-content-lg-end justify-content-center">
             <div className="card rounded-5" data-aos="fade-right">
               <div className="head row m-0 p-0 position-relative align-items-center justify-content-center">
@@ -476,16 +479,15 @@ const Home = () => {
                 />
                 <div className="content-list  row m-0 p-0 position-absolute justify-content-center align-items-center">
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
-                    <Link
-                      to="https://www.w3schools.com/css/css3_masking.asp"
-                      target="_blank"
+                    <p
+                      className="kiddo-font m-0 p-0 w-auto fs-2"
                       style={{ cursor: "pointer" }}
-                      className="m-0 p-0 text-center text-decoration-none"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
                     >
-                      <p className="kiddo-font m-0 p-0 w-auto fs-2">
-                        Learning Alphabet
-                      </p>
-                    </Link>
+                      Learning Alphabet
+                    </p>
+
                     <img
                       src={featuresContentList1}
                       alt=""
@@ -493,17 +495,16 @@ const Home = () => {
                       style={{ height: "0.6rem", width: "80%" }}
                     />
                   </div>
+
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
-                    <Link
-                      to="https://www.w3schools.com/css/css3_masking.asp"
-                      target="_blank"
+                    <p
                       style={{ cursor: "pointer" }}
-                      className="m-0 p-0 text-center text-decoration-none"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      className="kiddo-font m-0 p-0 w-auto fs-2"
                     >
-                      <p className="kiddo-font m-0 p-0 w-auto fs-2">
-                        Alphabets Groups
-                      </p>
-                    </Link>
+                      Alphabets Groups
+                    </p>
 
                     <img
                       src={featuresContentList1}
@@ -513,15 +514,15 @@ const Home = () => {
                     />
                   </div>
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
-                    <ScrollLink
-                      to="contact-us-section"
+                    <p
                       style={{ cursor: "pointer" }}
-                      className="m-0 p-0 text-center text-decoration-none"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      className="kiddo-font m-0 p-0 w-auto fs-2"
                     >
-                      <p className="kiddo-font m-0 p-0 w-auto fs-2">
-                        Understanding Shapes
-                      </p>
-                    </ScrollLink>
+                      Understanding Shapes
+                    </p>
+
                     <img
                       src={featuresContentList1}
                       alt=""
@@ -530,15 +531,15 @@ const Home = () => {
                     />
                   </div>
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
-                    <ScrollLink
-                      to="contact-us-section"
+                    <p
                       style={{ cursor: "pointer" }}
-                      className="m-0 p-0 text-center text-decoration-none"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      className="kiddo-font m-0 p-0 w-auto fs-2"
                     >
-                      <p className="kiddo-font m-0 p-0 w-auto fs-2">
-                        Forming Words
-                      </p>
-                    </ScrollLink>
+                      Forming Words
+                    </p>
+
                     <img
                       src={featuresContentList1}
                       alt=""
@@ -547,7 +548,12 @@ const Home = () => {
                     />
                   </div>
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
-                    <p className="kiddo-font m-0 p-0 w-auto fs-2">
+                    <p
+                      style={{ cursor: "pointer" }}
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      className="kiddo-font m-0 p-0 w-auto fs-2"
+                    >
                       Learning Vowels
                     </p>
                     <img
@@ -594,7 +600,12 @@ const Home = () => {
                 />
                 <div className="content-list  row m-0 p-0 position-absolute justify-content-center align-items-center">
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
-                    <p className="kiddo-font m-0 p-0 w-auto fs-2">
+                    <p
+                      style={{ cursor: "pointer" }}
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      className="kiddo-font m-0 p-0 w-auto fs-2"
+                    >
                       Learning Alphabet
                     </p>
                     <img
@@ -605,7 +616,12 @@ const Home = () => {
                     />
                   </div>
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
-                    <p className="kiddo-font m-0 p-0 w-auto fs-2">
+                    <p
+                      style={{ cursor: "pointer" }}
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      className="kiddo-font m-0 p-0 w-auto fs-2"
+                    >
                       Alphabets Groups
                     </p>
                     <img
@@ -616,7 +632,12 @@ const Home = () => {
                     />
                   </div>
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
-                    <p className="kiddo-font m-0 p-0 w-auto fs-2">
+                    <p
+                      style={{ cursor: "pointer" }}
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      className="kiddo-font m-0 p-0 w-auto fs-2"
+                    >
                       Understanding Shapes
                     </p>
                     <img
@@ -627,7 +648,12 @@ const Home = () => {
                     />
                   </div>
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
-                    <p className="kiddo-font m-0 p-0 w-auto fs-2">
+                    <p
+                      style={{ cursor: "pointer" }}
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      className="kiddo-font m-0 p-0 w-auto fs-2"
+                    >
                       Forming Words
                     </p>
                     <img
@@ -638,7 +664,12 @@ const Home = () => {
                     />
                   </div>
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
-                    <p className="kiddo-font m-0 p-0 w-auto fs-2">
+                    <p
+                      style={{ cursor: "pointer" }}
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      className="kiddo-font m-0 p-0 w-auto fs-2"
+                    >
                       Learning Vowels
                     </p>
                     <img
@@ -665,6 +696,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <FeaturesModal/>
+     
 
       {/** ================= About-Urdu-section ==================  */}
       <section
@@ -1234,32 +1267,18 @@ const Home = () => {
                     value={contactDetails.message}
                   ></textarea>
                   <div className="d-flex w-100 justify-content-center align-items-center">
-                    {/* <Button content="Submit" onClick={handleSubmit} /> */}
-                    {/* <div
-                      className="btn-ctm btn rounded-4 m-0 p-0 position-relative overflow-hidden w-auto"
-                      onClick={handleSubmit}
-                    >
-                      <div className="animation-div">
-                        <img src={btnBg} alt="btnBg" />
-                        <img src={btnBg} alt="btnBg" />
-                        <img src={btnBg} alt="btnBg" />
-                      </div>
-                      <div className="outer-btn-border rounded-4 m-0 p-1 overflow-hidden">
-                        <div className="inner-btn-border rounded-4 px-3 py-2">
-                          <h4 className="m-0 p-0 text-light">Submit</h4>
-                        </div>
-                      </div>
-                    </div> */}
-                    <ButtonNew
-                      onClick={handleSubmit}
-                      content="Submit"
-                      btnCtmBackground="radial-gradient(#C3D80A, #BED30A, #AFC50C, #98AD10, #8AA012)"
-                      boxShadow="0px 4px #5b6404"
-                      lineBackground="#dcf314"
-                      outerBtnBorder="1px solid rgb(7, 90, 94)"
-                      innerBtnBorder="2px dashed rgba(7, 90, 94, 1)"
-                      lineUpperOverlayBg="#b3cb147e"
-                    />
+                    
+                    <div onClick={handleSubmit}>
+                      <ButtonNew
+                        content="Submit"
+                        btnCtmBackground="radial-gradient(#C3D80A, #BED30A, #AFC50C, #98AD10, #8AA012)"
+                        boxShadow="0px 4px #5b6404"
+                        lineBackground="#dcf314"
+                        outerBtnBorder="1px solid rgb(7, 90, 94)"
+                        innerBtnBorder="2px dashed rgba(7, 90, 94, 1)"
+                        lineUpperOverlayBg="#b3cb147e"
+                      />
+                    </div>
                   </div>
                 </form>
                 <div className="line d-lg-flex d-none"></div>
