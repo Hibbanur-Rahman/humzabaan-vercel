@@ -622,7 +622,7 @@ const Home = () => {
                     />
                   </div>
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
-                  <p
+                    <p
                       style={{ cursor: "pointer" }}
                       data-bs-toggle="modal"
                       data-bs-target="#exampleModal"
@@ -640,7 +640,7 @@ const Home = () => {
                     />
                   </div>
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
-                  <p
+                    <p
                       style={{ cursor: "pointer" }}
                       data-bs-toggle="modal"
                       data-bs-target="#exampleModal"
@@ -658,7 +658,7 @@ const Home = () => {
                     />
                   </div>
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
-                  <p
+                    <p
                       style={{ cursor: "pointer" }}
                       data-bs-toggle="modal"
                       data-bs-target="#exampleModal"
@@ -676,7 +676,7 @@ const Home = () => {
                     />
                   </div>
                   <div className="list-item row m-0 p-0 mb-1 position-relative align-items-center justify-content-center">
-                  <p
+                    <p
                       style={{ cursor: "pointer" }}
                       data-bs-toggle="modal"
                       data-bs-target="#exampleModal"
