@@ -631,22 +631,13 @@ body {
     background-color: #579B22 !important;
     margin-top: -60px !important;
 }
-
 .login {
-    background-color: $primary-color !important;
+    background-image: url('../images/login-bg.svg');
     height: 100vh !important;
+    background-size: cover;
 
-    .logo {
-
-        height: 90px !important;
-        width: 181px !important;
-
-    }
-
-    .wrapper {
-        background-color: #19757a !important;
-        height: fit-content !important;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    .login-container {
+        height: min-content !important;
     }
 
     button {
@@ -654,23 +645,21 @@ body {
         background-color: $primary-color !important;
 
         &:hover {
-            background-color: #05c498 !important;
+            background-color: #399ba0 !important;
         }
     }
 
     input {
-        border: 2px solid #05c498 !important;
+        border: 1px solid #cacaca !important;
 
         &:focus {
             outline: none !important;
         }
 
-        &::placeholder {
-            color: #00C6D0 !important;
-        }
+      
     }
-}
 
+}
 
 .modal-dialog {
     background: transparent !important;
