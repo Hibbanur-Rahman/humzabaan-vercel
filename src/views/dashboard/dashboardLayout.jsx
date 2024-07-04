@@ -5,6 +5,8 @@ import "../../assets/styles/dashboard.scss";
 import DashboardSidebar from "../../components/dashboardSidebar";
 import Dashboard from "./dashboard";
 import EmailIntegration from "./emailIntegration";
+import Testimonial from "./testimonial";
+import Profile from "./profile";
 
 
 const DashboardLayout = () => {
@@ -23,6 +25,9 @@ const DashboardLayout = () => {
       <Routes>
         <Route path="/" element={<Dashboard/>} />
         <Route path="/email" element={<EmailIntegration/>} />
+        <Route path="/testimonial" element={<Testimonial/>} />
+        <Route path="/profile" element={<Profile/>} />
+
       </Routes>
     </div>
   );
