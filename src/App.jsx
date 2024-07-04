@@ -15,14 +15,14 @@ import Dashboard from './views/dashboard';
 function App() {
   AOS.init();
   return (
-    <BrowserRouter>
+    <>
      <Routes>
       <Route exact path="/" element={<Home/>}/>
       <Route exact path="/login" element={<Login/>}/>
       <Route exact path="/dashboard/*" element={<Dashboard/>}/>
      </Routes>
      <ToastContainer/>
-    </BrowserRouter>
+    </>
   )
 }
 
