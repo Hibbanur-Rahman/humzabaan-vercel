@@ -1,0 +1,69 @@
+@import url(./font.scss);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+$primary-color: rgba(7, 90, 94, 1);
+$secondary-color: rgba(180, 205, 76, 1);
+$btn-outline-color: rgba(109, 128, 4, 1);
+$btn-color: rgba(195, 216, 10, 1);
+$red-primary: #D75438;
+$brown-primary: #582C1A;
+$purple-primary: #752CAE;
+
+
+
+
+.dashboard {
+    background-color: #F5F5F9 !important;
+    height: 100vh !important;
+}
+
+.dashbaord-sidebar {
+    background-color: #fff !important;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+    .logo {
+        img {
+            height: 100px;
+        }
+    }
+
+    .menu-items {
+        p {
+            font-family: "Public Sans", sans-serif;
+            font-weight: 400;
+            font-style: 'normal';
+        }
+
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+            transition: all 0.5s ease-in-out;
+
+            cursor: pointer;
+            background-color: #c6caca36;
+
+        }
+    }
+
+    .active {
+        transition: all 0.5s ease-in-out;
+    
+        cursor: pointer;
+        background-color: $primary-color;
+    
+        p {
+            color: #fff;
+        }
+    
+        i {
+            color: #fff;
+        }
+        &:hover{
+            background-color: $primary-color;
+    
+        }
+    }
+
+}

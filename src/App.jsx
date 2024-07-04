@@ -10,7 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Login from './views/login';
-import Dashboard from './views/dashboard';
+import DashboardLayout from './views/dashboard/dashboardLayout';
 
 function App() {
   AOS.init();
@@ -19,7 +19,7 @@ function App() {
      <Routes>
       <Route exact path="/" element={<Home/>}/>
       <Route exact path="/login" element={<Login/>}/>
-      <Route exact path="/dashboard/*" element={<Dashboard/>}/>
+      <Route exact path="/dashboard/*" element={<DashboardLayout/>}/>
      </Routes>
      <ToastContainer/>
     </>
