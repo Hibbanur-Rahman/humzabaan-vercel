@@ -5,10 +5,12 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
 import DOMAIN from "../../environmentVariables";
+import loadingGif from '../assets/images/loading.gif';
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isSubmiting, setIsSubmiting] = useState(false);
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,16 +19,21 @@ const Login = () => {
       return;
     }
     try {
+      setIsSubmiting(true);
       const response = await axios.post(`${DOMAIN}/login`, { email, password });
       if (response.status === 200) {
+        setIsSubmiting(false);
         toast.success("Login successfull!!");
         const token = response.data.data.token;
         localStorage.setItem("humzabaan-token", token);
         setEmail("");
         setPassword("");
+
         navigate("/dashboard");
       }
     } catch (error) {
+      setIsSubmiting(false);
+
       toast.error("Failed to login");
     }
   };
@@ -61,12 +68,24 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
             className="row m-0 mb-3 p-2 rounded-3 bg-transparent border-2 "
           />
-          <button
-            type="submit"
-            className="text-white m-0 p-0 rounded-3 w-100 justify-center items-center text-xl py-2"
-          >
-            Sign In
-          </button>
+          {isSubmiting ? (
+            <button
+              type="button"
+              disabled
+              className="text-white m-0 p-0 d-flex align-items-center justify-content-center rounded-3 w-100 justify-center items-center text-xl py-2"
+              style={{cursor:'not-allowed'}}
+            >
+              <img src={loadingGif} alt="" style={{height:'30px',width:'30px'}} className="me-2"/>
+              Submiting...
+            </button>
+          ) : (
+            <button
+              type="submit"
+              className="text-white m-0 p-0 rounded-3 w-100 justify-center items-center text-xl py-2"
+            >
+              Sign In
+            </button>
+          )}
         </form>
       </div>
     </div>

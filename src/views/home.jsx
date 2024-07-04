@@ -48,6 +48,8 @@ import startFill from "../assets/images/star-fill.svg";
 import contactUsFrame from "../assets/images/contact-us-frame.svg";
 import ContactGhalib from "../assets/images/contact-ghalib.gif";
 import btnBg from "../assets/images/btn-bg.png";
+import loadingGif from "../assets/images/loading.gif";
+
 import Footer from "../components/footer";
 
 import axios from "axios";
@@ -74,10 +76,17 @@ const Home = () => {
   });
   const [isIframeShow, setIsIframeShow] = useState(false);
   const [isTeacherIframeShow, setIsTeacherIframeShow] = useState(false);
+  const [isSubmitingForm, setIsSubmitingForm] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      if(contactDetails.email==="" || contactDetails.message==='' || contactDetails.name=== ''){
+        toast.error("Please fill all the fields");
+        return ;
+      }
+
+      setIsSubmitingForm(true);
       const formData = new FormData();
       formData.append("name", contactDetails.name);
       formData.append("email", contactDetails.email);
@@ -94,10 +103,12 @@ const Home = () => {
           email: "",
           message: "",
         });
+        setIsSubmitingForm(false);
       }
     } catch (error) {
       console.log("Failed to send message:", error);
       toast.error("Failed to send message");
+      setIsSubmitingForm(false);
     }
   };
   const handleInputChange = (e) => {
@@ -1279,17 +1290,33 @@ const Home = () => {
                     value={contactDetails.message}
                   ></textarea>
                   <div className="d-flex w-100 justify-content-center align-items-center">
-                    <div onClick={handleSubmit}>
-                      <ButtonNew
-                        content="Submit"
-                        btnCtmBackground="radial-gradient(#C3D80A, #BED30A, #AFC50C, #98AD10, #8AA012)"
-                        boxShadow="0px 4px #5b6404"
-                        lineBackground="#dcf314"
-                        outerBtnBorder="1px solid rgb(7, 90, 94)"
-                        innerBtnBorder="2px dashed rgba(7, 90, 94, 1)"
-                        lineUpperOverlayBg="#b3cb147e"
-                      />
-                    </div>
+                    {isSubmitingForm ? (
+                      <div className="m-0 p-0 position-relative" >
+                        
+                        <ButtonNew
+                          content="Sending..."
+                          btnCtmBackground="radial-gradient(#C3D80A, #BED30A, #AFC50C, #98AD10, #8AA012)"
+                          boxShadow="0px 4px #5b6404"
+                          lineBackground="#dcf314"
+                          outerBtnBorder="1px solid rgb(7, 90, 94)"
+                          innerBtnBorder="2px dashed rgba(7, 90, 94, 1)"
+                          lineUpperOverlayBg="#b3cb147e"
+                          
+                        />
+                      </div>
+                    ) : (
+                      <div onClick={handleSubmit}>
+                        <ButtonNew
+                          content="Submit"
+                          btnCtmBackground="radial-gradient(#C3D80A, #BED30A, #AFC50C, #98AD10, #8AA012)"
+                          boxShadow="0px 4px #5b6404"
+                          lineBackground="#dcf314"
+                          outerBtnBorder="1px solid rgb(7, 90, 94)"
+                          innerBtnBorder="2px dashed rgba(7, 90, 94, 1)"
+                          lineUpperOverlayBg="#b3cb147e"
+                        />
+                      </div>
+                    )}
                   </div>
                 </form>
                 <div className="line d-lg-flex d-none"></div>
