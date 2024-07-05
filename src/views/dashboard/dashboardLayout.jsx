@@ -19,7 +19,7 @@ const DashboardLayout = () => {
     }
   }, []);
   return (
-    <div className="dashboard d-flex  m-0 p-0">
+    <div className="dashboard d-lg-flex  m-0 p-0">
       <DashboardSidebar />
       <div className=" row m-0 p-0 w-100">
         <Routes>
