@@ -67,6 +67,7 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import { useEffect, useState } from "react";
 import FeaturesModal from "../components/modal";
+import DOMAIN from "../../environmentVariables";
 const Home = () => {
   AOS.init();
   const [contactDetails, setContactDetails] = useState({
@@ -77,13 +78,18 @@ const Home = () => {
   const [isIframeShow, setIsIframeShow] = useState(false);
   const [isTeacherIframeShow, setIsTeacherIframeShow] = useState(false);
   const [isSubmitingForm, setIsSubmitingForm] = useState(false);
+  const [testimonialArr, setTestimonialArr] = useState([]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      if(contactDetails.email==="" || contactDetails.message==='' || contactDetails.name=== ''){
+      if (
+        contactDetails.email === "" ||
+        contactDetails.message === "" ||
+        contactDetails.name === ""
+      ) {
         toast.error("Please fill all the fields");
-        return ;
+        return;
       }
 
       setIsSubmitingForm(true);
@@ -123,8 +129,25 @@ const Home = () => {
     setIsTeacherIframeShow(!isTeacherIframeShow);
   };
 
+  const handleViewTestimonial = async () => {
+    try {
+      const response = await axios.post(`${DOMAIN}/view-testimonial`, {
+        headers: {
+          Authorization: localStorage.getItem("humzabaan-token"),
+        },
+      });
+      if (response.status === 200) {
+        setTestimonialArr(response.data.data);
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error("Failed to view Testimonial");
+    }
+  };
+
   useEffect(() => {
     AOS.init();
+    handleViewTestimonial();
   }, []);
 
   return (
@@ -894,7 +917,47 @@ const Home = () => {
               className="testimonial-list row m-0 p-0 justify-content-center mt-4 d-lg-flex d-none"
               data-aos="fade-right"
             >
-              <div className="testimonial-list-item col-lg-4 d-flex justify-content-end">
+              {Array.isArray(testimonialArr) &&
+                testimonialArr.map((item) => (
+                  <div
+                    className="testimonial-list-item col-lg-4 d-flex justify-content-end"
+                    id={item._id}
+                  >
+                    <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
+                      <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
+                        <img
+                          src={`${DOMAIN}/uploads/${item.image}`}
+                          className="m-0 p-0 rounded-circle"
+                          alt="profile-img"
+                        />
+                      </div>
+                      <div className="sub-heading crunch-font m-0 p-0 mt-2 position-relative d-flex align-items-center justify-content-center">
+                        <img
+                          src={testimonialSubHeading}
+                          alt="heading-bg"
+                          className="m-0 p-0 "
+                        />
+                        <h2 className="m-0 p-0 position-absolute">
+                          {item.name}
+                        </h2>
+                      </div>
+                      <div className="rating row m-0 p-0 mt-2">
+                        {[...Array(5)].map((_, index) => (
+                          <img
+                          src={`${item.rating>index?startFill:star}`}
+                          alt=""
+                          className="m-0 p-0  ps-1 w-auto"
+                        />
+                        ))}
+                        
+                      </div>
+                      <p className="review m-0 p-0 text-center kiddo-font col-10 mt-4">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              {/* <div className="testimonial-list-item col-lg-4 d-flex justify-content-end">
                 <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
                   <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
                     <img
@@ -1028,7 +1091,7 @@ const Home = () => {
                     ac.
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div
               className="testimonial-list row d-lg-none d-flex m-0 p-0 justify-content-center mt-4 "
@@ -1291,8 +1354,7 @@ const Home = () => {
                   ></textarea>
                   <div className="d-flex w-100 justify-content-center align-items-center">
                     {isSubmitingForm ? (
-                      <div className="m-0 p-0 position-relative" >
-                        
+                      <div className="m-0 p-0 position-relative">
                         <ButtonNew
                           content="Sending..."
                           btnCtmBackground="radial-gradient(#C3D80A, #BED30A, #AFC50C, #98AD10, #8AA012)"
@@ -1301,7 +1363,6 @@ const Home = () => {
                           outerBtnBorder="1px solid rgb(7, 90, 94)"
                           innerBtnBorder="2px dashed rgba(7, 90, 94, 1)"
                           lineUpperOverlayBg="#b3cb147e"
-                          
                         />
                       </div>
                     ) : (

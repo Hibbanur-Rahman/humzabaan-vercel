@@ -77,8 +77,9 @@ $purple-primary: #752CAE;
 .dashboard-testimonial{
     overflow-y: scroll;
     overflow-x: hidden;
-    // scrollbar-width: none !important;
+    scrollbar-width: none !important;
     width: 100% !important;
+    height: 100vh ;
     .card{
         height: min-content;
     }
