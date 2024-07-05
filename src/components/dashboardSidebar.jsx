@@ -19,6 +19,8 @@ const DashboardSidebar = () => {
             <div
               className={`menu-items ${
                 location.pathname === "/dashboard" ? "active" : ""
+              } ${
+                location.pathname === "/dashboard/" ? "active" : ""
               } d-flex rounded-3 align-items-center p-3 py-2 mb-3`}
             >
               <i className="bi bi-speedometer2 fs-5 me-2"></i>
@@ -73,21 +75,26 @@ const DashboardSidebar = () => {
           </div>
         </div>
       </div>
-      <div className="row m-0 p-0 d-lg-none p-2 border border-1 align-items-center" style={{boxShadow:'rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px'}}>
-        
-          <div
-            className="icon w-auto d-flex justify-content-center align-items-center border border-2 w-auto rounded-3 p-0 px-2"
-            style={{ height: "fit-content" }}
-          >
-            <i
-              className="bi bi-list fs-1 "
-              style={{ cursor: "pointer" }}
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasExample"
-              aria-controls="offcanvasExample"
-            ></i>
-          </div>
-        
+      <div
+        className="row m-0 p-0 d-lg-none p-2 border border-1 align-items-center"
+        style={{
+          boxShadow:
+            "rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px",
+        }}
+      >
+        <div
+          className="icon w-auto d-flex justify-content-center align-items-center border border-2 w-auto rounded-3 p-0 px-2"
+          style={{ height: "fit-content" }}
+        >
+          <i
+            className="bi bi-list fs-1 "
+            style={{ cursor: "pointer" }}
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample"
+            aria-controls="offcanvasExample"
+          ></i>
+        </div>
+
         <div className="logo col-9 d-flex justify-content-center align-items-center">
           <img src={logo} style={{ height: "50px" }} />
         </div>
@@ -118,6 +125,8 @@ const DashboardSidebar = () => {
               <div
                 className={`menu-items ${
                   location.pathname === "/dashboard" ? "active" : ""
+                } ${
+                  location.pathname === "/dashboard/" ? "active" : ""
                 } d-flex rounded-3 align-items-center p-3 py-2 mb-3`}
               >
                 <i className="bi bi-speedometer2 fs-5 me-2"></i>
