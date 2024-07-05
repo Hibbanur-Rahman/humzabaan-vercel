@@ -58,54 +58,85 @@ $purple-primary: #752CAE;
 
         cursor: pointer;
         background-color: $primary-color;
-    
+
         p {
             color: #fff;
         }
-    
+
         i {
             color: #fff;
         }
-        &:hover{
+
+        &:hover {
             background-color: $primary-color;
-    
+
         }
     }
 
 }
 
-.dashboard-testimonial{
+.dashboard-testimonial {
     overflow-y: scroll;
     overflow-x: hidden;
     // scrollbar-width: none !important;
     width: 100% !important;
     height: 100vh;
-    .card{
+
+    .card {
         height: min-content;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
     }
-    .input-group{
+
+    .input-group {
         border: 1px solid grey;
-        &:focus{
+
+        &:focus {
             outline: none;
         }
     }
-    
-    
-    textarea{
+
+
+    textarea {
         height: 120px !important;
         resize: none;
-        &:focus{
+
+        &:focus {
             outline: none;
         }
     }
-    button{
+
+    button {
         background-color: $primary-color;
         border: 1px solid $primary-color;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 
-        &:hover{
+        &:hover {
             background-color: $primary-color;
         }
     }
+}
+
+.email-section {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    // scrollbar-width: none !important;
+    width: 100% !important;
+    height: 100vh;
+
+    .card {
+        height: min-content;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    }
+
+    .message-item-row {
+        overflow: scroll;
+        scrollbar-width: none;
+
+        .message-cell {
+            height: 30px !important;
+            overflow: scroll;
+            scrollbar-width: none;
+        }
+    }
+
 }
