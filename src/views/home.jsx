@@ -51,6 +51,7 @@ import btnBg from "../assets/images/btn-bg.png";
 import loadingGif from "../assets/images/loading.gif";
 
 import Footer from "../components/footer";
+import DOMAIN from "../../environmentVariables";
 
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -81,9 +82,13 @@ const Home = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      if(contactDetails.email==="" || contactDetails.message==='' || contactDetails.name=== ''){
+      if (
+        contactDetails.email === "" ||
+        contactDetails.message === "" ||
+        contactDetails.name === ""
+      ) {
         toast.error("Please fill all the fields");
-        return ;
+        return;
       }
 
       setIsSubmitingForm(true);
@@ -95,8 +100,13 @@ const Home = () => {
         "https://script.google.com/macros/s/AKfycbymdG6MaoDG_pyYCo1O4N6hU8cq2HRJ2waADh3XNk7UVTGajb4ugyac_1mUFCNM6W-t3w/exec",
         formData
       );
+      const responseDB = await axios.post(`${DOMAIN}/send-message-db`, {
+        name: contactDetails.name,
+        email: contactDetails.email,
+        message: contactDetails.message,
+      });
       console.log(response);
-      if (response.data.result === "success") {
+      if (response.data.result === "success" && responseDB.status === 201) {
         toast.success("Sent message successfully");
         setContactDetails({
           name: "",
@@ -1291,8 +1301,7 @@ const Home = () => {
                   ></textarea>
                   <div className="d-flex w-100 justify-content-center align-items-center">
                     {isSubmitingForm ? (
-                      <div className="m-0 p-0 position-relative" >
-                        
+                      <div className="m-0 p-0 position-relative">
                         <ButtonNew
                           content="Sending..."
                           btnCtmBackground="radial-gradient(#C3D80A, #BED30A, #AFC50C, #98AD10, #8AA012)"
@@ -1301,7 +1310,6 @@ const Home = () => {
                           outerBtnBorder="1px solid rgb(7, 90, 94)"
                           innerBtnBorder="2px dashed rgba(7, 90, 94, 1)"
                           lineUpperOverlayBg="#b3cb147e"
-                          
                         />
                       </div>
                     ) : (
