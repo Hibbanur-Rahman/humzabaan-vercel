@@ -51,6 +51,7 @@ import btnBg from "../assets/images/btn-bg.png";
 import loadingGif from "../assets/images/loading.gif";
 
 import Footer from "../components/footer";
+import DOMAIN from "../../environmentVariables";
 
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -101,8 +102,13 @@ const Home = () => {
         "https://script.google.com/macros/s/AKfycbymdG6MaoDG_pyYCo1O4N6hU8cq2HRJ2waADh3XNk7UVTGajb4ugyac_1mUFCNM6W-t3w/exec",
         formData
       );
+      const responseDB = await axios.post(`${DOMAIN}/send-message-db`, {
+        name: contactDetails.name,
+        email: contactDetails.email,
+        message: contactDetails.message,
+      });
       console.log(response);
-      if (response.data.result === "success") {
+      if (response.data.result === "success" && responseDB.status === 201) {
         toast.success("Sent message successfully");
         setContactDetails({
           name: "",

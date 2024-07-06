@@ -125,7 +125,7 @@ const DashboardSidebar = () => {
               <div
                 className={`menu-items ${
                   location.pathname === "/dashboard" ? "active" : ""
-                }  ${
+                } ${
                   location.pathname === "/dashboard/" ? "active" : ""
                 } d-flex rounded-3 align-items-center p-3 py-2 mb-3`}
               >

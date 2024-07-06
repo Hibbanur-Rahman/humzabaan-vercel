@@ -8,6 +8,7 @@ const Testimonial = () => {
   const [testimonialArr, setTestimonialArr] = useState([]);
   const [ratings, setRatings] = useState([1, 1, 1]);
   const [files, setFiles] = useState([null, null, null]);
+  const [backendImages, setBackendImages] = useState(["", "", ""]);
   const fileInputRefs = [useRef(null), useRef(null), useRef(null)];
   const [descriptions, setDescriptions] = useState(["", "", ""]);
   const [names, setNames] = useState(["", "", ""]);
@@ -35,12 +36,12 @@ const Testimonial = () => {
     setter(newValues);
   };
 
-  const handleSubmit = async (index, endpoint) => {
+  const handleSubmit = async (index) => {
     try {
       const formData = new FormData();
       formData.append("rating", ratings[index]);
-      formData.append("profileImage", files[index]); 
-      formData.append("image", files[index]?.name || ""); 
+      formData.append("profileImage", files[index]);
+      formData.append("image", files[index]?.name || "");
       formData.append("description", descriptions[index]);
       formData.append("name", names[index]);
       const response = await axios.post(
@@ -77,24 +78,45 @@ const Testimonial = () => {
 
   useEffect(() => {
     if (testimonialArr.length >= 3) {
-      setRatings(testimonialArr.map(t => t.rating));
-      setDescriptions(testimonialArr.map(t => t.description));
-      setNames(testimonialArr.map(t => t.name));
+      setRatings(testimonialArr.map((t) => t.rating));
+      setDescriptions(testimonialArr.map((t) => t.description));
+      setNames(testimonialArr.map((t) => t.name));
+      setBackendImages(testimonialArr.map((t) => t.image));
     }
   }, [testimonialArr]);
 
   const renderTestimonial = (index) => (
-    <div className="card row m-0 p-3 pt-1 mt-3 mb-3" key={index}>
+    <div className="card row m-0 p-4 pt-3 mt-5 mb-5 rounded-5" key={index}>
       <p className="m-0 p-0 text-secondary">{`Testimonial-${index + 1}`}</p>
-      <div className="row m-0 p-0 justify-content-between">
+      <div className="row m-0 p-0 justify-content-between mt-3">
         <div className="w-auto m-0 p-0">
-          <p className="m-0 p-0 fw-semibold">Upload Profile photo</p>
-          <img
-            src={files[index] ? URL.createObjectURL(files[index]) : DragImg}
-            alt=""
-            onClick={() => handleImageClick(index)}
-            style={{ cursor: "pointer", width: "200px", height: "100px" }}
-          />
+          <p className="m-0 p-0 fw-semibold mb-2">Upload Profile photo</p>
+          {files[index] ? (
+            <img
+              src={URL.createObjectURL(files[index])}
+              alt=""
+              onClick={() => handleImageClick(index)}
+              style={{ cursor: "pointer", width: "200px", height: "100px" }}
+              className="rounded-4 overflow-hidden"
+            />
+          ) : backendImages[index] ? (
+            <img
+              src={`${DOMAIN}/uploads/${backendImages[index]}`}
+              alt=""
+              onClick={() => handleImageClick(index)}
+              style={{ cursor: "pointer", width: "200px", height: "100px" }}
+              className="rounded-4 overflow-hidden"
+
+            />
+          ) : (
+            <img
+              src={DragImg}
+              alt=""
+              onClick={() => handleImageClick(index)}
+              style={{ cursor: "pointer", width: "200px", height: "100px" }}
+            />
+          )}
+
           <input
             type="file"
             ref={fileInputRefs[index]}
@@ -104,17 +126,17 @@ const Testimonial = () => {
           {files[index] && <p>{files[index].name}</p>}
         </div>
         <div className="w-auto">
-          <p className="m-0 p-0 fw-semibold">Name/Person-Name</p>
+          <p className="m-0 p-0 fw-semibold  mb-2">Name/Person-Name</p>
           <input
             type="text"
             placeholder="Name"
-            className="input-group rounded-2 p-2"
+            className="input-group  p-2 rounded-3 border border-1 bg-light"
             value={names[index]}
             onChange={(e) => handleInputChange(setNames, index, e.target.value)}
           />
         </div>
         <div className="w-auto">
-          <p className="m-0 p-0 fw-semibold">Select Rating</p>
+          <p className="m-0 p-0 fw-semibold  mb-2">Select Rating</p>
           <div className="row m-0 p-0">
             {[...Array(5)].map((_, starIndex) => (
               <i
@@ -129,15 +151,17 @@ const Testimonial = () => {
           </div>
         </div>
       </div>
-      <div className="row m-0 p-0">
-        <p className="m-0 p-0 fw-semibold">Description</p>
+      <div className="row m-0 p-0 mt-4">
+        <p className="m-0 p-0 fw-semibold mb-2">Description</p>
         <textarea
+          className="m-0 p-2 rounded-3 border border-1 bg-light"
           placeholder="Write Description"
           value={descriptions[index]}
           onChange={(e) =>
             handleInputChange(setDescriptions, index, e.target.value)
           }
         ></textarea>
+        <p className="text-danger m-0 p-0">write description only 198 letters</p>
       </div>
       <div className="row">
         <button
