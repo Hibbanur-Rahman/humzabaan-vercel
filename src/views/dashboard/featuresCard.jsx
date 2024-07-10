@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
 import DOMAIN from "../../../environmentVariables";
@@ -6,32 +6,70 @@ import DOMAIN from "../../../environmentVariables";
 const FeaturesCard = () => {
   const [heading, setHeading] = useState(["", "", "", ""]);
   const [descriptions, setDescriptions] = useState(["", "", "", ""]);
+  const [featuresArr, setFeaturesArr] = useState([]);
 
   const handleHeadingInputChange = (index, value) => {
-    setHeading([...heading]);
-    heading[index] = value;
-    setHeading([...heading, heading[index]]);
+    const newHeadings = [...heading];
+    newHeadings[index] = value;
+    setHeading(newHeadings);
   };
+
   const handleDescriptionInputChange = (index, value) => {
-    setDescriptions([...descriptions]);
-    descriptions[index] = value;
-    setDescriptions([...descriptions, descriptions[index]]);
+    const newDescriptions = [...descriptions];
+    newDescriptions[index] = value;
+    setDescriptions(newDescriptions);
   };
 
   const handleSubmit = async (index) => {
     try {
-      const response = await axios.post(`${DOMAIN}/feature-${index}`, {
-        heading: heading[index],
-        description: descriptions[index],
-      });
-      if(response.status===200){
+      const response = await axios.post(
+        `${DOMAIN}/update-feature`,
+        {
+          number: index + 1,
+          heading: heading[index],
+          description: descriptions[index],
+        },
+        {
+          headers: {
+            Authorization: localStorage.getItem("humzabaan-token"),
+          },
+        }
+      );
+      if (response.status === 200) {
         toast.success("Feature Added Successfully");
       }
     } catch (error) {
-      console.log(error);
+      console.error(error);
       toast.error("Failed to update");
     }
   };
+
+  const handleView = async () => {
+    try {
+      const response = await axios.post(`${DOMAIN}/view-features`, {
+        headers: {
+          Authorization: localStorage.getItem("humzabaan-token"),
+        },
+      });
+      if (response.status === 200) {
+        setFeaturesArr(response.data.data);
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error("Failed to view features");
+    }
+  };
+
+  useEffect(() => {
+    handleView();
+  }, []);
+
+  useEffect(() => {
+    if (featuresArr.length >= 4) {
+      setHeading(featuresArr.map((feature) => feature.heading));
+      setDescriptions(featuresArr.map((feature) => feature.description));
+    }
+  }, [featuresArr]);
 
   const renderCard = (index) => (
     <div className="card row m-0 p-4 pt-3 mt-5 mb-5 rounded-5" key={index}>
@@ -54,12 +92,10 @@ const FeaturesCard = () => {
           value={descriptions[index]}
           onChange={(e) => handleDescriptionInputChange(index, e.target.value)}
         ></textarea>
-        <p className="text-danger m-0 p-0">
-          write description only 198 letters
-        </p>
+        <p className="text-danger m-0 p-0">write description only 198 letters</p>
       </div>
       <div className="row">
-        <button className="btn btn-primary w-auto mt-4">Submit</button>
+        <button className="btn btn-primary w-auto mt-4" onClick={() => handleSubmit(index)}>Submit</button>
       </div>
     </div>
   );
