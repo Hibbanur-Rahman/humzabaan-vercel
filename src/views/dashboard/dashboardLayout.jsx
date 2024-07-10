@@ -7,6 +7,7 @@ import Dashboard from "./dashboard";
 import EmailIntegration from "./emailIntegration";
 import Testimonial from "./testimonial";
 import Profile from "./profile";
+import FeaturesCard from "./featuresCard";
 
 const DashboardLayout = () => {
   const navigate = useNavigate();
@@ -27,6 +28,7 @@ const DashboardLayout = () => {
           <Route path="/email" element={<EmailIntegration />} />
           <Route path="/testimonial" element={<Testimonial />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/features-card" element={<FeaturesCard />} />
         </Routes>
       </div>
     </div>

@@ -41,6 +41,19 @@ const DashboardSidebar = () => {
             </div>
           </Link>
           <Link
+            to="/dashboard/features-card"
+            className="text-decoration-none text-dark"
+          >
+            <div
+              className={`menu-items ${
+                location.pathname === "/dashboard/features-card" ? "active" : ""
+              } d-flex rounded-3 align-items-center p-3 py-2 mb-3`}
+            >
+              <i className="bi bi-file-earmark fs-5 me-2"></i>
+              <p className="m-0 p-0 fs-5">Features</p>
+            </div>
+          </Link>
+          <Link
             to="/dashboard/profile"
             className="text-decoration-none text-dark"
           >
@@ -100,21 +113,21 @@ const DashboardSidebar = () => {
         </div>
       </div>
       <div
-        class="offcanvas offcanvas-start dashbaord-sidebar"
-        tabindex="-1"
+        className="offcanvas offcanvas-start dashbaord-sidebar"
+        tabIndex="-1"
         id="offcanvasExample"
         aria-labelledby="offcanvasExampleLabel"
       >
-        <div class="offcanvas-header">
+        <div className="offcanvas-header">
           <button
             type="button"
-            class="btn-close text-reset"
+            className="btn-close text-reset"
             data-bs-dismiss="offcanvas"
             aria-label="Close"
           ></button>
         </div>
         <div
-          class="offcanvas-body dashbaord-sidebar"
+          className="offcanvas-body dashbaord-sidebar"
           style={{ boxShadow: "none" }}
         >
           <div className="logo">
@@ -146,6 +159,19 @@ const DashboardSidebar = () => {
                 <p className="m-0 p-0 fs-5">Testimonial</p>
               </div>
             </Link>
+            <Link
+            to="/dashboard/features-card"
+            className="text-decoration-none text-dark"
+          >
+            <div
+              className={`menu-items ${
+                location.pathname === "/dashboard/features-card" ? "active" : ""
+              } d-flex rounded-3 align-items-center p-3 py-2 mb-3`}
+            >
+              <i className="bi bi-file-earmark fs-5 me-2"></i>
+              <p className="m-0 p-0 fs-5">Features</p>
+            </div>
+          </Link>
             <Link
               to="/dashboard/profile"
               className="text-decoration-none text-dark"

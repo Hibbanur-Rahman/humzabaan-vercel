@@ -68,7 +68,7 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import { useEffect, useState } from "react";
 import FeaturesModal from "../components/modal";
-import DOMAIN from "../../environmentVariables";
+
 const Home = () => {
   AOS.init();
   const [contactDetails, setContactDetails] = useState({
@@ -923,7 +923,7 @@ const Home = () => {
               className="testimonial-list row m-0 p-0 justify-content-center mt-4 d-lg-flex d-none"
               data-aos="fade-right"
             >
-              {Array.isArray(testimonialArr) &&
+              {/* {Array.isArray(testimonialArr) &&
                 testimonialArr.map((item) => (
                   <div
                     className="testimonial-list-item col-lg-4 d-flex justify-content-end"
@@ -962,8 +962,8 @@ const Home = () => {
                       </p>
                     </div>
                   </div>
-                ))}
-              {/* <div className="testimonial-list-item col-lg-4 d-flex justify-content-end">
+                ))} */}
+              <div className="testimonial-list-item col-lg-4 d-flex justify-content-end">
                 <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
                   <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
                     <img
@@ -1097,7 +1097,7 @@ const Home = () => {
                     ac.
                   </p>
                 </div>
-              </div> */}
+              </div>
             </div>
             <div
               className="testimonial-list row d-lg-none d-flex m-0 p-0 justify-content-center mt-4 "
