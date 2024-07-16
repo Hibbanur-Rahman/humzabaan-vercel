@@ -147,7 +147,7 @@ const Home = () => {
       }
     } catch (error) {
       console.log(error);
-      toast.error("Failed to view Testimonial");
+      // toast.error("Failed to view Testimonial");
     }
   };
 
