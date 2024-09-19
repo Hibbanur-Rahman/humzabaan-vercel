@@ -3,6 +3,8 @@ import DragImg from "../../assets/images/dragInput.svg";
 import { toast } from "react-toastify";
 import axios from "axios";
 import DOMAIN from "../../../environmentVariables";
+import { storage } from "../../services/firebaseConfig";
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 
 const Testimonial = () => {
   const [testimonialArr, setTestimonialArr] = useState([]);
@@ -37,17 +39,47 @@ const Testimonial = () => {
   };
 
   const handleSubmit = async (index) => {
+    if (!files[index]) {
+      toast.error("Please select a file.");
+      return;
+    }
+  
     try {
-      const formData = new FormData();
-      formData.append("rating", ratings[index]);
-      formData.append("profileImage", files[index]);
-      formData.append("image", files[index]?.name || "");
-      formData.append("description", descriptions[index]);
-      formData.append("name", names[index]);
-      const response = await axios.post(
-        `${DOMAIN}/update-testimonial-${index + 1}`,
-        formData
+      const file = files[index];
+      const storageRef = ref(storage, `testimonials/${file.name}`);
+      const uploadTask = uploadBytesResumable(storageRef, file);
+  
+      uploadTask.on(
+        "state_changed",
+        (snapshot) => {
+          const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          console.log("Upload is " + progress + "% done");
+        },
+        (error) => {
+          console.error("Upload failed:", error);
+          toast.error("Failed to upload image");
+        },
+        async () => {
+          const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
+          console.log("File available at", downloadURL);
+          await submitTestimonialToBackend(index, downloadURL); // Use downloadURL to submit
+        }
       );
+    } catch (error) {
+      console.error("Error uploading image:", error);
+      toast.error("Error occurred");
+    }
+  };
+  
+  const submitTestimonialToBackend = async (index, imageUrl) => {
+    try {
+      const formData = {
+        rating: ratings[index],
+        image: imageUrl,
+        description: descriptions[index],
+        name: names[index],
+      };
+      const response = await axios.post(`${DOMAIN}/update-testimonial-${index + 1}`, formData);
       if (response.status === 200) {
         toast.success("Testimonial added successfully");
       }
@@ -55,6 +87,7 @@ const Testimonial = () => {
       toast.error("Failed to update");
     }
   };
+  
 
   const handleViewTestimonial = async () => {
     try {
@@ -101,7 +134,7 @@ const Testimonial = () => {
             />
           ) : backendImages[index] ? (
             <img
-              src={`${DOMAIN}/uploads/${backendImages[index]}`}
+              src={`${backendImages[index]}`}
               alt=""
               onClick={() => handleImageClick(index)}
               style={{ cursor: "pointer", width: "200px", height: "100px" }}
