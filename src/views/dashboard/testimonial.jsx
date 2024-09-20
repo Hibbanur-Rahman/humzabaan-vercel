@@ -32,10 +32,12 @@ const Testimonial = () => {
     setFiles(newFiles);
   };
 
-  const handleInputChange = (setter, index, value) => {
-    const newValues = [...setter];
-    newValues[index] = value;
-    setter(newValues);
+  const handleInputChange = (setState, index, value) => {
+    setState((prevState) => {
+      const newValues = [...prevState];
+      newValues[index] = value;
+      return newValues;
+    });
   };
 
   const handleSubmit = async (index) => {
@@ -43,16 +45,17 @@ const Testimonial = () => {
       toast.error("Please select a file.");
       return;
     }
-  
+
     try {
       const file = files[index];
       const storageRef = ref(storage, `testimonials/${file.name}`);
       const uploadTask = uploadBytesResumable(storageRef, file);
-  
+
       uploadTask.on(
         "state_changed",
         (snapshot) => {
-          const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          const progress =
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
           console.log("Upload is " + progress + "% done");
         },
         (error) => {
@@ -70,7 +73,7 @@ const Testimonial = () => {
       toast.error("Error occurred");
     }
   };
-  
+
   const submitTestimonialToBackend = async (index, imageUrl) => {
     try {
       const formData = {
@@ -79,7 +82,10 @@ const Testimonial = () => {
         description: descriptions[index],
         name: names[index],
       };
-      const response = await axios.post(`${DOMAIN}/update-testimonial-${index + 1}`, formData);
+      const response = await axios.post(
+        `${DOMAIN}/update-testimonial-${index + 1}`,
+        formData
+      );
       if (response.status === 200) {
         toast.success("Testimonial added successfully");
       }
@@ -87,15 +93,10 @@ const Testimonial = () => {
       toast.error("Failed to update");
     }
   };
-  
 
   const handleViewTestimonial = async () => {
     try {
-      const response = await axios.post(`${DOMAIN}/view-testimonial`, {
-        headers: {
-          Authorization: localStorage.getItem("humzabaan-token"),
-        },
-      });
+      const response = await axios.get(`${DOMAIN}/view-testimonial`);
       if (response.status === 200) {
         setTestimonialArr(response.data.data);
       }
@@ -139,7 +140,6 @@ const Testimonial = () => {
               onClick={() => handleImageClick(index)}
               style={{ cursor: "pointer", width: "200px", height: "100px" }}
               className="rounded-4 overflow-hidden"
-
             />
           ) : (
             <img
@@ -194,7 +194,9 @@ const Testimonial = () => {
             handleInputChange(setDescriptions, index, e.target.value)
           }
         ></textarea>
-        <p className="text-danger m-0 p-0">write description only 198 letters</p>
+        <p className="text-danger m-0 p-0">
+          write description only 198 letters
+        </p>
       </div>
       <div className="row">
         <button

@@ -80,6 +80,7 @@ const Home = () => {
   const [isTeacherIframeShow, setIsTeacherIframeShow] = useState(false);
   const [isSubmitingForm, setIsSubmitingForm] = useState(false);
   const [testimonialArr, setTestimonialArr] = useState([]);
+  const [whyHumzabaanArr, setWhyHumzabaanArr] = useState([]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -137,11 +138,7 @@ const Home = () => {
 
   const handleViewTestimonial = async () => {
     try {
-      const response = await axios.post(`${DOMAIN}/view-testimonial`, {
-        headers: {
-          Authorization: localStorage.getItem("humzabaan-token"),
-        },
-      });
+      const response = await axios.get(`${DOMAIN}/view-testimonial`);
       if (response.status === 200) {
         setTestimonialArr(response.data.data);
       }
@@ -151,9 +148,21 @@ const Home = () => {
     }
   };
 
+  const handleViewWhyHumzabaan = async () => {
+    try {
+      const response = await axios.get(`${DOMAIN}/view-features`);
+      if (response.status === 200) {
+        setWhyHumzabaanArr(response.data.data);
+      }
+    } catch (error) {
+      console.log("error in the why humzabaan view: ", error);
+    }
+  };
+
   useEffect(() => {
     AOS.init();
     handleViewTestimonial();
+    handleViewWhyHumzabaan();
   }, []);
 
   return (
@@ -269,14 +278,14 @@ const Home = () => {
             className="who-we-are-right col-lg-6 m-0 p-lg-3 p-3 d-flex flex-column justify-content-center"
             data-aos="fade-right"
           >
-            <p className="m-0 p-0 text-light kiddo-font text-center">
+            <p className="m-0 p-0 text-light kiddo-font text-center" style={{fontSize:'1.1rem'}}>
               Welcome to Humzabaan – your ultimate destination for delving into
               the enchanting world of Urdu! We're passionate about merging the
               timeless essence of Urdu with cutting-edge technology to offer you
               an unparalleled learning experience tailored to your unique
               journey. ​
             </p>
-            <p className="m-0 p-0 mt-4 text-light kiddo-font text-center">
+            <p className="m-0 p-0 mt-4 text-light kiddo-font text-center" style={{fontSize:'1.1rem'}}>
               Here at Humzabaan, we're dedicated to nurturing the vibrant spirit
               of Urdu, whether you're taking your first steps or refining your
               skills. Our approach blends innovative digital tools with a
@@ -403,16 +412,16 @@ const Home = () => {
                 className="m-0 p-0 "
               />
               <div className="content content-1 position-absolute">
-                <h2 className="m-0 p-0 crunch-font text-center mb-lg-4 mb-2">
-                  HISTORY OF URDU
-                </h2>
-                <p className="m-0 p-0 kiddo-font text-center">
-                  Urdu, originating in the 13th century in North India, emerged
-                  as a linguistic synthesis of Persian, Arabic, Turkish, and
-                  local dialects, initially known as "Rekhta." Flourishing
-                  during the Mughal era, it served as a language of the courts
-                  and cultural exchange 
-                </p>
+                {whyHumzabaanArr.length > 0 && (
+                  <h2 className="m-0 p-0 crunch-font text-center mb-lg-4 mb-2">
+                    {whyHumzabaanArr[0].heading}
+                  </h2>
+                )}
+                {whyHumzabaanArr.length > 0 && (
+                  <p className="m-0 p-0 kiddo-font text-center">
+                    {whyHumzabaanArr[0].description}
+                  </p>
+                )}
               </div>
             </div>
             <div
@@ -425,17 +434,16 @@ const Home = () => {
                 className="feature-Img-2 m-0 p-0 "
               />
               <div className="content content-2 position-absolute">
-                <h2 className="m-0 p-0 crunch-font text-center mb-lg-4 mb-0">
-                  COURSES / QUIZ
-                </h2>
-                <p className="m-0 p-0 kiddo-font text-center">
-                  Initially tailored for beginners starting their Urdu journey
-                  from scratch, our courses at Humzabaan are designed to
-                  gradually introduce foundational concepts. As we progress, we
-                  aim to expand our offerings to accommodate the needs of more
-                  advanced learners with additional levels.Each course is
-                  complemented by quizzes, enriching the learning experience 
-                </p>
+                {whyHumzabaanArr.length > 0 && (
+                  <h2 className="m-0 p-0 crunch-font text-center mb-lg-4 mb-0">
+                    {whyHumzabaanArr[1].heading}
+                  </h2>
+                )}
+                {whyHumzabaanArr.length > 0 && (
+                  <p className="m-0 p-0 kiddo-font text-center">
+                    {whyHumzabaanArr[1].description}
+                  </p>
+                )}
               </div>
             </div>
           </div>
@@ -458,16 +466,17 @@ const Home = () => {
                 className="m-0 p-0 "
               />
               <div className="content content-1 position-absolute">
-                <h2 className="m-0 p-0 crunch-font text-center mb-lg-4 mb-2">
-                  DICTIONARY
-                </h2>
-                <p className="m-0 p-0 kiddo-font text-center">
-                  Humzabaan aap is your all-in-one dictionary app for Hindi,
-                  Urdu, and English. Search for words by typing, speaking, or
-                  scanning text. Definitions include audio pronunciations and
-                  additional helpful features like example sentences, synonyms,
-                  antonyms, and a favorites list.
-                </p>
+                {whyHumzabaanArr.length > 0 && (
+                  <h2 className="m-0 p-0 crunch-font text-center mb-lg-4 mb-2">
+                    {whyHumzabaanArr[2].heading}
+                  </h2>
+                )}
+
+                {whyHumzabaanArr.length > 0 && (
+                  <p className="m-0 p-0 kiddo-font text-center">
+                    {whyHumzabaanArr[2].description}
+                  </p>
+                )}
               </div>
             </div>
             <div
@@ -480,19 +489,21 @@ const Home = () => {
                 className="m-0 p-0 "
               />
               <div className="content content-2 position-absolute">
-                <h2 className="m-0 p-0 crunch-font text-center mb-lg-4 mb-2">
-                  LITERATURE
-                </h2>
-                <p className="m-0 p-0 kiddo-font text-center">
-                  Humzabaan app is more than just mastering the alphabet, words,
-                  and numbers; we delve deeper to make your Urdu learning
-                  journey engaging and immersive. That's where literature comes
-                  in. We believe that by blending technology with literature,
-                </p>
+                {whyHumzabaanArr.length > 0 && (
+                  <h2 className="m-0 p-0 crunch-font text-center mb-lg-4 mb-2">
+                    {whyHumzabaanArr[3].heading}
+                  </h2>
+                )}
+                {whyHumzabaanArr.length > 0 && (
+                  <p className="m-0 p-0 kiddo-font text-center">
+                    {whyHumzabaanArr[3].description}
+                  </p>
+                )}
               </div>
             </div>
           </div>
         </div>
+
         <div
           className="features-card row m-0 p-0 mt-lg-5 pb-lg-5 position-relative"
           id="features-card-section"
@@ -923,7 +934,7 @@ const Home = () => {
               className="testimonial-list row m-0 p-0 justify-content-center mt-4 d-lg-flex d-none"
               data-aos="fade-right"
             >
-              {/* {Array.isArray(testimonialArr) &&
+              {Array.isArray(testimonialArr) &&
                 testimonialArr.map((item) => (
                   <div
                     className="testimonial-list-item col-lg-4 d-flex justify-content-end"
@@ -932,7 +943,7 @@ const Home = () => {
                     <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
                       <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
                         <img
-                          src={`${DOMAIN}/uploads/${item.image}`}
+                          src={item.image}
                           className="m-0 p-0 rounded-circle"
                           alt="profile-img"
                         />
@@ -950,20 +961,19 @@ const Home = () => {
                       <div className="rating row m-0 p-0 mt-2">
                         {[...Array(5)].map((_, index) => (
                           <img
-                          src={`${item.rating>index?startFill:star}`}
-                          alt=""
-                          className="m-0 p-0  ps-1 w-auto"
-                        />
+                            src={`${item.rating > index ? startFill : star}`}
+                            alt=""
+                            className="m-0 p-0  ps-1 w-auto"
+                          />
                         ))}
-                        
                       </div>
                       <p className="review m-0 p-0 text-center kiddo-font col-10 mt-4">
                         {item.description}
                       </p>
                     </div>
                   </div>
-                ))} */}
-              <div className="testimonial-list-item col-lg-4 d-flex justify-content-end">
+                ))}
+              {/* <div className="testimonial-list-item col-lg-4 d-flex justify-content-end">
                 <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
                   <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
                     <img
@@ -1097,7 +1107,7 @@ const Home = () => {
                     ac.
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div
               className="testimonial-list row d-lg-none d-flex m-0 p-0 justify-content-center mt-4 "
@@ -1118,7 +1128,48 @@ const Home = () => {
                 modules={[Autoplay, Pagination]}
                 className="mySwiper position-absolute"
               >
-                <SwiperSlide>
+                {Array.isArray(testimonialArr) &&
+                  testimonialArr.map((item) => (
+                    <SwiperSlide>
+                      {" "}
+                      <div className="testimonial-list-item col-12 d-flex justify-content-center">
+                        <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
+                          <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
+                            <img
+                              src={item.image}
+                              className="m-0 p-0 rounded-circle"
+                              alt="profile-img"
+                            />
+                          </div>
+                          <div className="sub-heading crunch-font m-0 p-0 mt-2 position-relative d-flex align-items-center justify-content-center">
+                            <img
+                              src={testimonialSubHeading}
+                              alt="heading-bg"
+                              className="m-0 p-0 "
+                            />
+                            <h2 className="m-0 p-0 position-absolute">
+                              {item.name}
+                            </h2>
+                          </div>
+                          <div className="rating row m-0 p-0 mt-2">
+                            {[...Array(5)].map((_, index) => (
+                              <img
+                                src={`${
+                                  item.rating > index ? startFill : star
+                                }`}
+                                alt=""
+                                className="m-0 p-0  ps-1 w-auto"
+                              />
+                            ))}
+                          </div>
+                          <p className="review m-0 p-0 text-center kiddo-font col-10 mt-4">
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                {/* <SwiperSlide>
                   {" "}
                   <div className="testimonial-list-item col-12 d-flex justify-content-center">
                     <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
@@ -1291,7 +1342,7 @@ const Home = () => {
                       </p>
                     </div>
                   </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
               </Swiper>
             </div>
           </div>

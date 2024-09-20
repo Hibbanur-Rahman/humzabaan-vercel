@@ -178,7 +178,7 @@ const Footer = () => {
         </div>
         <div className="right-part col-sm-6 col-12 m-0 p-2 p-sm-0 d-flex  justify-content-center justify-content-lg-end">
           <p className="m-0 p-0 text-light">
-            © 2024 Hamzabaan™ | All rights reserved.
+            © 2024 Humzabaan™ | All rights reserved.
           </p>
         </div>
       </div>

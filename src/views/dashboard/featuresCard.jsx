@@ -46,11 +46,7 @@ const FeaturesCard = () => {
 
   const handleView = async () => {
     try {
-      const response = await axios.post(`${DOMAIN}/view-features`, {
-        headers: {
-          Authorization: localStorage.getItem("humzabaan-token"),
-        },
-      });
+      const response = await axios.get(`${DOMAIN}/view-features`);
       if (response.status === 200) {
         setFeaturesArr(response.data.data);
       }
