@@ -8,7 +8,7 @@ import ButtonNew from "./buttonNew";
 
 const Footer = () => {
   return (
-    <>
+    <div className="row m-0 p-0" style={{backgroundColor:'#7FD839'}}>
       <div className="footer row m-0 p-0 pt-5 justify-content-center">
         <div className="footer-content row col-10 justify-content-center">
           <div className="col-lg-3 mt-lg-0 mt-5 d-flex flex-column align-items-center order-last order-lg-first">
@@ -164,12 +164,12 @@ const Footer = () => {
       </div>
       <div className="bottom-last row m-0 p-lg-3 p-0  justify-content-sm-between justify-content-center align-items-center">
         <div className="left-part col-sm-6 m-0 p-2 p-sm-0 col-12 d-flex justify-content-center justify-content-lg-start">
-          <Link to="/privacy" className="text-light w-auto">
+          <Link to="/privacy-policy" className="text-light w-auto">
             PRIVACY POLICY
           </Link>
           <p className="m-0 p-0 text-light w-auto ps-2 pe-2"> | </p>
-          <Link to="/privacy" className="text-light w-auto">
-            TERMS OF USE
+          <Link to="/community-guidelines" className="text-light w-auto">
+            COMMUNITY GUIDELINES
           </Link>
           <p className="m-0 p-0 text-light w-auto ps-2 pe-2"> | </p>
           <Link to="/privacy" className="text-light w-auto">
@@ -182,7 +182,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

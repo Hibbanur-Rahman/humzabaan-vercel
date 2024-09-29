@@ -29,7 +29,7 @@ const Navbar = () => {
           <div className="col-6 m-0 p-0 d-flex align-items-end justify-content-center">
             <div className="d-flex col-10 m-0 p-0 align-items-center justify-content-center">
               <div className="col-3 d-flex align-items-center justify-content-center">
-                <Link to="#" className="text-decoration-none">
+                <Link to="/" className="text-decoration-none">
                   Home
                 </Link>
               </div>
@@ -116,7 +116,7 @@ const Navbar = () => {
             </div>
             <div className="offcanvas-body">
               <div className="row m-0 p-0">
-                <Link to="#" className="text-decoration-none mb-3 mt-3">
+                <Link to="/" className="text-decoration-none mb-3 mt-3">
                   Home
                 </Link>
                 <Link to="#" className="text-decoration-none mb-3 mt-3">

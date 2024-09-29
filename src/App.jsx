@@ -11,6 +11,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Login from './views/login';
 import DashboardLayout from './views/dashboard/dashboardLayout';
+import PrivacyPolicy from './views/privacyPolicy';
+import CommunityGuidelines from './views/communityGuidlines';
 
 function App() {
   AOS.init();
@@ -19,7 +21,10 @@ function App() {
      <Routes>
       <Route exact path="/" element={<Home/>}/>
       <Route exact path="/login" element={<Login/>}/>
+      <Route exact path="/privacy-policy" element={<PrivacyPolicy/>}/>
+      <Route exact path="/community-guidelines" element={<CommunityGuidelines/>}/>
       <Route exact path="/dashboard/*" element={<DashboardLayout/>}/>
+
      </Routes>
      <ToastContainer/>
     </>

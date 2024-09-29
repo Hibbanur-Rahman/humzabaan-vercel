@@ -278,14 +278,20 @@ const Home = () => {
             className="who-we-are-right col-lg-6 m-0 p-lg-3 p-3 d-flex flex-column justify-content-center"
             data-aos="fade-right"
           >
-            <p className="m-0 p-0 text-light kiddo-font text-center" style={{fontSize:'1.1rem'}}>
+            <p
+              className="m-0 p-0 text-light kiddo-font text-center"
+              style={{ fontSize: "1.1rem" }}
+            >
               Welcome to Humzabaan – your ultimate destination for delving into
               the enchanting world of Urdu! We're passionate about merging the
               timeless essence of Urdu with cutting-edge technology to offer you
               an unparalleled learning experience tailored to your unique
               journey. ​
             </p>
-            <p className="m-0 p-0 mt-4 text-light kiddo-font text-center" style={{fontSize:'1.1rem'}}>
+            <p
+              className="m-0 p-0 mt-4 text-light kiddo-font text-center"
+              style={{ fontSize: "1.1rem" }}
+            >
               Here at Humzabaan, we're dedicated to nurturing the vibrant spirit
               of Urdu, whether you're taking your first steps or refining your
               skills. Our approach blends innovative digital tools with a
@@ -644,7 +650,7 @@ const Home = () => {
                   style={{ height: "9rem" }}
                 />
                 <p className="kiddo-font m-0 p-0 fs-1 text-center position-absolute">
-                  DICTIONARY
+                  Features
                 </p>
               </div>
               <div className="card-content row m-0 p-0 position-relative align-items-center justify-content-center">
@@ -917,11 +923,7 @@ const Home = () => {
             alt="testimonial frame"
             className="testimonial-frame  m-0 p-0 "
           />
-          {/* <img
-            src={testimonialFrameTab}
-            alt="testimonial frame"
-            className="testimonial-frame testimonial-frame-tab d-sm-flex d-lg-none d-flex m-0 p-0 "
-          /> */}
+         
           <div className="testimonial-content row col-lg-10 m-0 p-0 position-absolute justify-content-center align-items-center ">
             <div
               className="heading m-0 p-0 mt-5 position-relative d-flex align-items-center justify-content-center"
@@ -973,141 +975,6 @@ const Home = () => {
                     </div>
                   </div>
                 ))}
-              {/* <div className="testimonial-list-item col-lg-4 d-flex justify-content-end">
-                <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
-                  <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
-                    <img
-                      src={testimonialProfileImg}
-                      className="m-0 p-0 rounded-circle"
-                      alt="profile-img"
-                    />
-                  </div>
-                  <div className="sub-heading crunch-font m-0 p-0 mt-2 position-relative d-flex align-items-center justify-content-center">
-                    <img
-                      src={testimonialSubHeading}
-                      alt="heading-bg"
-                      className="m-0 p-0 "
-                    />
-                    <h2 className="m-0 p-0 position-absolute">MIRZA GHALIB</h2>
-                  </div>
-                  <div className="rating row m-0 p-0 mt-2">
-                    <img src={startFill} alt="" className="m-0 p-0  w-auto" />
-                    <img
-                      src={startFill}
-                      alt=""
-                      className="m-0 p-0 ps-1 w-auto"
-                    />
-                    <img
-                      src={startFill}
-                      alt=""
-                      className="m-0 p-0 ps-1 w-auto"
-                    />
-                    <img
-                      src={startFill}
-                      alt=""
-                      className="m-0 p-0 ps-1 w-auto"
-                    />
-                    <img src={star} alt="" className="m-0 p-0 ps-1 w-auto" />
-                  </div>
-                  <p className="review m-0 p-0 text-center kiddo-font col-10 mt-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Quisque scelerisque lorem dolor, non maximus est hendrerit
-                    ac.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Quisque scelerisque lorem dolor, non maximus est hendrerit
-                    ac.
-                  </p>
-                </div>
-              </div>
-              <div className="testimonial-list-item col-lg-4 d-flex justify-content-start">
-                <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
-                  <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
-                    <img
-                      src={testimonialProfileImg}
-                      className="m-0 p-0 rounded-circle"
-                      alt="profile-img"
-                    />
-                  </div>
-                  <div className="sub-heading crunch-font m-0 p-0 mt-2 position-relative d-flex align-items-center justify-content-center">
-                    <img
-                      src={testimonialSubHeading}
-                      alt="heading-bg"
-                      className="m-0 p-0 "
-                    />
-                    <h2 className="m-0 p-0 position-absolute">MIRZA GHALIB</h2>
-                  </div>
-                  <div className="rating row m-0 p-0 mt-2">
-                    <img src={startFill} alt="" className="m-0 p-0  w-auto" />
-                    <img
-                      src={startFill}
-                      alt=""
-                      className="m-0 p-0 ps-1 w-auto"
-                    />
-                    <img
-                      src={startFill}
-                      alt=""
-                      className="m-0 p-0 ps-1 w-auto"
-                    />
-                    <img
-                      src={startFill}
-                      alt=""
-                      className="m-0 p-0 ps-1 w-auto"
-                    />
-                    <img src={star} alt="" className="m-0 p-0 ps-1 w-auto" />
-                  </div>
-                  <p className="review m-0 p-0 text-center kiddo-font col-10 mt-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Quisque scelerisque lorem dolor, non maximus est hendrerit
-                    ac.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Quisque scelerisque lorem dolor, non maximus est hendrerit
-                    ac.
-                  </p>
-                </div>
-              </div>
-              <div className="testimonial-list-item col-lg-4 d-flex justify-content-start">
-                <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
-                  <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
-                    <img
-                      src={testimonialProfileImg}
-                      className="m-0 p-0 rounded-circle"
-                      alt="profile-img"
-                    />
-                  </div>
-                  <div className="sub-heading crunch-font m-0 p-0 mt-2 position-relative d-flex align-items-center justify-content-center">
-                    <img
-                      src={testimonialSubHeading}
-                      alt="heading-bg"
-                      className="m-0 p-0 "
-                    />
-                    <h2 className="m-0 p-0 position-absolute">MIRZA GHALIB</h2>
-                  </div>
-                  <div className="rating row m-0 p-0 mt-2">
-                    <img src={startFill} alt="" className="m-0 p-0  w-auto" />
-                    <img
-                      src={startFill}
-                      alt=""
-                      className="m-0 p-0 ps-1 w-auto"
-                    />
-                    <img
-                      src={startFill}
-                      alt=""
-                      className="m-0 p-0 ps-1 w-auto"
-                    />
-                    <img
-                      src={startFill}
-                      alt=""
-                      className="m-0 p-0 ps-1 w-auto"
-                    />
-                    <img src={star} alt="" className="m-0 p-0 ps-1 w-auto" />
-                  </div>
-                  <p className="review m-0 p-0 text-center kiddo-font col-10 mt-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Quisque scelerisque lorem dolor, non maximus est hendrerit
-                    ac.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Quisque scelerisque lorem dolor, non maximus est hendrerit
-                    ac.
-                  </p>
-                </div>
-              </div> */}
             </div>
             <div
               className="testimonial-list row d-lg-none d-flex m-0 p-0 justify-content-center mt-4 "
@@ -1169,180 +1036,6 @@ const Home = () => {
                       </div>
                     </SwiperSlide>
                   ))}
-                {/* <SwiperSlide>
-                  {" "}
-                  <div className="testimonial-list-item col-12 d-flex justify-content-center">
-                    <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
-                      <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
-                        <img
-                          src={testimonialProfileImg}
-                          className="m-0 p-0 rounded-circle"
-                          alt="profile-img"
-                        />
-                      </div>
-                      <div className="sub-heading crunch-font m-0 p-0 mt-2 position-relative d-flex align-items-center justify-content-center">
-                        <img
-                          src={testimonialSubHeading}
-                          alt="heading-bg"
-                          className="m-0 p-0 "
-                        />
-                        <h2 className="m-0 p-0 position-absolute">
-                          MIRZA GHALIB
-                        </h2>
-                      </div>
-                      <div className="rating row m-0 p-0 mt-2">
-                        <img
-                          src={startFill}
-                          alt=""
-                          className="m-0 p-0  w-auto"
-                        />
-                        <img
-                          src={startFill}
-                          alt=""
-                          className="m-0 p-0 ps-1 w-auto"
-                        />
-                        <img
-                          src={startFill}
-                          alt=""
-                          className="m-0 p-0 ps-1 w-auto"
-                        />
-                        <img
-                          src={startFill}
-                          alt=""
-                          className="m-0 p-0 ps-1 w-auto"
-                        />
-                        <img
-                          src={star}
-                          alt=""
-                          className="m-0 p-0 ps-1 w-auto"
-                        />
-                      </div>
-                      <p className="review m-0 p-0 text-center kiddo-font col-10 mt-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Quisque scelerisque lorem dolor, non maximus est
-                        hendrerit ac.Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Quisque scelerisque lorem dolor, non
-                        maximus est hendrerit ac.
-                      </p>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  {" "}
-                  <div className="testimonial-list-item col-12 d-flex justify-content-center">
-                    <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
-                      <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
-                        <img
-                          src={testimonialProfileImg}
-                          className="m-0 p-0 rounded-circle"
-                          alt="profile-img"
-                        />
-                      </div>
-                      <div className="sub-heading crunch-font m-0 p-0 mt-2 position-relative d-flex align-items-center justify-content-center">
-                        <img
-                          src={testimonialSubHeading}
-                          alt="heading-bg"
-                          className="m-0 p-0 "
-                        />
-                        <h2 className="m-0 p-0 position-absolute">
-                          MIRZA GHALIB
-                        </h2>
-                      </div>
-                      <div className="rating row m-0 p-0 mt-2">
-                        <img
-                          src={startFill}
-                          alt=""
-                          className="m-0 p-0  w-auto"
-                        />
-                        <img
-                          src={startFill}
-                          alt=""
-                          className="m-0 p-0 ps-1 w-auto"
-                        />
-                        <img
-                          src={startFill}
-                          alt=""
-                          className="m-0 p-0 ps-1 w-auto"
-                        />
-                        <img
-                          src={startFill}
-                          alt=""
-                          className="m-0 p-0 ps-1 w-auto"
-                        />
-                        <img
-                          src={star}
-                          alt=""
-                          className="m-0 p-0 ps-1 w-auto"
-                        />
-                      </div>
-                      <p className="review m-0 p-0 text-center kiddo-font col-10 mt-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Quisque scelerisque lorem dolor, non maximus est
-                        hendrerit ac.Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Quisque scelerisque lorem dolor, non
-                        maximus est hendrerit ac.
-                      </p>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  {" "}
-                  <div className="testimonial-list-item col-12 d-flex justify-content-center">
-                    <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
-                      <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
-                        <img
-                          src={testimonialProfileImg}
-                          className="m-0 p-0 rounded-circle"
-                          alt="profile-img"
-                        />
-                      </div>
-                      <div className="sub-heading crunch-font m-0 p-0 mt-2 position-relative d-flex align-items-center justify-content-center">
-                        <img
-                          src={testimonialSubHeading}
-                          alt="heading-bg"
-                          className="m-0 p-0 "
-                        />
-                        <h2 className="m-0 p-0 position-absolute">
-                          MIRZA GHALIB
-                        </h2>
-                      </div>
-                      <div className="rating row m-0 p-0 mt-2">
-                        <img
-                          src={startFill}
-                          alt=""
-                          className="m-0 p-0  w-auto"
-                        />
-                        <img
-                          src={startFill}
-                          alt=""
-                          className="m-0 p-0 ps-1 w-auto"
-                        />
-                        <img
-                          src={startFill}
-                          alt=""
-                          className="m-0 p-0 ps-1 w-auto"
-                        />
-                        <img
-                          src={startFill}
-                          alt=""
-                          className="m-0 p-0 ps-1 w-auto"
-                        />
-                        <img
-                          src={star}
-                          alt=""
-                          className="m-0 p-0 ps-1 w-auto"
-                        />
-                      </div>
-                      <p className="review m-0 p-0 text-center kiddo-font col-10 mt-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Quisque scelerisque lorem dolor, non maximus est
-                        hendrerit ac.Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Quisque scelerisque lorem dolor, non
-                        maximus est hendrerit ac.
-                      </p>
-                    </div>
-                  </div>
-                </SwiperSlide> */}
               </Swiper>
             </div>
           </div>
