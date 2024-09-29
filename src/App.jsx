@@ -17,7 +17,7 @@ import CommunityGuidelines from './views/communityGuidlines';
 function App() {
   AOS.init();
   return (
-    < >
+    <div className='row m-0 p-0'>
      <Routes>
       <Route exact path="/" element={<Home/>}/>
       <Route exact path="/login" element={<Login/>}/>
@@ -27,7 +27,7 @@ function App() {
 
      </Routes>
      <ToastContainer/>
-    </>
+    </div>
   )
 }
 

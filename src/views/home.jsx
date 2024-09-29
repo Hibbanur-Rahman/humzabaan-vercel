@@ -166,7 +166,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home row m-0 p-0 overflow-hidden">
+    <div className="home row m-0 p-0 overflow-x-hidden">
       {/** ================= Navbar-section ==================  */}
       <Navbar />
 
@@ -937,10 +937,11 @@ const Home = () => {
               data-aos="fade-right"
             >
               {Array.isArray(testimonialArr) &&
-                testimonialArr.map((item) => (
+                testimonialArr.map((item,index) => (
                   <div
                     className="testimonial-list-item col-lg-4 d-flex justify-content-end"
                     id={item._id}
+                    key={index}
                   >
                     <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
                       <div className="image rounded-circle m-0 p-0 overflow-hidden border border-3 d-flex justify-content-center align-items-end">
@@ -963,6 +964,7 @@ const Home = () => {
                       <div className="rating row m-0 p-0 mt-2">
                         {[...Array(5)].map((_, index) => (
                           <img
+                          key={index}
                             src={`${item.rating > index ? startFill : star}`}
                             alt=""
                             className="m-0 p-0  ps-1 w-auto"
@@ -996,8 +998,8 @@ const Home = () => {
                 className="mySwiper position-absolute"
               >
                 {Array.isArray(testimonialArr) &&
-                  testimonialArr.map((item) => (
-                    <SwiperSlide>
+                  testimonialArr.map((item,index) => (
+                    <SwiperSlide key={index}>
                       {" "}
                       <div className="testimonial-list-item col-12 d-flex justify-content-center">
                         <div className="card m-0 p-0 p-4 rounded-3 justify-content-center align-items-center">
@@ -1021,6 +1023,7 @@ const Home = () => {
                           <div className="rating row m-0 p-0 mt-2">
                             {[...Array(5)].map((_, index) => (
                               <img
+                              key={index}
                                 src={`${
                                   item.rating > index ? startFill : star
                                 }`}

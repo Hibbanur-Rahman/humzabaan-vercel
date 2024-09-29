@@ -150,38 +150,38 @@ const PrivacyPolicy = () => {
           without identifying individual visitors.
         </p>
         <h1>4) How we may use your information:</h1>
-        <ol class="list-group ms-5" type="a">
-          <li class="">
+        <ol className="list-group ms-5" type="a">
+          <li className="">
             Your personal information may be used to provide you with suggestive
             information related to the products and service ongoing offers,
             features, and pricing, newly added products.
           </li>
-          <li class="">
+          <li className="">
             To communicate with you from time to time for matters associated
             with products and product-based services.
           </li>
-          <li class="">
+          <li className="">
             To provide you with services, to track the effectiveness of the
             services, to update the content or product, or to improve the
             layouts and designing of the platform resulting in smoothing and
             efficient user experience.
           </li>
-          <li class="">
+          <li className="">
             For business administration and diagnosing and resolving
             troubleshooting and technical difficulties.
           </li>
-          <li class="">
+          <li className="">
             Your information may be used by ‘Humzabaan’ to track, evaluate, and
             characterize the Platform’s and Product’s usage patterns and
             performance, including aggregate metrics like total visitors,
             traffic, and demographic trends.
           </li>
-          <li class="">
+          <li className="">
             To aid us in meeting legal duties and processes which shall ensure
             that our Terms of Service, as well as any other policies or
             agreements we have with you, are followed.
           </li>
-          <li class="">
+          <li className="">
             g. Such other related or incidental matters as specifically needed
             by ‘Humzabaan’ from time to time.
           </li>
