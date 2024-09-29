@@ -15,7 +15,7 @@ const CommunityGuidelines = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="row m-0 p-0 flex-column bg-white align-items-center overflow-x-hidden">
+    <div className="community-guidelines 3row m-0 p-0 flex-column bg-white align-items-center overflow-x-hidden">
       <Navbar />
       <div
         className="community-guidelines-container col-10 p-0 position-relative "
