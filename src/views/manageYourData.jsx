@@ -17,7 +17,7 @@ const ManageYourData = () => {
 
       const submitModal = document.getElementById("submitModal");
 
-      // Initialize Bootstrap modal programmatically and show it
+      // Initialize Bootstrap modal 
       const bootstrapModal = new bootstrap.Modal(submitModal);
       bootstrapModal.show();
     } catch (error) {
