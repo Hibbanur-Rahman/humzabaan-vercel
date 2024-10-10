@@ -172,6 +172,10 @@ const Footer = () => {
             COMMUNITY GUIDELINES
           </Link>
           <p className="m-0 p-0 text-light w-auto ps-2 pe-2"> | </p>
+          <Link to="/manage-your-data" className="text-light w-auto">
+            Manage Your Data
+          </Link>
+          <p className="m-0 p-0 text-light w-auto ps-2 pe-2"> | </p>
           <Link to="/privacy" className="text-light w-auto">
             COPYRIGHT
           </Link>

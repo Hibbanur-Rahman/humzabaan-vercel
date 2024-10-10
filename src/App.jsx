@@ -13,6 +13,7 @@ import Login from './views/login';
 import DashboardLayout from './views/dashboard/dashboardLayout';
 import PrivacyPolicy from './views/privacyPolicy';
 import CommunityGuidelines from './views/communityGuidlines';
+import ManageYourData from './views/manageYourData';
 
 function App() {
   AOS.init();
@@ -23,6 +24,7 @@ function App() {
       <Route exact path="/login" element={<Login/>}/>
       <Route exact path="/privacy-policy" element={<PrivacyPolicy/>}/>
       <Route exact path="/community-guidelines" element={<CommunityGuidelines/>}/>
+      <Route exact path="/manage-your-data" element={<ManageYourData/>}/>
       <Route exact path="/dashboard/*" element={<DashboardLayout/>}/>
 
      </Routes>
