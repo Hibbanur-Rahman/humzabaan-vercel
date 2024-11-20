@@ -68,6 +68,7 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import { useEffect, useState } from "react";
 import FeaturesModal from "../components/modal";
+import SliderFeatures from "../components/sliderFeatures/sliderFeatures";
 
 const Home = () => {
   AOS.init();
@@ -510,7 +511,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div
+        {/* <div
           className="features-card row m-0 p-0 mt-lg-5 pb-lg-5 position-relative"
           id="features-card-section"
         >
@@ -764,6 +765,12 @@ const Home = () => {
               </div>
             </div>
           </div>
+        </div> */}
+         <div
+          className="features-card row m-0 p-0 mt-lg-5 pb-lg-5 position-relative"
+          id="features-card-section"
+        >
+          <SliderFeatures/>
         </div>
       </div>
       <FeaturesModal />
