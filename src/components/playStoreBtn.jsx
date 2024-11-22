@@ -10,11 +10,17 @@ const PlayStoreBtn = ({
   outerBtnBorder,
   innerBtnBorder,
   lineUpperOverlayBg,
+  link,
 }) => {
+  const handleNavigate=()=>{
+    window.open(link,"_blank")
+  }
   return (
     <div
       className="btn-ctm btn-ctm-new playStoreBtn btn rounded-4 m-0 p-0 position-relative overflow-hidden w-100 justify-content-center"
       style={{ background: btnCtmBackground, boxShadow: boxShadow }}
+      onClick={()=>handleNavigate()}
+
     >
       <div
         className="line-upper-overlay row m-0 p-0 position-absolute w-100 "

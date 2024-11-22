@@ -318,7 +318,7 @@ const Home = () => {
               {isTeacherIframeShow ? (
                 <iframe
                   className="urdu-iframe"
-                  src="https://www.youtube.com/embed/IUhCA1ZLV7c?si=Y8UygaMEFXv3wCGq"
+                  src="https://www.youtube.com/embed/YOhtkzlKyFQ?si=VWgD5P9btJ2EOsUb"
                   title="YouTube video player"
                   frameborder="0"
                   allow="fullscreen;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -376,6 +376,7 @@ const Home = () => {
                 outerBtnBorder="1px solid #fff"
                 innerBtnBorder="2px dashed #fff"
                 lineUpperOverlayBg="#006465"
+                link="https://play.google.com/store/apps/details?id=com.devhz.humzabaan"
               />
             </div>
             <div className="mt-4 " style={{ width: "15rem" }}>
@@ -389,6 +390,7 @@ const Home = () => {
                 outerBtnBorder="1px solid rgb(7, 90, 94)"
                 innerBtnBorder="2px dashed rgba(7, 90, 94, 1)"
                 lineUpperOverlayBg="#b3cb147e"
+                link="https://apps.apple.com/ae/app/humzabaan/id6736941196"
               />
             </div>
           </div>
@@ -511,7 +513,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* <div
+        <div
           className="features-card row m-0 p-0 mt-lg-5 pb-lg-5 position-relative"
           id="features-card-section"
         >
@@ -765,13 +767,13 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div> */}
-         <div
+        </div>
+         {/* <div
           className="features-card row m-0 p-0 mt-lg-5 pb-lg-5 position-relative"
           id="features-card-section"
         >
           <SliderFeatures/>
-        </div>
+        </div> */}
       </div>
       <FeaturesModal />
 

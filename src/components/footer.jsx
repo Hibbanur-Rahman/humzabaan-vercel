@@ -97,6 +97,7 @@ const Footer = () => {
                 outerBtnBorder="1px solid #fff"
                 innerBtnBorder="2px dashed #fff"
                 lineUpperOverlayBg="#006465"
+                link="https://play.google.com/store/apps/details?id=com.devhz.humzabaan"
               />
             </div>
             <div className="mt-4" style={{ width: "15rem" }}>
@@ -110,6 +111,7 @@ const Footer = () => {
                 outerBtnBorder="1px solid rgb(7, 90, 94)"
                 innerBtnBorder="2px dashed rgba(7, 90, 94, 1)"
                 lineUpperOverlayBg="#b3cb147e"
+                link="https://apps.apple.com/in/app/humzabaan/id1574441111"
               />
             </div>
           </div>
@@ -175,10 +177,10 @@ const Footer = () => {
           <Link to="/manage-your-data" className="text-light w-auto">
             MANAGE YOUR DATA
           </Link>
-          <p className="m-0 p-0 text-light w-auto ps-2 pe-2"> | </p>
+          {/* <p className="m-0 p-0 text-light w-auto ps-2 pe-2"> | </p>
           <Link to="/privacy" className="text-light w-auto">
             COPYRIGHT
-          </Link>
+          </Link> */}
         </div>
         <div className="right-part col-sm-6 col-12 m-0 p-2 p-sm-0 d-flex  justify-content-center justify-content-lg-end">
           <p className="m-0 p-0 text-light">
