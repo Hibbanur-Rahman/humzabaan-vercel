@@ -11,11 +11,11 @@ const Footer = () => {
     <div className="row m-0 p-0" style={{backgroundColor:'#7FD839'}}>
       <div className="footer row m-0 p-0 pt-5 justify-content-center">
         <div className="footer-content row col-10 justify-content-center">
-          <div className="col-lg-3 mt-lg-0 mt-5 d-flex flex-column align-items-center order-last order-lg-first">
+          <div className="col-lg-4 mt-lg-0 mt-5 d-flex flex-column align-items-center order-last order-lg-first">
             <h3 className="crunch-font m-0 p-0 mb-4">FOLLOW US</h3>
             <div className="row m-0 p-0">
               <Link
-                to="https://www.facebook.com/"
+                to="https://www.facebook.com/profile.php?id=61568634553262"
                 target="_blank"
                 className="m-0 p-0 w-auto ms-0"
               >
@@ -27,7 +27,7 @@ const Footer = () => {
                 </div>
               </Link>
               <Link
-                to="https://www.instagram.com/"
+                to="https://www.instagram.com/urdu_humzabaan"
                 target="_blank"
                 className="m-0 p-0 w-auto ms-1"
               >
@@ -38,7 +38,7 @@ const Footer = () => {
                   ></i>
                 </div>
               </Link>
-              <Link
+              {/* <Link
                 to="https://www.twitter.com/"
                 target="_blank"
                 className="m-0 p-0 w-auto ms-1"
@@ -49,9 +49,9 @@ const Footer = () => {
                     aria-hidden="true"
                   ></i>
                 </div>
-              </Link>
+              </Link> */}
               <Link
-                to="https://www.youtube.com/"
+                to=" https://youtube.com/@humzabaan"
                 target="_blank"
                 className="m-0 p-0 w-auto ms-1"
               >
@@ -62,7 +62,7 @@ const Footer = () => {
                   ></i>
                 </div>
               </Link>
-              <Link
+              {/* <Link
                 to="https://www.linkedin.com/"
                 target="_blank"
                 className="m-0 p-0 w-auto ms-1"
@@ -73,7 +73,7 @@ const Footer = () => {
                     aria-hidden="true"
                   ></i>
                 </div>
-              </Link>
+              </Link> */}
             </div>
             <Link to="/" className="m-0 p-0">
               <img
@@ -84,7 +84,7 @@ const Footer = () => {
               />
             </Link>
           </div>
-          <div className="col-lg-3 mt-lg-0 mt-5 d-flex flex-column align-items-center">
+          <div className="col-lg-4 mt-lg-0 mt-5 d-flex flex-column align-items-center">
             <h3 className="crunch-font m-0 p-0 mb-4">DOWNLOAD APP</h3>
             <div className="" style={{ width: "15rem" }}>
             <PlayStoreBtn
@@ -115,7 +115,7 @@ const Footer = () => {
               />
             </div>
           </div>
-          <div className="col-lg-3 mt-lg-0 mt-5 d-flex flex-column align-items-center">
+          <div className="col-lg-4 mt-lg-0 mt-5 d-flex flex-column align-items-center">
             <h3 className="crunch-font m-0 p-0 mb-4">SUBSCRIBE</h3>
             <form action="" className="m-0 p-0 w-100">
               <input
@@ -144,7 +144,7 @@ const Footer = () => {
               </div>
             </form>
           </div>
-          <div className=" quicks-links col-lg-3 mt-lg-0 mt-5 d-flex flex-column align-items-center">
+          {/* <div className=" quicks-links col-lg-3 mt-lg-0 mt-5 d-flex flex-column align-items-center">
             <h3 className="crunch-font m-0 p-0 mb-4">QUICK LINKS</h3>
             <Link to="/" className="kiddo-font m-0 p-0">
               <p className="m-0 p-0 kiddo-font fs-3">Courses</p>
@@ -161,7 +161,7 @@ const Footer = () => {
             <Link to="/" className="kiddo-font m-0 p-0">
               <p className="m-0 p-0 kiddo-font fs-3">Events</p>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="bottom-last row m-0 p-lg-3 p-0  justify-content-sm-between justify-content-center align-items-center">

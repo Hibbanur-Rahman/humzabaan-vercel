@@ -69,6 +69,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { useEffect, useState } from "react";
 import FeaturesModal from "../components/modal";
 import SliderFeatures from "../components/sliderFeatures/sliderFeatures";
+import DownloadModal from "../components/downloadModal";
 
 const Home = () => {
   AOS.init();
@@ -170,7 +171,7 @@ const Home = () => {
     <div className="home row m-0 p-0 overflow-x-hidden">
       {/** ================= Navbar-section ==================  */}
       <Navbar />
-
+      <DownloadModal/>
       {/** ================= Hero-section ==================  */}
       <div
         id="hero-section"
@@ -513,7 +514,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div
+        {/* <div
           className="features-card row m-0 p-0 mt-lg-5 pb-lg-5 position-relative"
           id="features-card-section"
         >
@@ -767,13 +768,13 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
-         {/* <div
+        </div> */}
+        <div
           className="features-card row m-0 p-0 mt-lg-5 pb-lg-5 position-relative"
           id="features-card-section"
         >
-          <SliderFeatures/>
-        </div> */}
+          <SliderFeatures />
+        </div>
       </div>
       <FeaturesModal />
 
@@ -812,43 +813,34 @@ const Home = () => {
               data-aos="fade-left"
             >
               <img src={headingBg3} alt="heading-bg" className="m-0 p-0 " />
-              <h1 className="m-0 p-0 position-absolute">ABOUT URDU</h1>
+              <h1 className="m-0 p-0 position-absolute">History OF Urdu</h1>
             </div>
+
             <p
-              className="kiddo-font m-0 p-0 text-center mt-lg-4 fs-5"
+              className="kiddo-font m-0 p-0 text-center fs-5"
               data-aos="fade-right"
             >
-              Urdu, known for its soul-stirring poetry and profound literary
-              heritage, serves as a beacon of cultural identity for millions
-              worldwide. Originating from the Indo-Aryan lineage, Urdu's
-              linguistic tapestry is woven with influences from Persian, Arabic,
-              and Turkish, enriching its vocabulary with depth and diversity.
-              Spoken predominantly in South Asia, notably in Pakistan and parts
-              of India, Urdu's influence resonates deeply with diaspora
-              communities across the globe, including in countries like the
-              United Arab Emirates, United Kingdom, Saudi Arabia, United States,
-              Canada, Australia, and South Africa.
-            </p>
-            <p
-              className="kiddo-font m-0 p-0 text-center fs-2 mt-lg-5"
-              data-aos="fade-left"
-            >
-              URDU FOR ALL
+              Urdu, originating in the 13th century in North India, emerged as a
+              linguistic synthesis of Persian, Arabic, Turkish, and local
+              dialects, initially known as "Rekhta." Flourishing during the
+              Mughal era, it served as a language of the courts and cultural
+              exchange among diverse communities. With the patronage of Mughal
+              rulers, Urdu evolved into a literary language, fostering
+              masterpieces of poetry, prose, and art.
             </p>
             <p
               className="kiddo-font m-0 p-0 text-center fs-5"
               data-aos="fade-right"
             >
-              With an estimated more than 100 million speakers worldwide, Urdu
-              holds a prominent position in global linguistic diversity.
-              Pakistan stands as its heartland, with around 70-80 million native
-              speakers, while in India, it thrives alongside other regional
-              languages, boasting approximately 50-60 million speakers. Beyond
-              South Asia, countries like the United Arab Emirates and the United
-              Kingdom host significant Urdu-speaking populations.
+              During British colonial rule, it became a symbol of resistance and
+              cultural identity, propelling Urdu literature and journalism
+              movements. Partition in 1947 saw Urdu become the official language
+              of Pakistan, while Hindi became India's language, marking a
+              pivotal moment in Urdu's history. Despite political divisions,
+              Urdu retained its status as a unifying force,
             </p>
             <div className="row m-0 p-0 justify-content-center align-items-center">
-              <div
+              {/* <div
                 className="sub-heading m-0 p-0 mt-lg-5 mb-lg-5 position-relative d-flex align-items-center justify-content-center"
                 data-aos="fade-left"
               >
@@ -856,7 +848,7 @@ const Home = () => {
                 <h1 className="kiddo-font m-0 p-0 position-absolute">
                   HISTORY OF URDU
                 </h1>
-              </div>
+              </div> */}
 
               <div className="history-urdu col-lg-5 m-0 p-0 d-flex align-content-end justify-content-lg-end justify-content-center ">
                 <div
@@ -896,26 +888,7 @@ const Home = () => {
                   )}
                 </div>
               </div>
-              <div className="col-lg-6 m-0 p-0 ms-lg-5" data-aos="fade-left">
-                <p className="kiddo-font m-0 p-0 text-center fs-5">
-                  Urdu, originating in the 13th century in North India, emerged
-                  as a linguistic synthesis of Persian, Arabic, Turkish, and
-                  local dialects, initially known as "Rekhta." Flourishing
-                  during the Mughal era, it served as a language of the courts
-                  and cultural exchange among diverse communities. With the
-                  patronage of Mughal rulers, Urdu evolved into a literary
-                  language, fostering masterpieces of poetry, prose, and art.
-                </p>
-                <p className="kiddo-font m-0 p-0 text-center fs-5 mt-lg-5 mt-4">
-                  During British colonial rule, it became a symbol of resistance
-                  and cultural identity, propelling Urdu literature and
-                  journalism movements. Partition in 1947 saw Urdu become the
-                  official language of Pakistan, while Hindi became India's
-                  language, marking a pivotal moment in Urdu's history. Despite
-                  political divisions, Urdu retained its status as a unifying
-                  force,
-                </p>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -932,7 +905,7 @@ const Home = () => {
             alt="testimonial frame"
             className="testimonial-frame  m-0 p-0 "
           />
-         
+
           <div className="testimonial-content row col-lg-10 m-0 p-0 position-absolute justify-content-center align-items-center ">
             <div
               className="heading m-0 p-0 mt-5 position-relative d-flex align-items-center justify-content-center"
@@ -946,7 +919,7 @@ const Home = () => {
               data-aos="fade-right"
             >
               {Array.isArray(testimonialArr) &&
-                testimonialArr.map((item,index) => (
+                testimonialArr.map((item, index) => (
                   <div
                     className="testimonial-list-item col-lg-4 d-flex justify-content-end"
                     id={item._id}
@@ -973,7 +946,7 @@ const Home = () => {
                       <div className="rating row m-0 p-0 mt-2">
                         {[...Array(5)].map((_, index) => (
                           <img
-                          key={index}
+                            key={index}
                             src={`${item.rating > index ? startFill : star}`}
                             alt=""
                             className="m-0 p-0  ps-1 w-auto"
@@ -1007,7 +980,7 @@ const Home = () => {
                 className="mySwiper position-absolute"
               >
                 {Array.isArray(testimonialArr) &&
-                  testimonialArr.map((item,index) => (
+                  testimonialArr.map((item, index) => (
                     <SwiperSlide key={index}>
                       {" "}
                       <div className="testimonial-list-item col-12 d-flex justify-content-center">
@@ -1032,7 +1005,7 @@ const Home = () => {
                           <div className="rating row m-0 p-0 mt-2">
                             {[...Array(5)].map((_, index) => (
                               <img
-                              key={index}
+                                key={index}
                                 src={`${
                                   item.rating > index ? startFill : star
                                 }`}
