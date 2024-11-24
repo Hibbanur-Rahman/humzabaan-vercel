@@ -9,8 +9,8 @@ import { handleDownloadModal } from "../redux/slices/downloadModal/downloadModal
 import PlayStoreBtn from "./playStoreBtn";
 import playStoreLogo from "../assets/images/playStoreLogo.svg";
 import appleLogo from "../assets/images/Apple_logo.svg";
-import appStoreQr from '../assets/images/app-store-qr.svg';
-import playStoreQr from '../assets/images/play-store-qr.svg';
+import appStoreQr from '../assets/images/app-store-qr.png';
+import playStoreQr from '../assets/images/play-store-qr.png';
 const DownloadModal = () => {
   const dispatch = useDispatch();
   const isOpenDownloadModal = useSelector(
@@ -35,6 +35,7 @@ const DownloadModal = () => {
         aria-hidden={!isOpenDownloadModal}
         style={{
           display: isOpenDownloadModal ? "flex" : "none", // Controls visibility
+          background:'#00000054'
         }}
       >
         <div className="modal-dialog modal-dialog-centered">

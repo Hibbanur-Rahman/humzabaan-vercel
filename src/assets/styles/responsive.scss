@@ -153,10 +153,16 @@ $purple-primary: #752CAE;
         background: linear-gradient(to bottom, $purple-primary 50%, $primary-color 50%);
 
         p {
+            height: min-content;
             font-size: 14px !important;
+        }
+        .history-para-2{
+            margin-top: -70px !important;
         }
 
         .heading {
+            margin-top: 70px !important;
+
             img {
                 height: 40px !important;
                 width: 393px !important;
@@ -214,7 +220,7 @@ $purple-primary: #752CAE;
 
         .about-urdu-ink-img {
             height: 259px !important;
-            bottom: -50px !important;
+            bottom: 81px !important;
             right: 3px;
             z-index: 8;
             width: 100% !important;
@@ -368,26 +374,31 @@ $purple-primary: #752CAE;
         width: 367px !important;
     }
 
-    .modal-heading{
+    .modal-heading {
         padding-left: 10px !important;
     }
-    .close-btn-img{
+
+    .close-btn-img {
         width: 45px !important;
         height: 51px !important;
         top: 33px;
         right: -10px;
     }
+
     .modal-content-section {
         width: 80% !important;
         top: 75px;
+
         .content-img {
             height: 202px !important;
             width: 202px !important
         }
-        p{
+
+        p {
             font-size: 13px !important;
-            
+
         }
+
         .content-img-wrapper {
             height: 202px !important;
             width: 202px !important

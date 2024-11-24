@@ -1,0 +1,177 @@
+.history-slider {
+    width: 100%;
+
+    .swiper {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 33% !important;
+        // width: 400px !important;
+
+    }
+
+    .swiper-slide-next {
+        scale: 1.2;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .history-slide {
+        background-color: #DDC492 !important;
+        height: 300px !important;
+        width: 359px !important;
+
+        .history-slider-bg-img {
+            height: 300px !important;
+            width: 400px !important;
+            z-index: 4 !important;
+        }
+
+        .history-slide-bg {
+
+            // background-color: #DDC492 !important;
+            height: 300px !important;
+            width: 400px !important;
+        }
+
+        .history-thumbnail-img {
+            height: 164px;
+            width: 281px;
+        }
+
+        .history-play-btn {
+            z-index: 10 !important;
+            height: 50px;
+            width: 50px;
+        }
+
+        p {
+            font-size: 15px !important;
+            color: #582C1A !important;
+            width: 255px !important;
+            text-align: justify;
+        }
+
+        .history-urdu-iframe{
+            z-index: 10 !important;
+            height: 144px !important;
+            width: 271px !important;
+        }
+        .history-iframe-border{
+            height: 164px !important;
+            width: 281px !important;
+        }
+    }
+
+    .swiper-pagination {
+        position: relative;
+        margin-top: 80px !important;
+    }
+
+    .swiper-pagination-bullet {
+        background: transparent !important;
+        opacity: 1;
+        height: 16px;
+        width: 16px;
+        border: 2px solid #582C1A !important;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #582C1A !important;
+        opacity: 1 !important;
+    }
+
+
+
+}
+
+
+@media (max-width:990px) {
+
+
+    .history-slider {
+        position: relative;
+        top: -104px !important;
+        .swiper {
+            width: 100%;
+            padding-top: 0px;
+            padding-bottom: 50px;
+        }
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 100% !important;
+            margin-right: 0px !important;
+            margin-left: 0px !important;
+        }
+
+        .swiper-slide-next {
+            scale: 1;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .swiper-pagination {
+            position: relative;
+            margin-top: 30px !important;
+        }
+
+
+        .swiper-pagination-bullet {
+            background: transparent !important;
+            opacity: 1;
+            height: 16px;
+            width: 16px;
+            border: 2px solid #582C1A !important;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #582C1A !important;
+            opacity: 1 !important;
+        }
+
+        .history-slide {
+            height: 259px !important;
+            width: 312px !important;
+
+            .history-slider-bg-img {
+                height: 300px !important;
+                width: 311px !important;
+                z-index: 4 !important;
+            }
+
+            .history-slide-bg {
+
+                // background-color: #DDC492 !important;
+                height: 259px !important;
+                width: 312px !important;
+
+            }
+
+            .history-thumbnail-img {
+                height: 159px;
+                width: 289px;
+            }
+
+            .history-play-btn {
+                z-index: 10 !important;
+                height: 50px;
+                width: 50px;
+            }
+
+            p {
+                font-size: 12px !important;
+                color: #582C1A !important;
+                width: 255px !important;
+                text-align: justify;
+            }
+        }
+    }
+}
+
+@media (min-width:200px) and (max-width:575px) {}
+
+@media (min-width:1000px) and (max-width:1464px) {}

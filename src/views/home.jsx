@@ -70,6 +70,7 @@ import { useEffect, useState } from "react";
 import FeaturesModal from "../components/modal";
 import SliderFeatures from "../components/sliderFeatures/sliderFeatures";
 import DownloadModal from "../components/downloadModal";
+import HistorySlider from "../components/historySlider/historySlider";
 
 const Home = () => {
   AOS.init();
@@ -829,7 +830,7 @@ const Home = () => {
               masterpieces of poetry, prose, and art.
             </p>
             <p
-              className="kiddo-font m-0 p-0 text-center fs-5"
+              className="kiddo-font m-0 p-0 text-center fs-5 mt-md-0 history-para-2"
               data-aos="fade-right"
             >
               During British colonial rule, it became a symbol of resistance and
@@ -850,7 +851,7 @@ const Home = () => {
                 </h1>
               </div> */}
 
-              <div className="history-urdu col-lg-5 m-0 p-0 d-flex align-content-end justify-content-lg-end justify-content-center ">
+              {/* <div className="history-urdu col-lg-5 m-0 p-0 d-flex align-content-end justify-content-lg-end justify-content-center ">
                 <div
                   className="video-player position-relative d-flex justify-content-center align-items-center"
                   data-aos="fade-right"
@@ -887,8 +888,8 @@ const Home = () => {
                     </>
                   )}
                 </div>
-              </div>
-              
+              </div> */}
+              <HistorySlider/>
             </div>
           </div>
         </div>

@@ -187,8 +187,18 @@ const PrivacyPolicy = () => {
           </li>
         </ol>
 
+        <h1> 5) Location Access</h1>
+        <p>
+          We may request access to your location to enhance your experience
+          within the app. This information helps us provide features such as
+          personalized content, regional language preferences, or location-based
+          services. Rest assured, your location data is processed securely and
+          is not shared with any third parties without your explicit consent.
+          You can manage or revoke location access permissions at any time
+          through your device settings.
+        </p>
         <h1>
-          5) General Rights of ‘Humzabaan’ Users under Data Protection Rules and
+          6) General Rights of ‘Humzabaan’ Users under Data Protection Rules and
           Regulations:
         </h1>
         <ol>
@@ -201,7 +211,7 @@ const PrivacyPolicy = () => {
           </li>
           <li>Right to be informed</li>
         </ol>
-        <h1>6) Minor Safety Policy</h1>
+        <h1>7) Minor Safety Policy</h1>
         <p>
           differently to ensure their parents are in control and we only collect
           the bare minimum information we need to make ‘Humzabaan’ work. Child
@@ -223,7 +233,7 @@ const PrivacyPolicy = () => {
           children, we will delete it. If you believe this to be the case,
           please contact us at support@humzabaan.com.
         </p>
-        <h1>7) Data Retention</h1>
+        <h1>8) Data Retention</h1>
         <p>
           ‘Humzabaan’ will generally retain your personal information until your
           account is deleted. However, ‘Humzabaan’ may retain certain
@@ -233,7 +243,7 @@ const PrivacyPolicy = () => {
           misuse or disruption of the Service, or perform agreements. We may
           also retain anonymous data indefinitely.
         </p>
-        <h1>8) Contact us</h1>
+        <h1>9) Contact us</h1>
         <p>
           Humzabaan FZE LLC is the data controller of your data for the purposes
           of the General Data Protection Regulation (“GDPR”) and any relevant
@@ -243,7 +253,7 @@ const PrivacyPolicy = () => {
           concerns you have about this Privacy Policy, please contact our Data
           Protection Officer at support@humzabaan.com.
         </p>
-        <h1>9) Amendments</h1>
+        <h1>10) Amendments</h1>
         <p>
           We keep our Privacy Policy under regular review to make sure it is up
           to date and accurate. Any changes we may make to this Privacy Policy

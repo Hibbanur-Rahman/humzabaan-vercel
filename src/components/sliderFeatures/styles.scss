@@ -65,12 +65,13 @@
 
 
 @media (max-width:990px) {
-  .heading img {
-    width: 400px !important;
-    height: 80px !important;
-  }
+  
 
   .features-slider-wrapper {
+    .heading img {
+      width: 400px !important;
+      height: 80px !important;
+    }
     .swiper-slide {
       background-position: center;
       background-size: cover;
