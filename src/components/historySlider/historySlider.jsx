@@ -11,18 +11,70 @@ import "./style.scss";
 
 // import required module
 import { Autoplay, Pagination } from "swiper/modules";
-import HeadingImg from "../../assets/images/features-heading.svg";
-import sliderBg from "../../assets/images/features-slider-bg.svg";
-import featuresVideoThumbnail from "../../assets/images/features-video-thumbnail.png";
+
 import VideoPlayBtn from "../../assets/images/play-btn.svg";
-import FeaturesSlideLine from "../../assets/images/features-thumbnail-line.svg";
 import historySliderBorder from "../../assets/images/history-slider-border.svg";
 import historySliderThumbnail from "../../assets/images/history-slider-thumbnail.svg";
-import iframeBorder from '../../assets/images/slides-iframe-border.svg';
+import iframeBorder from "../../assets/images/slides-iframe-border.svg";
 
 const HistorySlider = () => {
-  const [videoPlay, setVideoPlay] = useState(false);
-
+  const [videoPlayId, setVideoPlayId] = useState(null);
+  const [historySliderArr, setHistorySliderArr] = useState([
+    {
+      id: 1,
+      videoLink:
+        "https://www.youtube.com/embed/YeJ7AiGeoZc?si=1lt8liYFMYmVyraT",
+      thumbnail: "https://i.ytimg.com/vi/YeJ7AiGeoZc/sddefault.jpg",
+      desc: `Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium, totam rem
+                    aperiam, eaque ipsa quae ab illo inventore`,
+    },
+    {
+      id: 2,
+      videoLink:
+        "https://www.youtube.com/embed/ZjhWV-s35zg?si=NdXRzik6l6wpG4Fs",
+      thumbnail: "https://i.ytimg.com/vi/ZjhWV-s35zg/sddefault.jpg",
+      desc: `Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium, totam rem
+                    aperiam, eaque ipsa quae ab illo inventore`,
+    },
+    {
+      id: 3,
+      videoLink:
+        "https://www.youtube.com/embed/KsKQH8XmWrI?si=O51yuWkmOr0PiVk4",
+      thumbnail: "https://i.ytimg.com/vi/KsKQH8XmWrI/sddefault.jpg",
+      desc: `Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium, totam rem
+                    aperiam, eaque ipsa quae ab illo inventore`,
+    },
+    {
+      id: 4,
+      videoLink:
+        "https://www.youtube.com/embed/8Pj3Dta5XgQ?si=FHaua12iCppZdAKo",
+      thumbnail: "https://i.ytimg.com/vi/8Pj3Dta5XgQ/sddefault.jpg",
+      desc: `Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium, totam rem
+                    aperiam, eaque ipsa quae ab illo inventore`,
+    },
+    {
+      id: 5,
+      videoLink:
+        "https://www.youtube.com/embed/4BG0OvgnHuQ?si=vo0DbiDpiS0a25W4",
+      thumbnail: "https://i.ytimg.com/vi/4BG0OvgnHuQ/sddefault.jpg",
+      desc: `Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium, totam rem
+                    aperiam, eaque ipsa quae ab illo inventore`,
+    },
+    {
+      id: 6,
+      videoLink:
+        "https://www.youtube.com/embed/4ryZkia5CpY?si=2kGvfnRskd7aNjax",
+      thumbnail: "https://i.ytimg.com/vi/4ryZkia5CpY/sddefault.jpg",
+      desc: `Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium, totam rem
+                    aperiam, eaque ipsa quae ab illo inventore`,
+    },
+  ]);
   return (
     <div className="history-slider m-0 p-0">
       <Swiper
@@ -32,7 +84,7 @@ const HistorySlider = () => {
           clickable: true,
           dynamicBullets: true,
         }}
-        // autoplay={true}
+        autoplay={true}
         loop={true}
         modules={[Pagination, Autoplay]}
         breakpoints={{
@@ -51,322 +103,64 @@ const HistorySlider = () => {
         }}
         className="history-swiper"
       >
-        <SwiperSlide>
-          <div className="position-relative d-flex align-items-center justify-content-center history-slide m-0 p-0">
-            <img
-              src={historySliderBorder}
-              alt=""
-              className="history-slider-bg-img relative m-0 p-0"
-            />
-            <div className="position-absolute d-flex flex-column align-items-center justify-content-center history-slide-bg m-0 p-0">
-              {videoPlay ? (
-                <div className="mt-4 mt-md-4 d-flex align-items-center justify-content-center">
-                  <img src={iframeBorder} alt="" className="history-iframe-border position-absolute" />
-                  <iframe
-                    className="history-urdu-iframe position-relative "
-                    src="https://www.youtube.com/embed/tq_b_HkixEY?si=L_wM3uXYb-_8mcOd"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="fullscreen;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              ) : (
-                <div className="m-0 p-0 mt-4 mt-md-4 relative d-flex align-items-center justify-content-center">
-                  <img
-                    src={historySliderThumbnail}
-                    alt=""
-                    className="history-thumbnail-img"
-                  />
-                  <img
-                    src={VideoPlayBtn}
-                    alt=""
-                    className="position-absolute history-play-btn"
-                    onClick={() => setVideoPlay(true)}
-                  />
-                </div>
-              )}
+        {Array.isArray(historySliderArr) &&
+          historySliderArr.length > 0 &&
+          historySliderArr.map((item) => (
+            <SwiperSlide key={item?.id}>
+              <div className="position-relative d-flex align-items-center justify-content-center history-slide m-0 p-0">
+                <img
+                  src={historySliderBorder}
+                  alt=""
+                  className="history-slider-bg-img relative m-0 p-0"
+                />
+                <div className="position-absolute d-flex flex-column align-items-center justify-content-center history-slide-bg m-0 p-0">
+                  {videoPlayId === item?.id ? (
+                    <div className="mt-4 mt-md-4 d-flex align-items-center justify-content-center">
+                      <img
+                        src={iframeBorder}
+                        alt=""
+                        className="history-iframe-border position-absolute"
+                      />
+                      <iframe
+                        className="history-urdu-iframe position-relative "
+                        src={item?.videoLink}
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="fullscreen;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                  ) : (
+                    <div className="m-0 p-0 mt-4 mt-md-4 relative d-flex align-items-center justify-content-center">
+                      <img
+                        src={iframeBorder}
+                        alt=""
+                        className="history-iframe-border-youtube position-absolute"
+                      />
+                      <div className="history-thumbnail-img overflow-hidden">
+                        <img
+                          src={item?.thumbnail || historySliderThumbnail}
+                          alt=""
+                          className="h-100 w-100 "
+                        />
+                      </div>
+                      <img
+                        src={VideoPlayBtn}
+                        alt=""
+                        className="position-absolute history-play-btn"
+                        onClick={() => setVideoPlayId(item?.id)}
+                      />
+                    </div>
+                  )}
 
-              <p className={`${videoPlay?'mt-2':''}`}>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="position-relative d-flex align-items-center justify-content-center history-slide m-0 p-0">
-            <img
-              src={historySliderBorder}
-              alt=""
-              className="history-slider-bg-img relative m-0 p-0"
-            />
-            <div className="position-absolute d-flex flex-column align-items-center justify-content-center history-slide-bg m-0 p-0">
-              {videoPlay ? (
-                <div className="mt-4 mt-md-4 d-flex align-items-center justify-content-center">
-                  <img src={iframeBorder} alt="" className="history-iframe-border position-absolute" />
-                  <iframe
-                    className="history-urdu-iframe position-relative "
-                    src="https://www.youtube.com/embed/tq_b_HkixEY?si=L_wM3uXYb-_8mcOd"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="fullscreen;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
+                  <p className={`${videoPlayId === item?.id ? "mt-2" : "mt-1"}`}>
+                    {item?.desc}
+                  </p>
                 </div>
-              ) : (
-                <div className="m-0 p-0 mt-4 mt-md-4 relative d-flex align-items-center justify-content-center">
-                  <img
-                    src={historySliderThumbnail}
-                    alt=""
-                    className="history-thumbnail-img"
-                  />
-                  <img
-                    src={VideoPlayBtn}
-                    alt=""
-                    className="position-absolute history-play-btn"
-                    onClick={() => setVideoPlay(true)}
-                  />
-                </div>
-              )}
-
-              <p className={`${videoPlay?'mt-2':''}`}>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="position-relative d-flex align-items-center justify-content-center history-slide m-0 p-0">
-            <img
-              src={historySliderBorder}
-              alt=""
-              className="history-slider-bg-img relative m-0 p-0"
-            />
-            <div className="position-absolute d-flex flex-column align-items-center justify-content-center history-slide-bg m-0 p-0">
-              {videoPlay ? (
-                <div className="mt-4 mt-md-4 d-flex align-items-center justify-content-center">
-                  <img src={iframeBorder} alt="" className="history-iframe-border position-absolute" />
-                  <iframe
-                    className="history-urdu-iframe position-relative "
-                    src="https://www.youtube.com/embed/tq_b_HkixEY?si=L_wM3uXYb-_8mcOd"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="fullscreen;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              ) : (
-                <div className="m-0 p-0 mt-4 mt-md-4 relative d-flex align-items-center justify-content-center">
-                  <img
-                    src={historySliderThumbnail}
-                    alt=""
-                    className="history-thumbnail-img"
-                  />
-                  <img
-                    src={VideoPlayBtn}
-                    alt=""
-                    className="position-absolute history-play-btn"
-                    onClick={() => setVideoPlay(true)}
-                  />
-                </div>
-              )}
-
-              <p className={`${videoPlay?'mt-2':''}`}>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="position-relative d-flex align-items-center justify-content-center history-slide m-0 p-0">
-            <img
-              src={historySliderBorder}
-              alt=""
-              className="history-slider-bg-img relative m-0 p-0"
-            />
-            <div className="position-absolute d-flex flex-column align-items-center justify-content-center history-slide-bg m-0 p-0">
-              {videoPlay ? (
-                <div className="mt-4 mt-md-4 d-flex align-items-center justify-content-center">
-                  <img src={iframeBorder} alt="" className="history-iframe-border position-absolute" />
-                  <iframe
-                    className="history-urdu-iframe position-relative "
-                    src="https://www.youtube.com/embed/tq_b_HkixEY?si=L_wM3uXYb-_8mcOd"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="fullscreen;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              ) : (
-                <div className="m-0 p-0 mt-4 mt-md-4 relative d-flex align-items-center justify-content-center">
-                  <img
-                    src={historySliderThumbnail}
-                    alt=""
-                    className="history-thumbnail-img"
-                  />
-                  <img
-                    src={VideoPlayBtn}
-                    alt=""
-                    className="position-absolute history-play-btn"
-                    onClick={() => setVideoPlay(true)}
-                  />
-                </div>
-              )}
-
-              <p className={`${videoPlay?'mt-2':''}`}>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="position-relative d-flex align-items-center justify-content-center history-slide m-0 p-0">
-            <img
-              src={historySliderBorder}
-              alt=""
-              className="history-slider-bg-img relative m-0 p-0"
-            />
-            <div className="position-absolute d-flex flex-column align-items-center justify-content-center history-slide-bg m-0 p-0">
-              {videoPlay ? (
-                <div className="mt-4 mt-md-4 d-flex align-items-center justify-content-center">
-                  <img src={iframeBorder} alt="" className="history-iframe-border position-absolute" />
-                  <iframe
-                    className="history-urdu-iframe position-relative "
-                    src="https://www.youtube.com/embed/tq_b_HkixEY?si=L_wM3uXYb-_8mcOd"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="fullscreen;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              ) : (
-                <div className="m-0 p-0 mt-4 mt-md-4 relative d-flex align-items-center justify-content-center">
-                  <img
-                    src={historySliderThumbnail}
-                    alt=""
-                    className="history-thumbnail-img"
-                  />
-                  <img
-                    src={VideoPlayBtn}
-                    alt=""
-                    className="position-absolute history-play-btn"
-                    onClick={() => setVideoPlay(true)}
-                  />
-                </div>
-              )}
-
-              <p className={`${videoPlay?'mt-2':''}`}>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="position-relative d-flex align-items-center justify-content-center history-slide m-0 p-0">
-            <img
-              src={historySliderBorder}
-              alt=""
-              className="history-slider-bg-img relative m-0 p-0"
-            />
-            <div className="position-absolute d-flex flex-column align-items-center justify-content-center history-slide-bg m-0 p-0">
-              {videoPlay ? (
-                <div className="mt-4 mt-md-4 d-flex align-items-center justify-content-center">
-                  <img src={iframeBorder} alt="" className="history-iframe-border position-absolute" />
-                  <iframe
-                    className="history-urdu-iframe position-relative "
-                    src="https://www.youtube.com/embed/tq_b_HkixEY?si=L_wM3uXYb-_8mcOd"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="fullscreen;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              ) : (
-                <div className="m-0 p-0 mt-4 mt-md-4 relative d-flex align-items-center justify-content-center">
-                  <img
-                    src={historySliderThumbnail}
-                    alt=""
-                    className="history-thumbnail-img"
-                  />
-                  <img
-                    src={VideoPlayBtn}
-                    alt=""
-                    className="position-absolute history-play-btn"
-                    onClick={() => setVideoPlay(true)}
-                  />
-                </div>
-              )}
-
-              <p className={`${videoPlay?'mt-2':''}`}>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="position-relative d-flex align-items-center justify-content-center history-slide m-0 p-0">
-            <img
-              src={historySliderBorder}
-              alt=""
-              className="history-slider-bg-img relative m-0 p-0"
-            />
-            <div className="position-absolute d-flex flex-column align-items-center justify-content-center history-slide-bg m-0 p-0">
-              {videoPlay ? (
-                <div className="mt-4 mt-md-4 d-flex align-items-center justify-content-center">
-                  <img src={iframeBorder} alt="" className="history-iframe-border position-absolute" />
-                  <iframe
-                    className="history-urdu-iframe position-relative "
-                    src="https://www.youtube.com/embed/tq_b_HkixEY?si=L_wM3uXYb-_8mcOd"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="fullscreen;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              ) : (
-                <div className="m-0 p-0 mt-4 mt-md-4 relative d-flex align-items-center justify-content-center">
-                  <img
-                    src={historySliderThumbnail}
-                    alt=""
-                    className="history-thumbnail-img"
-                  />
-                  <img
-                    src={VideoPlayBtn}
-                    alt=""
-                    className="position-absolute history-play-btn"
-                    onClick={() => setVideoPlay(true)}
-                  />
-                </div>
-              )}
-
-              <p className={`${videoPlay?'mt-2':''}`}>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-        
+              </div>
+            </SwiperSlide>
+          ))}
       </Swiper>
     </div>
   );

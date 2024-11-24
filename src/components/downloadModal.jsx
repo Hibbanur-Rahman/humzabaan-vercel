@@ -45,8 +45,6 @@ const DownloadModal = () => {
                 src={closeBtnImg}
                 alt="modal close img"
                 className="close-btn-img m-0 p-0 position-absolute"
-                data-bs-dismiss="modal"
-                aria-label="Close"
                 onClick={() => {
                   handleCloseModal();
                 }}
@@ -65,7 +63,7 @@ const DownloadModal = () => {
                 Download App
               </p>
               <div className="modal-content-section row m-0 p-0 position-absolute justify-content-center">
-                <div className="col-lg-6 d-flex flex-column align-items-center justify-content-center">
+                <div className="col-lg-6 d-flex flex-column align-items-center justify-content-center mt-md-0 mt-2">
                   <div className="content-img-wrapper m-0 p-0 rounded-5 overflow-hidden">
                     <img
                       src={playStoreQr}
@@ -88,7 +86,7 @@ const DownloadModal = () => {
                     />
                   </div>
                 </div>
-                <div className="col-lg-6 d-flex flex-column align-items-center justify-content-center">
+                <div className="col-lg-6 d-flex flex-column align-items-center justify-content-center mt-md-0 mt-3">
                   <div className="content-img-wrapper m-0 p-0 rounded-5 overflow-hidden">
                     <img
                       src={appStoreQr}

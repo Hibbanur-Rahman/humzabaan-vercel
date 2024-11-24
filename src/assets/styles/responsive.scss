@@ -376,6 +376,8 @@ $purple-primary: #752CAE;
 
     .modal-heading {
         padding-left: 10px !important;
+        top: 40px;
+        width: 200px !important;
     }
 
     .close-btn-img {
@@ -390,8 +392,10 @@ $purple-primary: #752CAE;
         top: 75px;
 
         .content-img {
-            height: 202px !important;
-            width: 202px !important
+            height: 140px !important;
+            width: 202px !important;
+            border-radius: 20px !important;
+
         }
 
         p {
@@ -400,8 +404,9 @@ $purple-primary: #752CAE;
         }
 
         .content-img-wrapper {
-            height: 202px !important;
-            width: 202px !important
+            height: 140px !important;
+            width: 202px !important;
+            border-radius: 20px !important;
         }
     }
 

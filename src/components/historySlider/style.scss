@@ -39,8 +39,12 @@
         }
 
         .history-thumbnail-img {
-            height: 164px;
+            height: 154px;
             width: 281px;
+            overflow: hidden;
+            img{
+                scale: 1.4;
+            }
         }
 
         .history-play-btn {
@@ -64,6 +68,10 @@
         .history-iframe-border{
             height: 164px !important;
             width: 281px !important;
+        }
+        .history-iframe-border-youtube{
+            height: 210px !important;
+            width: 295px !important;
         }
     }
 
@@ -152,8 +160,12 @@
             }
 
             .history-thumbnail-img {
-                height: 159px;
-                width: 289px;
+                height: 154px;
+                width: 281px;
+                overflow: hidden;
+                img{
+                    scale: 1.4;
+                }
             }
 
             .history-play-btn {
