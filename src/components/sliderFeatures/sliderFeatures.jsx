@@ -88,7 +88,7 @@ export default function App() {
           modules={[Pagination, Autoplay]}
           breakpoints={{
             0: {
-              slidesPerView: 1, // Show one slide for devices with width 0px and above
+              slidesPerView: 1, // Show one slide for devices with width 0px and 
               spaceBetween: 0, // Adjust spacing for smaller screens
             },
             768: {
