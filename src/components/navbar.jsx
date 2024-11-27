@@ -34,7 +34,7 @@ const Navbar = () => {
                 </Link>
               </div>
               <div className="col-3 d-flex align-items-center justify-content-center">
-                <Link to="#" className="text-decoration-none">
+                <Link to="/curriculum" className="text-decoration-none">
                   CURRICULUM
                 </Link>
               </div>
@@ -119,7 +119,7 @@ const Navbar = () => {
                 <Link to="/" className="text-decoration-none mb-3 mt-3">
                   Home
                 </Link>
-                <Link to="#" className="text-decoration-none mb-3 mt-3">
+                <Link to="/curriculum" className="text-decoration-none mb-3 mt-3">
                   CURRICULUM
                 </Link>
                 <ScrollLink to="features-section" className="text-decoration-none mb-3 mt-3"  data-bs-dismiss="offcanvas"

@@ -9,6 +9,7 @@ $red-primary: #D75438;
 $brown-primary: #582C1A;
 $purple-primary: #752CAE;
 
+
 body {
     scroll-behavior: smooth;
     background-color: #7FD839;
@@ -157,6 +158,16 @@ body {
     }
 
     a {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-variation-settings:
+            "slnt" 0;
+        color: $primary-color !important;
+    }
+
+    p {
         font-family: "Inter", sans-serif;
         font-optical-sizing: auto;
         font-weight: 700;
@@ -631,6 +642,7 @@ body {
     background-color: #579B22 !important;
     margin-top: -60px !important;
 }
+
 .login {
     background-image: url('../images/login-bg.svg');
     height: 100vh !important;
@@ -656,7 +668,7 @@ body {
             outline: none !important;
         }
 
-      
+
     }
 
 }
@@ -706,13 +718,14 @@ body {
     }
 
     .content-img {
-        height: 256px ;
-         width: 266px ;
-         border: 1px solid #255102;
+        height: 256px;
+        width: 266px;
+        border: 1px solid #255102;
     }
-    .content-img-wrapper{
-        height: 256px ;
-        width: 266px 
+
+    .content-img-wrapper {
+        height: 256px;
+        width: 266px
     }
 
 }
@@ -770,4 +783,57 @@ body {
 .para-hover:active {
     -webkit-animation-name: rubberBand;
     animation-name: rubberBand;
+}
+
+.curriculum {
+    display: flex;
+
+    .curriculum-heading {
+        height: 80px !important;
+    }
+
+    .curriculum-heading-para {
+        font-size: 18px !important;
+        color: rgba(0, 0, 0, 0.667);
+    }
+    .circle-wrapper{
+        margin-top: 60px !important;
+    }
+
+    .circle-item {
+        border-radius: 50%;
+        border: 8px solid $primary-color;
+        position: relative;
+        z-index: 3;
+        background-color: #ffffff6f;
+        .inner-circle {
+            background-color: #f6f6f6;
+            border-radius: 50%;
+
+            img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+    }
+    .chapter-name-para-2{
+        color: $primary-color;
+    }
+    .line-connection{
+        border: 2px dashed #000;
+        width: 700px;
+        transform: rotate(26deg);
+        position: relative;
+        top: 80px;
+        left: -40px;
+    }
+    .line-connection-right{
+        border: 2px dashed #000;
+        width: 700px;
+        transform: rotate(-30deg);
+        position: relative;
+        top: 80px;
+        left: -40px;
+    }
 }

@@ -84,7 +84,7 @@ const HistorySlider = () => {
           clickable: true,
           dynamicBullets: true,
         }}
-        autoplay={true}
+        autoplay={videoPlayId?false:true}
         loop={true}
         modules={[Pagination, Autoplay]}
         breakpoints={{
