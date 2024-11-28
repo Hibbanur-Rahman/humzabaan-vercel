@@ -282,7 +282,7 @@ const Home = () => {
             data-aos="fade-right"
           >
             <p
-              className="m-0 p-0 text-light kiddo-font text-center"
+              className="m-0 p-0 text-light poppins-regular text-center"
               style={{ fontSize: "1.1rem" }}
             >
               Welcome to Humzabaan – your ultimate destination for delving into
@@ -292,7 +292,7 @@ const Home = () => {
               journey. ​
             </p>
             <p
-              className="m-0 p-0 mt-4 text-light kiddo-font text-center"
+              className="m-0 p-0 mt-4 text-light poppins-regular text-center"
               style={{ fontSize: "1.1rem" }}
             >
               Here at Humzabaan, we're dedicated to nurturing the vibrant spirit
@@ -429,7 +429,7 @@ const Home = () => {
                   </h2>
                 )}
                 {whyHumzabaanArr.length > 0 && (
-                  <p className="m-0 p-0 kiddo-font text-center">
+                  <p className="m-0 p-0 poppins-regular text-center">
                     {whyHumzabaanArr[0].description}
                   </p>
                 )}
@@ -451,7 +451,7 @@ const Home = () => {
                   </h2>
                 )}
                 {whyHumzabaanArr.length > 0 && (
-                  <p className="m-0 p-0 kiddo-font text-center">
+                  <p className="m-0 p-0 poppins-regular text-center">
                     {whyHumzabaanArr[1].description}
                   </p>
                 )}
@@ -484,7 +484,7 @@ const Home = () => {
                 )}
 
                 {whyHumzabaanArr.length > 0 && (
-                  <p className="m-0 p-0 kiddo-font text-center">
+                  <p className="m-0 p-0 poppins-regular text-center">
                     {whyHumzabaanArr[2].description}
                   </p>
                 )}
@@ -506,7 +506,7 @@ const Home = () => {
                   </h2>
                 )}
                 {whyHumzabaanArr.length > 0 && (
-                  <p className="m-0 p-0 kiddo-font text-center">
+                  <p className="m-0 p-0 poppins-regular text-center">
                     {whyHumzabaanArr[3].description}
                   </p>
                 )}
@@ -818,7 +818,7 @@ const Home = () => {
             </div>
 
             <p
-              className="kiddo-font m-0 p-0 text-center fs-5"
+              className="poppins-light m-0 p-0 text-center fs-5"
               data-aos="fade-right"
             >
               Urdu, originating in the 13th century in North India, emerged as a
@@ -830,7 +830,7 @@ const Home = () => {
               masterpieces of poetry, prose, and art.
             </p>
             <p
-              className="kiddo-font m-0 p-0 text-center fs-5 mt-md-0 history-para-2"
+              className="poppins-light m-0 p-0 text-center fs-5 mt-md-0 history-para-2"
               data-aos="fade-right"
             >
               During British colonial rule, it became a symbol of resistance and
@@ -954,7 +954,7 @@ const Home = () => {
                           />
                         ))}
                       </div>
-                      <p className="review m-0 p-0 text-center kiddo-font col-10 mt-4">
+                      <p className="review m-0 p-0 text-center poppins-regular col-10 mt-4">
                         {item.description}
                       </p>
                     </div>

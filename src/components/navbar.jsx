@@ -39,9 +39,9 @@ const Navbar = () => {
                 </Link>
               </div>
               <div className="col-3 d-flex align-items-center justify-content-center">
-                <ScrollLink to="features-section" className="text-decoration-none"  style={{ cursor: "pointer" }}>
+                <Link to="/features"  className="text-decoration-none"  style={{ cursor: "pointer" }}>
                   FEATURES
-                </ScrollLink>
+                </Link>
               </div>
               <div className="col-3 d-flex align-items-center justify-content-center">
                 <ScrollLink
