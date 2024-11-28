@@ -3,7 +3,9 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 
 const Features = () => {
+
   return (
+    //features heading
     <div className="row m-0 p-0 flex-column bg-white align-items-center overflow-x-hidden">
       <Navbar />
       <div
