@@ -15,6 +15,7 @@ import PrivacyPolicy from "./views/privacyPolicy";
 import CommunityGuidelines from "./views/communityGuidlines";
 import ManageYourData from "./views/manageYourData";
 import Curriculum from "./views/curriculum";
+import Features from "./views/features";
 
 function App() {
   AOS.init();
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/curriculum" element={<Curriculum />} />
+        <Route exact path="/features" element={<Features />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route
