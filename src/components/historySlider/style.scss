@@ -42,7 +42,8 @@
             height: 154px;
             width: 281px;
             overflow: hidden;
-            img{
+
+            img {
                 scale: 1.4;
             }
         }
@@ -55,22 +56,31 @@
         }
 
         p {
-            font-size: 15px !important;
+            font-size: 18px !important;
             color: #582C1A !important;
             width: 255px !important;
-            text-align: justify;
+            text-align: center;
+        }
+        .title{
+            font-size: 24px !important;
+            font-weight: 600;
+        }
+        .subtitle{
+            font-size: 16px !important;
         }
 
-        .history-urdu-iframe{
+        .history-urdu-iframe {
             z-index: 10 !important;
             height: 144px !important;
             width: 271px !important;
         }
-        .history-iframe-border{
+
+        .history-iframe-border {
             height: 164px !important;
             width: 281px !important;
         }
-        .history-iframe-border-youtube{
+
+        .history-iframe-border-youtube {
             height: 210px !important;
             width: 295px !important;
         }
@@ -105,11 +115,13 @@
     .history-slider {
         position: relative;
         top: -104px !important;
+
         .swiper {
             width: 100%;
             padding-top: 0px;
             padding-bottom: 50px;
         }
+
         .swiper-slide {
             background-position: center;
             background-size: cover;
@@ -164,7 +176,8 @@
                 height: 154px;
                 width: 281px;
                 overflow: hidden;
-                img{
+
+                img {
                     scale: 1.4;
                 }
             }

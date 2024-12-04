@@ -24,49 +24,38 @@ export default function App() {
       id: 1,
       videoLink: "https://www.youtube.com/embed/ZkuZKBEj6Xw",
       thumbnail: "https://i.ytimg.com/vi/ZkuZKBEj6Xw/sddefault.jpg",
-      desc: `Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore`,
+      desc: `The course will familiarize you with the letters that comprise the Urdu alphabet, along with their pronunciation.`,
     },
     {
       id: 2,
       videoLink: "https://www.youtube.com/embed/dchR13x2B6w",
       thumbnail: "https://i.ytimg.com/vi/dchR13x2B6w/sddefault.jpg",
-      desc: `Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore`,
+      desc: `In Urdu, alphabet letters are often grouped based on their shapes. The course will introduce you to the alphabet families.`,
     },
     {
       id: 3,
       videoLink: "https://www.youtube.com/embed/6tlgJlYyV80",
       thumbnail: "https://i.ytimg.com/vi/6tlgJlYyV80/sddefault.jpg",
-      desc: `Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore`,
+      desc: `The course will introduce you to the changing shapes of Urdu letters based on their positions within a word.`,
     },
     {
       id: 4,
       videoLink: "https://www.youtube.com/embed/D-JMAYtVRLo",
       thumbnail: "https://i.ytimg.com/vi/D-JMAYtVRLo/sddefault.jpg",
-      desc: `Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore`,
+      desc: `The course will introduce you to symbols and combinations of letters that represent vowels in Urdu.`,
     },
     {
       id: 5,
       videoLink: "https://www.youtube.com/embed/i2qMoy93mDc",
       thumbnail: "https://i.ytimg.com/vi/i2qMoy93mDc/sddefault.jpg",
-      desc: `Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore`,
+      desc: `The course will familiarize you with how words are formed in Urdu by combining letters.
+`,
     },
     {
       id: 6,
       videoLink: "https://www.youtube.com/embed/ytdsbjrdMG4",
       thumbnail: "https://i.ytimg.com/vi/ytdsbjrdMG4/sddefault.jpg",
-      desc: `Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore`,
+      desc: `The course will familiarize you with numbers and their pronunciation in Urdu.`,
     },
   ]);
   return (
@@ -83,12 +72,12 @@ export default function App() {
             clickable: true,
             dynamicBullets: true,
           }}
-          autoplay={videoPlayId?false:true}
+          autoplay={videoPlayId ? false : true}
           loop={true}
           modules={[Pagination, Autoplay]}
           breakpoints={{
             0: {
-              slidesPerView: 1, // Show one slide for devices with width 0px and 
+              slidesPerView: 1, // Show one slide for devices with width 0px and
               spaceBetween: 0, // Adjust spacing for smaller screens
             },
             768: {
@@ -154,9 +143,7 @@ export default function App() {
                       </div>
                     )}
                     <p className="col-9 text-center text-black my-2 poppins-regular ">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem accusantium doloremque laudantium, totam rem
-                      aperiam, eaque ipsa quae ab illo inventore
+                      {item?.desc}
                     </p>
                     <div className="w-auto mt-3">
                       <Button

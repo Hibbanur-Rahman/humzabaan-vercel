@@ -409,7 +409,62 @@ $purple-primary: #752CAE;
             border-radius: 20px !important;
         }
     }
-
+    .curriculum {
+        display: flex;
+    
+        .curriculum-heading {
+            height: 50px !important;
+        }
+    
+        .curriculum-heading-para {
+            font-size: 16px !important;
+            color: rgba(0, 0, 0, 0.667);
+        }
+        .circle-wrapper{
+            margin-top: 60px !important;
+            position: relative;
+            z-index: 4;
+        }
+    
+        .circle-item {
+            border-radius: 50%;
+            border: 4px solid $primary-color;
+            position: relative;
+            z-index: 3;
+            background-color: #ffffff6f;
+            .inner-circle {
+                background-color: #f6f6f6;
+                border-radius: 50%;
+    
+                img {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+    
+        }
+        .chapter-name-para-2{
+            color: $primary-color;
+        }
+        .line-connection{
+            border: 2px dashed #000;
+            width: 364px;
+            transform: rotate(31deg);
+            position: relative;
+            top: 29px;
+            left: 0px;
+            position: relative;
+            z-index: 0;
+        }
+        .line-connection-right{
+            border: 2px dashed #000;
+            width: 333px;
+            transform: rotate(-30deg);
+            position: relative;
+            top: 29px;
+            left: -10px;
+        }
+    }
 
 }
 

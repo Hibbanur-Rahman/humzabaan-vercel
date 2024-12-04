@@ -25,54 +25,48 @@ const HistorySlider = () => {
       videoLink:
         "https://www.youtube.com/embed/YeJ7AiGeoZc?si=1lt8liYFMYmVyraT",
       thumbnail: "https://i.ytimg.com/vi/YeJ7AiGeoZc/sddefault.jpg",
-      desc: `Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore`,
+      desc: `Beginnings`,
+      subtitle:'11th Century'
     },
     {
       id: 2,
       videoLink:
         "https://www.youtube.com/embed/ZjhWV-s35zg?si=NdXRzik6l6wpG4Fs",
       thumbnail: "https://i.ytimg.com/vi/ZjhWV-s35zg/sddefault.jpg",
-      desc: `Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore`,
+      desc: `Fusion`,
+       subtitle:'13th Century'
     },
     {
       id: 3,
       videoLink:
         "https://www.youtube.com/embed/KsKQH8XmWrI?si=O51yuWkmOr0PiVk4",
       thumbnail: "https://i.ytimg.com/vi/KsKQH8XmWrI/sddefault.jpg",
-      desc: `Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore`,
+      desc: `Refinement`,
+       subtitle:'17th Century'
     },
     {
       id: 4,
       videoLink:
         "https://www.youtube.com/embed/8Pj3Dta5XgQ?si=FHaua12iCppZdAKo",
       thumbnail: "https://i.ytimg.com/vi/8Pj3Dta5XgQ/sddefault.jpg",
-      desc: `Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore`,
+      desc: `Expansion`,
+       subtitle:'18th Century'
     },
     {
       id: 5,
       videoLink:
         "https://www.youtube.com/embed/4BG0OvgnHuQ?si=vo0DbiDpiS0a25W4",
       thumbnail: "https://i.ytimg.com/vi/4BG0OvgnHuQ/sddefault.jpg",
-      desc: `Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore`,
+      desc: `Modernity`,
+       subtitle:'19th Century'
     },
     {
       id: 6,
       videoLink:
         "https://www.youtube.com/embed/4ryZkia5CpY?si=2kGvfnRskd7aNjax",
       thumbnail: "https://i.ytimg.com/vi/4ryZkia5CpY/sddefault.jpg",
-      desc: `Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore`,
+      desc: `Future`,
+       subtitle:'20th Century'
     },
   ]);
   return (
@@ -154,9 +148,10 @@ const HistorySlider = () => {
                     </div>
                   )}
 
-                  <p className={`${videoPlayId === item?.id ? "mt-2" : "mt-1"}`}>
+                  <p className={`m-0 p-0 ${videoPlayId === item?.id ? "mt-2" : "mt-3"} fs-1 title`}>
                     {item?.desc}
                   </p>
+                  <p className="m-0 p-0 subtitle">~{item?.subtitle}</p>
                 </div>
               </div>
             </SwiperSlide>

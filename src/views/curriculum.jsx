@@ -113,7 +113,7 @@ const CourseItem = ({
   >
     <div className="d-flex gap-3 align-items-center">
       {!alignRight && (
-        <div className="circle-item p-3 d-flex align-items-center justify-content-center">
+        <div className="circle-item p-md-3 p-2 d-flex align-items-center justify-content-center">
           <div className="inner-circle p-3 overflow-hidden">
             <img src={img} alt={title} />
           </div>
@@ -128,7 +128,7 @@ const CourseItem = ({
         <p className={`roboto-regular m-0 p-0  ${alignRight?'text-end':''}`}>{subCourses}</p>
       </div>
       {alignRight && (
-        <div className="circle-item p-3 d-flex align-items-center justify-content-center">
+        <div className="circle-item p-md-3 p-2 d-flex align-items-center justify-content-center">
           <div className="inner-circle p-3 overflow-hidden">
             <img src={img} alt={title} />
           </div>
@@ -145,7 +145,7 @@ const Curriculum = () => {
     <div className="row m-0 p-0 flex-column bg-white align-items-center overflow-x-hidden">
       <Navbar />
       <div
-        className="curriculum col-10 d-flex flex-column justify-content-center align-items-center"
+        className="curriculum col-md-10 col-12 d-flex flex-column justify-content-center align-items-center"
         style={{ marginBottom: "10rem" }}
       >
         <img
@@ -153,11 +153,11 @@ const Curriculum = () => {
           className="curriculum-heading m-0 p-0 mt-5"
           alt="Curriculum Heading"
         />
-        <p className="curriculum-heading-para col-7 text-center mt-3">
+        <p className="curriculum-heading-para col-md-7 text-center mt-3">
           Explore our catalog for Urdu courses, designed to help beginners learn
           essential vocabulary, grammar, and conversational skills.
         </p>
-        <div className="d-flex flex-column justify-content-center align-items-center col-8">
+        <div className="d-flex flex-column justify-content-center align-items-center col-md-8 col-12">
           {courseData.map((course, index) => (
             <React.Fragment key={index}>
               <CourseItem
