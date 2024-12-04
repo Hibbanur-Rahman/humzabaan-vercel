@@ -11,7 +11,9 @@ const Features = () => {
       <div
         className="curriculum col-10 d-flex flex-column justify-content-center align-items-center"
         style={{ marginBottom: "10rem" }}
-      ></div>
+      >
+        <h1>Features</h1>
+      </div>
       <Footer />
     </div>
   );
