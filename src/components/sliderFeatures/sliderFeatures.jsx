@@ -59,7 +59,7 @@ export default function App() {
     },
   ]);
   return (
-    <div className="w-100 d-flex justify-content-center align-items-center p-5">
+    <div className="w-100 d-flex justify-content-center align-items-center p-5" style={{maxWidth:'1400px'}}>
       <div className="features-slider-wrapper col-lg-11  pt-5">
         <div className="heading w-100 d-flex justify-content-center align-items-center">
           <img src={HeadingImg} alt="" className="tutorial-heading" />
@@ -72,9 +72,11 @@ export default function App() {
             clickable: true,
             dynamicBullets: true,
           }}
-          autoplay={videoPlayId ? false : true}
+          // autoplay={videoPlayId ? false : true}
           loop={true}
-          modules={[Pagination, Autoplay]}
+          modules={[Pagination,
+            //  Autoplay
+            ]}
           breakpoints={{
             0: {
               slidesPerView: 1, // Show one slide for devices with width 0px and
@@ -154,6 +156,7 @@ export default function App() {
                         outerBtnBorder="1px solid #000d9c"
                         innerBtnBorder="2px dashed #fff"
                         lineUpperOverlayBg="#1d3ae2 "
+                        link={item?.videoLink}
                       />
                     </div>
                   </div>

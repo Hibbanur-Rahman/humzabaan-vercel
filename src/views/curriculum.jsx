@@ -146,7 +146,8 @@ const Curriculum = () => {
       <Navbar />
       <div
         className="curriculum col-md-10 col-12 d-flex flex-column justify-content-center align-items-center"
-        style={{ marginBottom: "10rem" }}
+        style={{ marginBottom: "10rem",maxWidth:'1400px' }}
+
       >
         <img
           src={curriculumHeading}

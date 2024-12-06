@@ -78,9 +78,11 @@ const HistorySlider = () => {
           clickable: true,
           dynamicBullets: true,
         }}
-        autoplay={videoPlayId?false:true}
+        // autoplay={videoPlayId?false:true}
         loop={true}
-        modules={[Pagination, Autoplay]}
+        modules={[Pagination, 
+          // Autoplay
+        ]}
         breakpoints={{
           0: {
             slidesPerView: 1, // Show one slide for devices with width 0px and above

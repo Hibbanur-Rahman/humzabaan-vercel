@@ -172,7 +172,7 @@ const Home = () => {
     <div className="home row m-0 p-0 overflow-x-hidden">
       {/** ================= Navbar-section ==================  */}
       <Navbar />
-      <DownloadModal/>
+      <DownloadModal />
       {/** ================= Hero-section ==================  */}
       <div
         id="hero-section"
@@ -386,13 +386,13 @@ const Home = () => {
                 logo={appleLogo}
                 para="DOWNLOAD ON THE"
                 head="APP STORE"
-                btnCtmBackground="radial-gradient(#C3D80A, #BED30A, #AFC50C, #98AD10, #8AA012)"
-                boxShadow="0px 4px #5b6404"
-                lineBackground="#dcf314"
-                outerBtnBorder="1px solid rgb(7, 90, 94)"
-                innerBtnBorder="2px dashed rgba(7, 90, 94, 1)"
-                lineUpperOverlayBg="#b3cb147e"
-                link="https://apps.apple.com/ae/app/humzabaan/id6736941196"
+                btnCtmBackground="radial-gradient(rgb(45 45 45), rgb(36 35 35), rgb(47 46 46), rgb(44 43 43), rgb(52 51 51))"
+                boxShadow="0px 4px rgb(36 34 34)"
+                lineBackground="#000000"
+                outerBtnBorder="1px solid rgb(255, 255, 255)"
+                innerBtnBorder="2px dashed rgb(255, 255, 255)"
+                lineUpperOverlayBg="rgb(37 37 37)"
+                link="https://apps.apple.com/in/app/humzabaan/id1574441111"
               />
             </div>
           </div>
@@ -771,7 +771,7 @@ const Home = () => {
           </div>
         </div> */}
         <div
-          className="features-card row m-0 p-0 mt-lg-5 pb-lg-5 position-relative"
+          className="features-card row m-0 p-0 mt-lg-5 pb-lg-5 position-relative justify-content-center"
           id="features-card-section"
         >
           <SliderFeatures />
@@ -889,7 +889,7 @@ const Home = () => {
                   )}
                 </div>
               </div> */}
-              <HistorySlider/>
+              <HistorySlider />
             </div>
           </div>
         </div>

@@ -11,14 +11,18 @@ const Button = ({
   outerBtnBorder,
   innerBtnBorder,
   lineUpperOverlayBg,
+  link
 }) => {
   const dispatch = useDispatch();
   const [isDownloadBtn, setIsDownloadBtn] = useState(true);
   const handleOpenDownloadModal = () => {
     if (content === "DOWNLOAD NOW") {
       dispatch(handleDownloadModal(true));
+    } else if(content=== 'LEARN MORE') {
+      window.open(link, "_blank");
     }
   };
+
   return (
     <>
       <div
