@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import Button from "./button";
 import NavbarBg from "../assets/images/Rectangle-5.png";
@@ -6,6 +6,7 @@ import NavbarBgMobile from "../assets/images/NavbarBgMobile.png";
 import logo from "../assets/images/Humzabaan_MAIN_LOGO.svg";
 import ButtonNew from "./buttonNew";
 const Navbar = () => {
+  const navigate=useNavigate();
   return (
     <>
       {/**================= Navbar for desktop =================== */}
@@ -116,16 +117,16 @@ const Navbar = () => {
             </div>
             <div className="offcanvas-body">
               <div className="row m-0 p-0">
-                <Link to="/" className="text-decoration-none mb-3 mt-3">
+                <p onClick={()=>navigate("/")} className="text-decoration-none mb-3 mt-3"  data-bs-dismiss="offcanvas">
                   Home
-                </Link>
-                <Link to="/curriculum" className="text-decoration-none mb-3 mt-3">
+                </p>
+                <p onClick={()=>navigate("/curriculum")} className="text-decoration-none mb-3 mt-3"  data-bs-dismiss="offcanvas">
                   CURRICULUM
-                </Link>
-                <ScrollLink to="features-section" className="text-decoration-none mb-3 mt-3"  data-bs-dismiss="offcanvas"
+                </p>
+                <p onClick={()=>navigate("/features")} className="text-decoration-none mb-3 mt-3"  data-bs-dismiss="offcanvas"
                 aria-label="Close">
                   FEATURES
-                </ScrollLink>
+                </p>
                 <ScrollLink
                   to="contact-us-section"
                   className="text-decoration-none mb-3 mt-3"

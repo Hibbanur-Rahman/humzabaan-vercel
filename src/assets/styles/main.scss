@@ -848,3 +848,22 @@ body {
         left: -40px;
     }
 }
+
+.features-tab{
+    display: flex;
+    .features-heading-text{
+        height: 90px;
+        margin-top: 30px;
+    }
+    .features-tab-row{
+        display: flex;
+        h1{
+            color: $primary-color;
+            font-size: 30px !important;
+        }
+        img{
+            height: 400px;
+            width: 330px;
+        }
+    }
+}

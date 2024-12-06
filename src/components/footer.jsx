@@ -51,7 +51,7 @@ const Footer = () => {
                 </div>
               </Link> */}
               <Link
-                to=" https://youtube.com/@humzabaan"
+                to="https://www.youtube.com/@Humzabaan"
                 target="_blank"
                 className="m-0 p-0 w-auto ms-1"
               >
