@@ -16,6 +16,7 @@ import CommunityGuidelines from "./views/communityGuidlines";
 import ManageYourData from "./views/manageYourData";
 import Curriculum from "./views/curriculum";
 import Features from "./views/features";
+import DownloadModal from "./components/downloadModal";
 
 function App() {
   AOS.init();
@@ -35,6 +36,7 @@ function App() {
         <Route exact path="/manage-your-data" element={<ManageYourData />} />
         <Route exact path="/dashboard/*" element={<DashboardLayout />} />
       </Routes>
+      <DownloadModal/>
       <ToastContainer />
     </div>
   );

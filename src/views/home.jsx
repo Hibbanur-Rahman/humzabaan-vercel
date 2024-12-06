@@ -172,7 +172,7 @@ const Home = () => {
     <div className="home row m-0 p-0 overflow-x-hidden">
       {/** ================= Navbar-section ==================  */}
       <Navbar />
-      <DownloadModal />
+      {/* <DownloadModal /> */}
       {/** ================= Hero-section ==================  */}
       <div
         id="hero-section"
