@@ -33,7 +33,7 @@ const courseData = [
   {
     img: courseImg3,
     title: "Shakl",
-    subtitle: "Understanding",
+    subtitle: "Understanding Shapes",
     duration: "1hr",
     subCourses: "16 Sub-courses",
   },
@@ -67,7 +67,7 @@ const courseData = [
   },
   {
     img: courseImg8,
-    title: "Zamaan O Makaan",
+    title: "Zaman O Makaan",
     subtitle: "Time and Place",
     duration: "1hr",
     subCourses: "5 Sub-courses",
@@ -81,7 +81,7 @@ const courseData = [
   },
   {
     img: courseImg10,
-    title: "Qurb O Janvaar",
+    title: "Qurb O Javaar",
     subtitle: "Around Us",
     duration: "1hr",
     subCourses: "5 Sub-courses",

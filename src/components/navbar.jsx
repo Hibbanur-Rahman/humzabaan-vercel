@@ -1,12 +1,33 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import Button from "./button";
 import NavbarBg from "../assets/images/Rectangle-5.png";
 import NavbarBgMobile from "../assets/images/NavbarBgMobile.png";
 import logo from "../assets/images/Humzabaan_MAIN_LOGO.svg";
 import ButtonNew from "./buttonNew";
+import { useEffect } from "react";
 const Navbar = () => {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
+  const location = useLocation();
+  // Function to navigate to '/' and store a flag in state or local storage
+  const handleContactNavigate = () => {
+    navigate("/");
+    localStorage.setItem("scrollToContact", "true");
+  };
+
+  // Scroll to contact-us-section if the flag is set in local storage
+  useEffect(() => {
+    if (
+      location.pathname === "/" &&
+      localStorage.getItem("scrollToContact") === "true"
+    ) {
+      const contactSection = document.getElementById("contact-us-section");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      }
+      localStorage.removeItem("scrollToContact"); // Clean up the flag
+    }
+  }, [location]);
   return (
     <>
       {/**================= Navbar for desktop =================== */}
@@ -30,28 +51,42 @@ const Navbar = () => {
           <div className="col-6 m-0 p-0 d-flex align-items-end justify-content-center">
             <div className="d-flex col-10 m-0 p-0 align-items-center justify-content-center">
               <div className="col-3 d-flex align-items-center justify-content-center">
-                <Link to="/" className="text-decoration-none">
+                <Link to="/" className={`text-decoration-none`}>
                   Home
                 </Link>
               </div>
               <div className="col-3 d-flex align-items-center justify-content-center">
-                <Link to="/curriculum" className="text-decoration-none">
-                  CURRICULUM
+                <Link to="/curriculum" className={`text-decoration-none`}>
+                  Curriculum
                 </Link>
               </div>
               <div className="col-3 d-flex align-items-center justify-content-center">
-                <Link to="/features"  className="text-decoration-none"  style={{ cursor: "pointer" }}>
-                  FEATURES
-                </Link>
-              </div>
-              <div className="col-3 d-flex align-items-center justify-content-center">
-                <ScrollLink
-                  to="contact-us-section"
-                  className="text-decoration-none"
+                <Link
+                  to="/features"
+                  className={`text-decoration-none`}
                   style={{ cursor: "pointer" }}
                 >
-                  CONTACT
-                </ScrollLink>
+                  Features
+                </Link>
+              </div>
+              <div className="col-3 d-flex align-items-center justify-content-center">
+                {location.pathname !== "/" ? (
+                  <p
+                    className="m-0 p-0 "
+                    style={{ cursor: "pointer" }}
+                    onClick={() => handleContactNavigate()}
+                  >
+                    Contact
+                  </p>
+                ) : (
+                  <ScrollLink
+                    to="contact-us-section"
+                    className={`text-decoration-none`}
+                    style={{ cursor: "pointer" }}
+                  >
+                    Contact
+                  </ScrollLink>
+                )}
               </div>
             </div>
           </div>
@@ -117,24 +152,48 @@ const Navbar = () => {
             </div>
             <div className="offcanvas-body">
               <div className="row m-0 p-0">
-                <p onClick={()=>navigate("/")} className="text-decoration-none mb-3 mt-3"  data-bs-dismiss="offcanvas">
+                <p
+                  onClick={() => navigate("/")}
+                  className="text-decoration-none mb-3 mt-3"
+                  data-bs-dismiss="offcanvas"
+                >
                   Home
                 </p>
-                <p onClick={()=>navigate("/curriculum")} className="text-decoration-none mb-3 mt-3"  data-bs-dismiss="offcanvas">
-                  CURRICULUM
-                </p>
-                <p onClick={()=>navigate("/features")} className="text-decoration-none mb-3 mt-3"  data-bs-dismiss="offcanvas"
-                aria-label="Close">
-                  FEATURES
-                </p>
-                <ScrollLink
-                  to="contact-us-section"
+                <p
+                  onClick={() => navigate("/curriculum")}
                   className="text-decoration-none mb-3 mt-3"
-                   data-bs-dismiss="offcanvas"
-                aria-label="Close"
+                  data-bs-dismiss="offcanvas"
                 >
-                  CONTACT
-                </ScrollLink>
+                  Curriculum
+                </p>
+
+                <p
+                  onClick={() => navigate("/features")}
+                  className="text-decoration-none mb-3 mt-3"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  Features
+                </p>
+                {location.pathname !== "/" ? (
+                  <p
+                    onClick={() => handleContactNavigate()}
+                    className="m-0 p-0 "
+                    style={{ cursor: "pointer" }}
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  >
+                    Contact
+                  </p>
+                ) : (
+                  <ScrollLink
+                    to="contact-us-section"
+                    className={`text-decoration-none`}
+                    style={{ cursor: "pointer" }}
+                  >
+                    Contact
+                  </ScrollLink>
+                )}
                 <ButtonNew
                   content="DOWNLOAD NOW"
                   btnCtmBackground="radial-gradient(#C3D80A, #BED30A, #AFC50C, #98AD10, #8AA012)"

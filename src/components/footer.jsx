@@ -5,10 +5,39 @@ import playStoreLogo from "../assets/images/playStoreLogo.svg";
 import appleLogo from "../assets/images/Apple_logo.svg";
 import Button from "./button";
 import ButtonNew from "./buttonNew";
+import { toast } from "react-toastify";
+import axios from "axios";
+import DOMAIN from "../../environmentVariables";
+import { useState } from "react";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [loading, setLoading] = useState(false);
+  const handleSubmitSubscribe = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const response = await axios.post(`${DOMAIN}/subscribe`, {
+        name,
+        email,
+      });
+      if (response.status === 201) {
+        toast.success("You have been subscribed successfully");
+        setLoading(false);
+        setName("");
+        setEmail("");
+      }
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+      toast.error(error?.response?.data?.message || "Failed to Subscribe");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
-    <div className="row m-0 p-0" style={{backgroundColor:'#7FD839'}}>
+    <div className="row m-0 p-0" style={{ backgroundColor: "#7FD839" }}>
       <div className="footer row m-0 p-0 pt-5 justify-content-center">
         <div className="footer-content row col-10 justify-content-center">
           <div className="col-lg-4 mt-lg-0 mt-5 d-flex flex-column align-items-center order-last order-lg-first">
@@ -80,14 +109,14 @@ const Footer = () => {
                 src={LogoDark}
                 alt="Logo dark"
                 className=" m-0 p-0 mt-4 w-auto"
-                style={{height:'93px'}}
+                style={{ height: "93px" }}
               />
             </Link>
           </div>
           <div className="col-lg-4 mt-lg-0 mt-5 d-flex flex-column align-items-center">
             <h3 className="crunch-font m-0 p-0 mb-4">DOWNLOAD APP</h3>
             <div className="" style={{ width: "15rem" }}>
-            <PlayStoreBtn
+              <PlayStoreBtn
                 logo={playStoreLogo}
                 para="GET IT ON"
                 head="GOOGLE PLAY"
@@ -101,7 +130,7 @@ const Footer = () => {
               />
             </div>
             <div className="mt-4" style={{ width: "15rem" }}>
-            <PlayStoreBtn
+              <PlayStoreBtn
                 logo={appleLogo}
                 para="DOWNLOAD ON THE"
                 head="APP STORE"
@@ -117,30 +146,51 @@ const Footer = () => {
           </div>
           <div className="col-lg-4 mt-lg-0 mt-5 d-flex flex-column align-items-center">
             <h3 className="crunch-font m-0 p-0 mb-4">SUBSCRIBE</h3>
-            <form action="" className="m-0 p-0 w-100">
+            <form
+              onSubmit={(e) => handleSubmitSubscribe(e)}
+              className="m-0 p-0 w-100"
+            >
               <input
-                className="m-0 p-2 mb-3 rounded-5 w-100"
+                className="m-0 p-2 mb-3 rounded-5 w-100 text-white"
                 name="name"
                 id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 placeholder="Your Name"
               />
               <input
-                className="m-0 p-2 mb-3 rounded-5 w-100"
+                className="m-0 p-2 mb-3 rounded-5 w-100 text-white"
                 name="email"
                 id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your Email"
               />
               <div className="d-flex w-100 justify-content-center align-items-center">
                 {/* <Button content="Submit" /> */}
-                <ButtonNew
-                  content="Submit"
-                  btnCtmBackground="radial-gradient(#3e60f4 , #041ec8)"
-                  boxShadow="0px 4px #00139e"
-                  lineBackground="#3e60f4"
-                  outerBtnBorder="1px solid #000d9c"
-                  innerBtnBorder="2px dashed #fff"
-                  lineUpperOverlayBg="#1d3ae2 "
-                />
+                {loading ? (
+                  <ButtonNew
+                    content="Submitting.."
+                    btnCtmBackground="radial-gradient(#3e60f4 , #041ec8)"
+                    boxShadow="0px 4px #00139e"
+                    lineBackground="#3e60f4"
+                    outerBtnBorder="1px solid #000d9c"
+                    innerBtnBorder="2px dashed #fff"
+                    lineUpperOverlayBg="#1d3ae2 "
+                  />
+                ) : (
+                  <div onClick={(e) => handleSubmitSubscribe(e)}>
+                    <ButtonNew
+                      content="Submit"
+                      btnCtmBackground="radial-gradient(#3e60f4 , #041ec8)"
+                      boxShadow="0px 4px #00139e"
+                      lineBackground="#3e60f4"
+                      outerBtnBorder="1px solid #000d9c"
+                      innerBtnBorder="2px dashed #fff"
+                      lineUpperOverlayBg="#1d3ae2 "
+                    />
+                  </div>
+                )}
               </div>
             </form>
           </div>

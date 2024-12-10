@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Button from "../buttonNew";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -20,6 +20,12 @@ import FeaturesSlideLine from "../../assets/images/features-thumbnail-line.svg";
 export default function App() {
   const [videoPlayId, setVideoPlayId] = useState(null);
   const [sliderArr, setSliderArr] = useState([
+    {
+      id: 6,
+      videoLink: "https://www.youtube.com/embed/ytdsbjrdMG4",
+      thumbnail: "https://i.ytimg.com/vi/ytdsbjrdMG4/sddefault.jpg",
+      desc: `The course will familiarize you with numbers and their pronunciation in Urdu.`,
+    },
     {
       id: 1,
       videoLink: "https://www.youtube.com/embed/ZkuZKBEj6Xw",
@@ -51,13 +57,42 @@ export default function App() {
       desc: `The course will familiarize you with how words are formed in Urdu by combining letters.
 `,
     },
-    {
-      id: 6,
-      videoLink: "https://www.youtube.com/embed/ytdsbjrdMG4",
-      thumbnail: "https://i.ytimg.com/vi/ytdsbjrdMG4/sddefault.jpg",
-      desc: `The course will familiarize you with numbers and their pronunciation in Urdu.`,
-    },
+    // {
+    //   id: 6,
+    //   videoLink: "https://www.youtube.com/embed/ytdsbjrdMG4",
+    //   thumbnail: "https://i.ytimg.com/vi/ytdsbjrdMG4/sddefault.jpg",
+    //   desc: `The course will familiarize you with numbers and their pronunciation in Urdu.`,
+    // },
   ]);
+  const reorderSliderArr = () => {
+    // const reordered = sliderArr.sort((a, b) => (a.id === 1 ? -1 : 0));
+    const reordered=[];
+    sliderArr.forEach((item) => {
+      if(item.id!==6){
+          reordered.push(item);
+      }
+    })
+    reordered.push(sliderArr[0]);
+   
+    setSliderArr([...reordered]);
+  };
+
+  // Monitor screen size and reorder sliderArr if screen width is smaller than 990px
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 990) {
+        reorderSliderArr();
+      }
+    };
+
+    // Initial check and event listener
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, [sliderArr]);
+  
   return (
     <div className="w-100 d-flex justify-content-center align-items-center p-5" style={{maxWidth:'1400px'}}>
       <div className="features-slider-wrapper col-lg-11  pt-5">
@@ -144,7 +179,7 @@ export default function App() {
                         />
                       </div>
                     )}
-                    <p className="col-9 text-center text-black my-2 poppins-regular ">
+                    <p className="col-9 text-center text-black my-2 poppins-regular " style={{width:'300px'}}>
                       {item?.desc}
                     </p>
                     <div className="w-auto mt-3">

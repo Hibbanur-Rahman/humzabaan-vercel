@@ -16,6 +16,7 @@ $purple-primary: #752CAE;
         a {
             color: #fff !important;
         }
+
         p {
             color: #fff !important;
             cursor: pointer;
@@ -106,51 +107,56 @@ $purple-primary: #752CAE;
         background: none;
     }
 
-    .features {
-        img {
-            height: 31.25rem !important;
-            width: 27.25rem !important;
+    .why-humzabaan-section {
+        .features {
+            img {
+                height: 31.25rem !important;
+                width: 27.25rem !important;
+            }
+
+            .content {
+                width: 285px !important;
+            }
+
+
+            .content-1 {
+                top: 22% !important;
+                right: 0.8rem !important;
+            }
+
+            .content-2 {
+                top: 23% !important;
+                left: 1.1rem !important;
+            }
+
+            .feature-Img-2 {
+                height: 33rem !important;
+            }
+
+            .features-item {
+                p {
+                    font-size: 13px !important;
+                }
+
+                width: auto !important;
+                margin-top: -139px !important;
+            }
+
+            .features-item-margin-top {
+                margin-top: 0px !important;
+            }
+
         }
 
-        .content {
-            width: 285px !important;
+        .features-card {
+            .card {
+
+                max-width: 25rem !important;
+            }
+
+            background: linear-gradient(0deg, #752CAE 80%, rgba(255, 255, 255, 0) 50%),
+            url(/Humzabaan/src/assets/images/red-bg.svg) repeat !important;
         }
-
-
-        .content-1 {
-            top: 22% !important;
-            right: 0.8rem !important;
-        }
-
-        .content-2 {
-            top: 23% !important;
-            left: 1.1rem !important;
-        }
-
-        .feature-Img-2 {
-            height: 33rem !important;
-        }
-
-        .features-item {
-
-            width: auto !important;
-            margin-top: -139px !important;
-        }
-
-        .features-item-margin-top {
-            margin-top: 0px !important;
-        }
-
-    }
-
-    .features-card {
-        .card {
-
-            max-width: 25rem !important;
-        }
-
-        background: linear-gradient(0deg, #752CAE 80%, rgba(255, 255, 255, 0) 50%),
-        url(/Humzabaan/src/assets/images/red-bg.svg) repeat !important;
     }
 
     .about-urdu {
@@ -160,7 +166,8 @@ $purple-primary: #752CAE;
             height: min-content;
             font-size: 14px !important;
         }
-        .history-para-2{
+
+        .history-para-2 {
             margin-top: -70px !important;
         }
 
@@ -380,7 +387,7 @@ $purple-primary: #752CAE;
 
     .modal-heading {
         padding-left: 10px !important;
-        top: 40px;
+        top: 3px;
         width: 200px !important;
     }
 
@@ -413,44 +420,49 @@ $purple-primary: #752CAE;
             border-radius: 20px !important;
         }
     }
+
     .curriculum {
         display: flex;
-    
+
         .curriculum-heading {
             height: 50px !important;
         }
-    
+
         .curriculum-heading-para {
             font-size: 16px !important;
             color: rgba(0, 0, 0, 0.667);
         }
-        .circle-wrapper{
+
+        .circle-wrapper {
             margin-top: 60px !important;
             position: relative;
             z-index: 4;
         }
-    
+
         .circle-item {
             border-radius: 50%;
             border: 4px solid $primary-color;
             position: relative;
             z-index: 3;
             background-color: #ffffff6f;
+
             .inner-circle {
                 background-color: #f6f6f6;
                 border-radius: 50%;
-    
+
                 img {
                     width: 60px;
                     height: 60px;
                 }
             }
-    
+
         }
-        .chapter-name-para-2{
+
+        .chapter-name-para-2 {
             color: $primary-color;
         }
-        .line-connection{
+
+        .line-connection {
             border: 2px dashed #000;
             width: 364px;
             transform: rotate(31deg);
@@ -460,7 +472,8 @@ $purple-primary: #752CAE;
             position: relative;
             z-index: 0;
         }
-        .line-connection-right{
+
+        .line-connection-right {
             border: 2px dashed #000;
             width: 333px;
             transform: rotate(-30deg);
@@ -485,7 +498,13 @@ $purple-primary: #752CAE;
         }
     }
 }
-
+@media (min-width:200px) and (max-width:395px) {
+    .modal-heading {
+        padding-left: 10px !important;
+        top: 20px;
+        width: 200px !important;
+    }
+}
 @media (min-width:1000px) and (max-width:1464px) {
     .about-urdu-content {
         .heading {

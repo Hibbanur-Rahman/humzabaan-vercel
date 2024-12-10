@@ -278,12 +278,12 @@ const Home = () => {
         <p className="heading-p m-0 p-0 mt-lg-5 text-center fs-1">WHO WE ARE</p>
         <div className="row col-lg-10 m-0 p-0  z-2 justify-content-center">
           <div
-            className="who-we-are-right col-lg-6 m-0 p-lg-3 p-3 d-flex flex-column justify-content-center"
+            className="who-we-are-right col-lg-5 m-0 p-lg-3 p-3 d-flex flex-column justify-content-center"
             data-aos="fade-right"
           >
             <p
               className="m-0 p-0 text-light poppins-regular text-center"
-              style={{ fontSize: "1.1rem" }}
+              style={{ fontSize: "1rem" }}
             >
               Welcome to Humzabaan – your ultimate destination for delving into
               the enchanting world of Urdu! We're passionate about merging the
@@ -293,7 +293,7 @@ const Home = () => {
             </p>
             <p
               className="m-0 p-0 mt-4 text-light poppins-regular text-center"
-              style={{ fontSize: "1.1rem" }}
+              style={{ fontSize: "1rem" }}
             >
               Here at Humzabaan, we're dedicated to nurturing the vibrant spirit
               of Urdu, whether you're taking your first steps or refining your

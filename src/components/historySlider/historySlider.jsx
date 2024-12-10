@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../buttonNew";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -20,6 +20,14 @@ import iframeBorder from "../../assets/images/slides-iframe-border.svg";
 const HistorySlider = () => {
   const [videoPlayId, setVideoPlayId] = useState(null);
   const [historySliderArr, setHistorySliderArr] = useState([
+    {
+      id: 6,
+      videoLink:
+        "https://www.youtube.com/embed/4ryZkia5CpY?si=2kGvfnRskd7aNjax",
+      thumbnail: "https://i.ytimg.com/vi/4ryZkia5CpY/sddefault.jpg",
+      desc: `Future`,
+       subtitle:'20th Century'
+    },
     {
       id: 1,
       videoLink:
@@ -60,15 +68,44 @@ const HistorySlider = () => {
       desc: `Modernity`,
        subtitle:'19th Century'
     },
-    {
-      id: 6,
-      videoLink:
-        "https://www.youtube.com/embed/4ryZkia5CpY?si=2kGvfnRskd7aNjax",
-      thumbnail: "https://i.ytimg.com/vi/4ryZkia5CpY/sddefault.jpg",
-      desc: `Future`,
-       subtitle:'20th Century'
-    },
+    // {
+    //   id: 6,
+    //   videoLink:
+    //     "https://www.youtube.com/embed/4ryZkia5CpY?si=2kGvfnRskd7aNjax",
+    //   thumbnail: "https://i.ytimg.com/vi/4ryZkia5CpY/sddefault.jpg",
+    //   desc: `Future`,
+    //    subtitle:'20th Century'
+    // },
   ]);
+
+  const reorderSliderArr = () => {
+    // const reordered = sliderArr.sort((a, b) => (a.id === 1 ? -1 : 0));
+    const reordered=[];
+    historySliderArr.forEach((item) => {
+      if(item.id!==6){
+          reordered.push(item);
+      }
+    })
+    reordered.push(historySliderArr[0]);
+   
+    setHistorySliderArr([...reordered]);
+  };
+
+  // Monitor screen size and reorder historySliderArr if screen width is smaller than 990px
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 990) {
+        reorderSliderArr();
+      }
+    };
+
+    // Initial check and event listener
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, [historySliderArr]);
   return (
     <div className="history-slider m-0 p-0">
       <Swiper
@@ -150,10 +187,10 @@ const HistorySlider = () => {
                     </div>
                   )}
 
-                  <p className={`m-0 p-0 ${videoPlayId === item?.id ? "mt-2" : "mt-3"} fs-1 title`}>
+                  <p className={`m-0 p-0 ${videoPlayId === item?.id ? "mt-2" : "mt-3"} fs-1 title text-center`}>
                     {item?.desc}
                   </p>
-                  <p className="m-0 p-0 subtitle">~{item?.subtitle}</p>
+                  <p className="m-0 p-0 subtitle text-center">~{item?.subtitle}</p>
                 </div>
               </div>
             </SwiperSlide>

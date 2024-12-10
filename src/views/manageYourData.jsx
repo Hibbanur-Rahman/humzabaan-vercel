@@ -1,30 +1,53 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import ButtonNew from "../components/buttonNew";
 import { toast } from "react-toastify";
 import "../assets/styles/main.scss";
 import "../assets/styles/privacyPolicy.scss";
+import axios from "axios";
+import DOMAIN from "../../environmentVariables";
 
 const ManageYourData = () => {
+  const [email, setEmail] = useState();
+  const [name, setName] = useState();
+  const [reason, setReason] = useState();
+  const [comment, setComment] = useState();
+  const [loading, setLoading] = useState(false);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const response = await axios.post(`${DOMAIN}/manageData`, {
+        name,
+        email,
+        reason,
+        comment,
+      });
+      if (response.status === 201) {
+        toast.success("Message submitted successfully");
+
+        const submitModal = document.getElementById("submitModal");
+
+        // Initialize Bootstrap modal
+        const bootstrapModal = new bootstrap.Modal(submitModal);
+        bootstrapModal.show();
+        setLoading(false);
+        setName("");
+        setEmail("");
+        setComment("");
+      }
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+      toast.error(error?.response?.data?.message || "Failed to Send");
+    } finally {
+      setLoading(false);
+    }
+  };
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const handleSubmit = async () => {
-    try {
-      toast.success("Message submitted successfully");
-
-      const submitModal = document.getElementById("submitModal");
-
-      // Initialize Bootstrap modal 
-      const bootstrapModal = new bootstrap.Modal(submitModal);
-      bootstrapModal.show();
-    } catch (error) {
-      console.error("Error submitting data:", error);
-    }
-  };
-
   return (
     <div className="community-guidelines row m-0 p-0 flex-column bg-white align-items-center overflow-x-hidden">
       <Navbar />
@@ -54,7 +77,10 @@ const ManageYourData = () => {
         </ul>
 
         <div className="row d-flex justify-content-center align-items-center my-5">
-          <form className="col-12 col-lg-6 m-0 p-0">
+          <form
+            className="col-12 col-lg-6 m-0 p-0"
+            onSubmit={(e) => handleSubmit(e)}
+          >
             <h3>Account & Data Deletion Request Form</h3>
 
             <div className="row m-0 p-0 mb-3">
@@ -62,6 +88,8 @@ const ManageYourData = () => {
                 Full Name
               </label>
               <input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 id="fullName"
                 name="fullName"
                 className="rounded-4 p-2 px-3"
@@ -77,6 +105,8 @@ const ManageYourData = () => {
                 Email *
               </label>
               <input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 id="email"
                 name="email"
                 className="rounded-4 p-2 px-3"
@@ -99,6 +129,8 @@ const ManageYourData = () => {
                 Reason for Deletion
               </label>
               <select
+                value={reason}
+                onChange={(e) => setReason(e.target.value)}
                 id="reasonForDeletion"
                 name="reasonForDeletion"
                 className="rounded-4 p-2 px-3"
@@ -120,13 +152,15 @@ const ManageYourData = () => {
                 Additional Comments
               </label>
               <textarea
+                value={comment}
+                onChange={(e) => setComment(e.target.value)}
                 id="additionalComments"
                 className="rounded-4 p-2 px-3"
                 style={{
                   border: "1px solid #808080",
                   outline: "none",
                   resize: "none",
-                  height:'150px'
+                  height: "150px",
                 }}
                 placeholder="Provide any additional information to help us process your request."
               />
@@ -140,19 +174,30 @@ const ManageYourData = () => {
               </label>
             </div>
 
-            <div
-              className="d-flex w-auto justify-content-center align-items-center"
-              onClick={handleSubmit}
-            >
-              <ButtonNew
-                content="Submit"
-                btnCtmBackground="radial-gradient(#3e60f4 , #041ec8)"
-                boxShadow="0px 4px #00139e"
-                lineBackground="#3e60f4"
-                outerBtnBorder="1px solid #000d9c"
-                innerBtnBorder="2px dashed #fff"
-                lineUpperOverlayBg="#1d3ae2"
-              />
+            <div className="d-flex w-auto justify-content-center align-items-center">
+              {loading ? (
+                <ButtonNew
+                  content="Submitting.."
+                  btnCtmBackground="radial-gradient(#3e60f4 , #041ec8)"
+                  boxShadow="0px 4px #00139e"
+                  lineBackground="#3e60f4"
+                  outerBtnBorder="1px solid #000d9c"
+                  innerBtnBorder="2px dashed #fff"
+                  lineUpperOverlayBg="#1d3ae2 "
+                />
+              ) : (
+                <div onClick={(e) => handleSubmit(e)}>
+                  <ButtonNew
+                    content="Submit"
+                    btnCtmBackground="radial-gradient(#3e60f4 , #041ec8)"
+                    boxShadow="0px 4px #00139e"
+                    lineBackground="#3e60f4"
+                    outerBtnBorder="1px solid #000d9c"
+                    innerBtnBorder="2px dashed #fff"
+                    lineUpperOverlayBg="#1d3ae2 "
+                  />
+                </div>
+              )}
             </div>
           </form>
         </div>
