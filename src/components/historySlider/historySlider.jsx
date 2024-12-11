@@ -105,7 +105,7 @@ const HistorySlider = () => {
 
     // Cleanup
     return () => window.removeEventListener("resize", handleResize);
-  }, [historySliderArr]);
+  }, []);
   return (
     <div className="history-slider m-0 p-0">
       <Swiper

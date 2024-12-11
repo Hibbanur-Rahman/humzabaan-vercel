@@ -66,14 +66,14 @@ export default function App() {
   ]);
   const reorderSliderArr = () => {
     // const reordered = sliderArr.sort((a, b) => (a.id === 1 ? -1 : 0));
-    const reordered=[];
+    const reordered = [];
     sliderArr.forEach((item) => {
-      if(item.id!==6){
-          reordered.push(item);
+      if (item.id !== 6) {
+        reordered.push(item);
       }
-    })
+    });
     reordered.push(sliderArr[0]);
-   
+
     setSliderArr([...reordered]);
   };
 
@@ -91,10 +91,13 @@ export default function App() {
 
     // Cleanup
     return () => window.removeEventListener("resize", handleResize);
-  }, [sliderArr]);
-  
+  }, []);
+
   return (
-    <div className="w-100 d-flex justify-content-center align-items-center p-5" style={{maxWidth:'1400px'}}>
+    <div
+      className="w-100 d-flex justify-content-center align-items-center p-5"
+      style={{ maxWidth: "1400px" }}
+    >
       <div className="features-slider-wrapper col-lg-11  pt-5">
         <div className="heading w-100 d-flex justify-content-center align-items-center">
           <img src={HeadingImg} alt="" className="tutorial-heading" />
@@ -109,9 +112,10 @@ export default function App() {
           }}
           // autoplay={videoPlayId ? false : true}
           loop={true}
-          modules={[Pagination,
+          modules={[
+            Pagination,
             //  Autoplay
-            ]}
+          ]}
           breakpoints={{
             0: {
               slidesPerView: 1, // Show one slide for devices with width 0px and
@@ -179,7 +183,10 @@ export default function App() {
                         />
                       </div>
                     )}
-                    <p className="col-9 text-center text-black my-2 poppins-regular " style={{width:'300px'}}>
+                    <p
+                      className="col-9 text-center text-black my-2 poppins-regular "
+                      style={{ width: "300px" }}
+                    >
                       {item?.desc}
                     </p>
                     <div className="w-auto mt-3">
